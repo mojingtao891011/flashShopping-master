@@ -1,0 +1,52 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "UIViewExt.h"
+
+#define ChangeTitle    @"ChangeTitle"
+
+//获取屏幕的宽、高
+#define SCREENMAIN_WIDTH    [UIScreen mainScreen].bounds.size.width
+#define SCREENMAIN_HEIGHT   [UIScreen mainScreen].bounds.size.height
+
+//获取ios版本号
+#define IOS_VERSION  [[[UIDevice currentDevice]systemVersion] floatValue]
+#define POINT_Y   IOS_VERSION < 7.0 ? 0 : 64
+
+//发送数据通知
+#define postNoteName @"postNotificationName"
+
+//字体的颜色
+#define searchTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//A2A1A1
+#define descriptionTextColor [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:1] //3C3C3C
+#define priceTextColor [UIColor colorWithRed:104/255.0 green:104/255.0 blue:104/255.0 alpha:1] //#686868
+#define regTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//#BC0835
+#define greedTextColor [UIColor colorWithRed:8/255.0 green:173/255.0 blue:0/255.0 alpha:1]//#08AD00
+#define backTextColor [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1]//#000000
+
+
+#define SGorderNumber    @"orderNumber"
+#define SGisPayment      @"isPayment"
+#define SGimageName      @"imageName"
+#define SGdescription    @"description"
+#define SGshopType       @"shopType"
+#define SGshopColor      @"shopColor"
+#define SGprice          @"price"
+#define SGquantity       @"quantity"
+#define SGfreight        @"freight"
+#define SGorderTime      @"orderTime"
+#define SGtotal          @"total"
+
+#endif
