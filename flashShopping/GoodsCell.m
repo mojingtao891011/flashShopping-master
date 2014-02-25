@@ -44,6 +44,9 @@
     //商品描述
     _directionsLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_directionsLabel];
+    //商品编号
+    _goodsCodeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+    [self.contentView addSubview:_goodsCodeLabel];
      //价格（字体）
     _priceLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_priceLabel];
@@ -64,7 +67,7 @@
     
     //图片
     [_goodsImgView setFrame:CGRectMake(10, 10, 80, 80)];
-    [_goodsImgView setImageWithURL:[NSURL URLWithString:_goodsModel.viewUrl] placeholderImage:[UIImage imageNamed:@"testImg1"]];
+    [_goodsImgView setImageWithURL:[NSURL URLWithString:_goodsModel.viewUrl] placeholderImage:[UIImage imageNamed:@"init.jpg"]];
     
     //商品描述
     CGSize size = [_goodsModel.name sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:CGSizeMake( 100 , 300) lineBreakMode:NSLineBreakByCharWrapping];
@@ -72,19 +75,23 @@
     _directionsLabel.numberOfLines = 0 ;
     _directionsLabel.backgroundColor = [UIColor clearColor];
     _directionsLabel.text = [NSString stringWithFormat:@"[出售中]%@",_goodsModel.name];
-    
-    
-    
+        
+    //商品编号
+    _goodsCodeLabel.left = _goodsImgView.right ;
+    _goodsCodeLabel.top = _directionsLabel.bottom ;
+    [_goodsCodeLabel sizeToFit];
     
     //价格（字体）
-    [_priceLabel setFrame:CGRectMake(_goodsImgView.right ,  _directionsLabel.bottom ,  0, 0)];
+    _priceLabel.left = _goodsImgView.right ;
+    _priceLabel.top = _goodsCodeLabel.bottom ;
     _priceLabel.text = @"价格：";
     _priceLabel.backgroundColor = [UIColor clearColor];
     [_priceLabel sizeToFit];
    
     
     //价格
-    [_priceMoneyLabel setFrame:CGRectMake(_priceLabel.right, _directionsLabel.bottom, 0, 0)];
+    _priceMoneyLabel.left = _priceLabel.right ;
+    _priceMoneyLabel.top = _priceLabel.top ;
     _priceMoneyLabel.text = [NSString stringWithFormat:@"%@",_goodsModel.price];
     _priceMoneyLabel.textColor = [UIColor redColor];
     _priceMoneyLabel.backgroundColor = [UIColor clearColor];

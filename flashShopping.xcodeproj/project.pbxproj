@@ -80,10 +80,13 @@
 		E250878A18BC25AD005350DE /* GoodInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250878818BC25AD005350DE /* GoodInfoViewController.m */; };
 		E250878B18BC25AD005350DE /* GoodInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E250878918BC25AD005350DE /* GoodInfoViewController.xib */; };
 		E250878E18BC3A14005350DE /* GoodInfoModle.m in Sources */ = {isa = PBXBuildFile; fileRef = E250878D18BC3A14005350DE /* GoodInfoModle.m */; };
+		E250879018BC74AF005350DE /* init.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E250878F18BC74AF005350DE /* init.jpg */; };
+		E250879418BC7A7D005350DE /* ModifyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250879218BC7A7D005350DE /* ModifyInfoViewController.m */; };
+		E250879518BC7A7D005350DE /* ModifyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */; };
+		E250879818BC7EF9005350DE /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = E250879618BC7EF9005350DE /* save.png */; };
+		E250879918BC7EF9005350DE /* Submit.png in Resources */ = {isa = PBXBuildFile; fileRef = E250879718BC7EF9005350DE /* Submit.png */; };
 		E265B697187B98B700B7CA13 /* search_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B688187B98B700B7CA13 /* search_bg.png */; };
 		E265B698187B98B700B7CA13 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B689187B98B700B7CA13 /* searchButton.png */; };
-		E265B69D187B98B700B7CA13 /* testImg2.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B68E187B98B700B7CA13 /* testImg2.png */; };
-		E265B69E187B98B700B7CA13 /* testImg1.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B68F187B98B700B7CA13 /* testImg1.png */; };
 		E265B6A3187B98B700B7CA13 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B694187B98B700B7CA13 /* return.png */; };
 		E265B6A4187B98B700B7CA13 /* pullDownButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B695187B98B700B7CA13 /* pullDownButton.png */; };
 		E265B6A5187B98B700B7CA13 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B696187B98B700B7CA13 /* refresh.png */; };
@@ -235,10 +238,14 @@
 		E250878918BC25AD005350DE /* GoodInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodInfoViewController.xib; sourceTree = "<group>"; };
 		E250878C18BC3A14005350DE /* GoodInfoModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodInfoModle.h; sourceTree = "<group>"; };
 		E250878D18BC3A14005350DE /* GoodInfoModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodInfoModle.m; sourceTree = "<group>"; };
+		E250878F18BC74AF005350DE /* init.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = init.jpg; sourceTree = "<group>"; };
+		E250879118BC7A7D005350DE /* ModifyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyInfoViewController.h; sourceTree = "<group>"; };
+		E250879218BC7A7D005350DE /* ModifyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyInfoViewController.m; sourceTree = "<group>"; };
+		E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyInfoViewController.xib; sourceTree = "<group>"; };
+		E250879618BC7EF9005350DE /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		E250879718BC7EF9005350DE /* Submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Submit.png; sourceTree = "<group>"; };
 		E265B688187B98B700B7CA13 /* search_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_bg.png; sourceTree = "<group>"; };
 		E265B689187B98B700B7CA13 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
-		E265B68E187B98B700B7CA13 /* testImg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImg2.png; sourceTree = "<group>"; };
-		E265B68F187B98B700B7CA13 /* testImg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImg1.png; sourceTree = "<group>"; };
 		E265B694187B98B700B7CA13 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		E265B695187B98B700B7CA13 /* pullDownButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullDownButton.png; sourceTree = "<group>"; };
 		E265B696187B98B700B7CA13 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
@@ -438,6 +445,7 @@
 		E249F596187549E900462E6B = {
 			isa = PBXGroup;
 			children = (
+				E24AC18C1887DED900AF86F1 /* PublicModel */,
 				E249F5A8187549E900462E6B /* flashShopping */,
 				E249F5A1187549E900462E6B /* Frameworks */,
 				E249F5A0187549E900462E6B /* Products */,
@@ -470,7 +478,6 @@
 		E249F5A8187549E900462E6B /* flashShopping */ = {
 			isa = PBXGroup;
 			children = (
-				E24AC18C1887DED900AF86F1 /* PublicModel */,
 				E24AC17B18876FDB00AF86F1 /* DataModel */,
 				E2480971187FCF2E00046EB7 /* landView */,
 				E2929E831876970A007CE3C7 /* thirdSourceLibrary */,
@@ -538,6 +545,9 @@
 				E26BFB3A1890E299001401F3 /* GoodsDetailViewController.h */,
 				E26BFB3B1890E299001401F3 /* GoodsDetailViewController.m */,
 				E26BFB3C1890E299001401F3 /* GoodsDetailViewController.xib */,
+				E250879118BC7A7D005350DE /* ModifyInfoViewController.h */,
+				E250879218BC7A7D005350DE /* ModifyInfoViewController.m */,
+				E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */,
 			);
 			name = shopManager;
 			sourceTree = "<group>";
@@ -568,6 +578,7 @@
 		E249F5F318754FD800462E6B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E250878F18BC74AF005350DE /* init.jpg */,
 				E26BFB3F1890F469001401F3 /* pen.png */,
 				E280A3A61882798E00D67265 /* logisticsButton.png */,
 				E280A3AD1882824F00D67265 /* redPoint.png */,
@@ -626,6 +637,7 @@
 				E225EA5B18AA044A0098F2C6 /* PullNenu.m */,
 			);
 			name = PublicModel;
+			path = flashShopping;
 			sourceTree = "<group>";
 		};
 		E265B687187B98B700B7CA13 /* orderManager */ = {
@@ -638,8 +650,6 @@
 				E265B689187B98B700B7CA13 /* searchButton.png */,
 				E244FA39187D521F005DFF26 /* lastCell.png */,
 				E244FA40187D54C5005DFF26 /* tableViewHead.png */,
-				E265B68F187B98B700B7CA13 /* testImg1.png */,
-				E265B68E187B98B700B7CA13 /* testImg2.png */,
 				E2D2AB0E1888F3D0002F8D66 /* pullViewbackground.png */,
 				E265B694187B98B700B7CA13 /* return.png */,
 				E265B695187B98B700B7CA13 /* pullDownButton.png */,
@@ -688,6 +698,8 @@
 		E280A3941882642900D67265 /* modifyPrice */ = {
 			isa = PBXGroup;
 			children = (
+				E250879718BC7EF9005350DE /* Submit.png */,
+				E250879618BC7EF9005350DE /* save.png */,
 				E280A39C18826B6800D67265 /* textfiled-a.png */,
 				E280A39D18826B6800D67265 /* textfiled-b.png */,
 				E280A3951882655200D67265 /* Radio-a.png */,
@@ -818,6 +830,7 @@
 				E249F5EF18754B7800462E6B /* MoreViewController.xib in Resources */,
 				E2929E3C18767942007CE3C7 /* navigationbarBackground.png in Resources */,
 				E230F051187E70D3009A0479 /* blackArrow.png in Resources */,
+				E250879918BC7EF9005350DE /* Submit.png in Resources */,
 				E217F3021882454B0095CEA3 /* testShopImg.png in Resources */,
 				E217F30F1882454B0095CEA3 /* 04-按钮h.png in Resources */,
 				E280A39A1882655900D67265 /* complete.png in Resources */,
@@ -825,7 +838,6 @@
 				E217F3081882454B0095CEA3 /* detailbuttonBackground_a@2x.png in Resources */,
 				E265B697187B98B700B7CA13 /* search_bg.png in Resources */,
 				E230F052187E70D3009A0479 /* blackArrow@2x.png in Resources */,
-				E265B69D187B98B700B7CA13 /* testImg2.png in Resources */,
 				E244FA3B187D521F005DFF26 /* lastCell.png in Resources */,
 				E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */,
 				E217F3031882454B0095CEA3 /* 03-顶部.png in Resources */,
@@ -850,13 +862,13 @@
 				E230F06C187E9607009A0479 /* chat.png in Resources */,
 				E248096F187FCE8400046EB7 /* Remember_bg.png in Resources */,
 				E248096E187FCE8400046EB7 /* remember.png in Resources */,
-				E265B69E187B98B700B7CA13 /* testImg1.png in Resources */,
 				E2929E37187654E3007CE3C7 /* refund_manager.png in Resources */,
 				E280A3A71882798E00D67265 /* logisticsButton.png in Resources */,
 				E217F3101882454B0095CEA3 /* 04-按钮i.png in Resources */,
 				E217F3061882454B0095CEA3 /* 04-按钮a.png in Resources */,
 				E280A39F18826B6800D67265 /* textfiled-b.png in Resources */,
 				E280A3971882655200D67265 /* Radio-a.png in Resources */,
+				E250879018BC74AF005350DE /* init.jpg in Resources */,
 				E217F30D1882454B0095CEA3 /* 04-按钮f.png in Resources */,
 				E217F3041882454B0095CEA3 /* 03-顶部a.png in Resources */,
 				E2929E32187654E3007CE3C7 /* dimensional code.png in Resources */,
@@ -882,10 +894,12 @@
 				E2480970187FCE8400046EB7 /* landButton.png in Resources */,
 				E230F055187E70D3009A0479 /* grayArrow.png in Resources */,
 				E265B6A4187B98B700B7CA13 /* pullDownButton.png in Resources */,
+				E250879518BC7A7D005350DE /* ModifyInfoViewController.xib in Resources */,
 				E230F041187E30C1009A0479 /* cellbackground.png in Resources */,
 				E2929E3B18767942007CE3C7 /* navigationbarBackground@2x.png in Resources */,
 				E217F30B1882454B0095CEA3 /* info.png in Resources */,
 				E2D2AB0F1888F3D0002F8D66 /* pullViewbackground.png in Resources */,
+				E250879818BC7EF9005350DE /* save.png in Resources */,
 				E230F065187E9607009A0479 /* buttom_shopManager_bg.png in Resources */,
 				E2929E33187654E3007CE3C7 /* logistics_Manager.png in Resources */,
 				E2C4E0EC188BB8F200A94FA2 /* Custom.xib in Resources */,
@@ -899,6 +913,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E250879418BC7A7D005350DE /* ModifyInfoViewController.m in Sources */,
 				E230F050187E70D3009A0479 /* EGORefreshTableHeaderView.m in Sources */,
 				E26BFB23188F52E7001401F3 /* ASIAuthenticationDialog.m in Sources */,
 				E26BFB3D1890E299001401F3 /* GoodsDetailViewController.m in Sources */,

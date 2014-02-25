@@ -2,14 +2,15 @@ TflashShopping
 v6
 r1
 cCheck dependencies
-cProcessPCH /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-bbxwvjvzzyuwuvelysfbtggxwdkm/flashShopping-Prefix.pch.pch flashShopping/flashShopping-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch.pch flashShopping/flashShopping-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-bbxwvjvzzyuwuvelysfbtggxwdkm/flashShopping-Prefix.pch.pch flashShopping/flashShopping-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/EGORefreshTableHeaderView.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ASIHttpRequst/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/SDWebImagePrefetcher.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/SDWebImage/SDWebImagePrefetcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/RequestNetwork.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/RequestNetwork.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ASIHTTPRequest.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ASIHttpRequst/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/AppDelegate.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ASIDownloadCache.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ASIHttpRequst/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -60,6 +61,7 @@ cCpResource flashShopping/images/orderManager/tableView_bg.png Build/Products/De
 cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MoreViewController.xib
 cCpResource flashShopping/images/shopMangerImages/navigationbarBackground.png Build/Products/Debug-iphonesimulator/flashShopping.app/navigationbarBackground.png
 cCpResource flashShopping/EGOTableViewPullRefresh/Resources/blackArrow.png Build/Products/Debug-iphonesimulator/flashShopping.app/blackArrow.png
+cCpResource flashShopping/images/Submit.png Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png
 cCpResource flashShopping/images/orderDetailImg/testShopImg.png Build/Products/Debug-iphonesimulator/flashShopping.app/testShopImg.png
 cCpResource flashShopping/images/orderDetailImg/04-按钮h.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮h.png
 cCpResource flashShopping/images/complete.png Build/Products/Debug-iphonesimulator/flashShopping.app/complete.png
@@ -67,7 +69,6 @@ cCpResource flashShopping/images/shopMangerImages/shop_manager.png Build/Product
 cCpResource flashShopping/images/orderDetailImg/detailbuttonBackground_a@2x.png Build/Products/Debug-iphonesimulator/flashShopping.app/detailbuttonBackground_a@2x.png
 cCpResource flashShopping/images/orderManager/search_bg.png Build/Products/Debug-iphonesimulator/flashShopping.app/search_bg.png
 cCpResource flashShopping/EGOTableViewPullRefresh/Resources/blackArrow@2x.png Build/Products/Debug-iphonesimulator/flashShopping.app/blackArrow@2x.png
-cCpResource flashShopping/images/orderManager/testImg2.png Build/Products/Debug-iphonesimulator/flashShopping.app/testImg2.png
 cCpResource flashShopping/images/orderManager/lastCell.png Build/Products/Debug-iphonesimulator/flashShopping.app/lastCell.png
 cCpResource flashShopping/images/orderDetailImg/orderNunmber_a.png Build/Products/Debug-iphonesimulator/flashShopping.app/orderNunmber_a.png
 cCpResource flashShopping/images/orderDetailImg/03-顶部.png Build/Products/Debug-iphonesimulator/flashShopping.app/03-顶部.png
@@ -83,6 +84,7 @@ cCpResource flashShopping/images/button_more_bg.png Build/Products/Debug-iphones
 cCpResource flashShopping/images/orderDetailImg/04-按钮b.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮b.png
 cCpResource flashShopping/images/orderManager/chatButton.png Build/Products/Debug-iphonesimulator/flashShopping.app/chatButton.png
 cCpResource flashShopping/images/pen.png Build/Products/Debug-iphonesimulator/flashShopping.app/pen.png
+cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib
 cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ChatViewController.xib
 cCpResource flashShopping/images/orderDetailImg/04-按钮e.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮e.png
 cCpResource flashShopping/images/orderDetailImg/detailbuttonBackground_b@2x.png Build/Products/Debug-iphonesimulator/flashShopping.app/detailbuttonBackground_b@2x.png
@@ -91,14 +93,13 @@ cCpResource flashShopping/EGOTableViewPullRefresh/Resources/whiteArrow.png Build
 cCpResource flashShopping/images/chat.png Build/Products/Debug-iphonesimulator/flashShopping.app/chat.png
 cCpResource flashShopping/images/Remember_bg.png Build/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.png
 cCpResource flashShopping/images/remember.png Build/Products/Debug-iphonesimulator/flashShopping.app/remember.png
-cCpResource flashShopping/images/orderManager/testImg1.png Build/Products/Debug-iphonesimulator/flashShopping.app/testImg1.png
 cCpResource flashShopping/images/shopMangerImages/refund_manager.png Build/Products/Debug-iphonesimulator/flashShopping.app/refund_manager.png
 cCpResource flashShopping/images/logisticsButton.png Build/Products/Debug-iphonesimulator/flashShopping.app/logisticsButton.png
-cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib
 cCpResource flashShopping/images/orderDetailImg/04-按钮i.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮i.png
 cCpResource flashShopping/images/orderDetailImg/04-按钮a.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮a.png
 cCpResource flashShopping/images/textfiled-b.png Build/Products/Debug-iphonesimulator/flashShopping.app/textfiled-b.png
 cCpResource flashShopping/images/Radio-a.png Build/Products/Debug-iphonesimulator/flashShopping.app/Radio-a.png
+cCpResource flashShopping/images/init.jpg Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg
 cCpResource flashShopping/images/orderDetailImg/04-按钮f.png Build/Products/Debug-iphonesimulator/flashShopping.app/04-按钮f.png
 cCpResource flashShopping/images/orderDetailImg/03-顶部a.png Build/Products/Debug-iphonesimulator/flashShopping.app/03-顶部a.png
 cCpResource flashShopping/images/shopMangerImages/dimensional\ code.png Build/Products/Debug-iphonesimulator/flashShopping.app/dimensional\ code.png
@@ -123,10 +124,12 @@ cCpResource flashShopping/images/landLogo.jpg Build/Products/Debug-iphonesimulat
 cCpResource flashShopping/images/landButton.png Build/Products/Debug-iphonesimulator/flashShopping.app/landButton.png
 cCpResource flashShopping/EGOTableViewPullRefresh/Resources/grayArrow.png Build/Products/Debug-iphonesimulator/flashShopping.app/grayArrow.png
 cCpResource flashShopping/images/orderManager/pullDownButton.png Build/Products/Debug-iphonesimulator/flashShopping.app/pullDownButton.png
+cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib
 cCpResource flashShopping/images/orderManager/cellbackground.png Build/Products/Debug-iphonesimulator/flashShopping.app/cellbackground.png
 cCpResource flashShopping/images/shopMangerImages/navigationbarBackground@2x.png Build/Products/Debug-iphonesimulator/flashShopping.app/navigationbarBackground@2x.png
 cCpResource flashShopping/images/orderDetailImg/info.png Build/Products/Debug-iphonesimulator/flashShopping.app/info.png
 cCpResource flashShopping/images/orderManager/pullViewbackground.png Build/Products/Debug-iphonesimulator/flashShopping.app/pullViewbackground.png
+cCpResource flashShopping/images/save.png Build/Products/Debug-iphonesimulator/flashShopping.app/save.png
 cCpResource flashShopping/images/buttom_shopManager_bg.png Build/Products/Debug-iphonesimulator/flashShopping.app/buttom_shopManager_bg.png
 cCpResource flashShopping/images/shopMangerImages/logistics_Manager.png Build/Products/Debug-iphonesimulator/flashShopping.app/logistics_Manager.png
 cCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/Custom.xib
@@ -1488,8 +1491,8 @@ t1393297317
 s73612
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o
-t1393290850
-s57836
+t1393314587
+s57296
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ChatViewController.o
 t1393290851
@@ -1508,20 +1511,20 @@ t1393296882
 s13800
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o
-t1393299877
-s82320
+t1393319147
+s83976
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodManagerViewController.o
 t1393298058
 s60528
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o
-t1393299360
-s67176
+t1393312258
+s69220
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o
-t1393290848
-s94692
+t1393320682
+s81308
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsManamentModel.o
 t1393290850
@@ -1534,6 +1537,10 @@ s47172
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.o
 t1393290849
 s77764
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o
+t1393322058
+s78176
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MoreViewController.o
 t1393290849
@@ -1611,9 +1618,9 @@ t1393290850
 s57840
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping.LinkFileList
-c00000000530C08600000000000001E53
-t1393297504
-s7763
+c00000000530C438F0000000000001F21
+t1393312655
+s7969
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/main.o
 t1393290851
@@ -1628,11 +1635,11 @@ t1393290852
 s585
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app
-t1393299921
-s3230
+t1393322059
+s3366
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM
-t1393299877
+t1393321941
 s102
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/03-顶部.png
@@ -1684,7 +1691,7 @@ t1393297567
 s136
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodInfoViewController.nib
-t1393299921
+t1393312403
 s136
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodManagerViewController.nib
@@ -1692,7 +1699,7 @@ t1393290853
 s136
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodsDetailViewController.nib
-t1393290576
+t1393315667
 s136
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/Info.plist
@@ -1702,6 +1709,10 @@ s1071
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/LICENSE
 t1393290576
 s1084
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/ModifyInfoViewController.nib
+t1393320438
+s136
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/MoreViewController.nib
 t1393290576
@@ -1734,6 +1745,10 @@ s136
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/ShopMvoingViewController.nib
 t1393290576
 s136
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png
+t1393313919
+s6774
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/addressBg.png
 t1393290576
@@ -1820,8 +1835,8 @@ t1393290576
 s42
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping
-t1393299877
-s730080
+t1393322059
+s731484
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/grayArrow.png
 t1393290576
@@ -1834,6 +1849,10 @@ s2109
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/info.png
 t1393290576
 s3754
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg
+t1393311066
+s10893
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/iphone.png
 t1393290576
@@ -1926,6 +1945,10 @@ s2900
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/return.png
 t1393290576
 s3111
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/save.png
+t1393313919
+s6241
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/searchBar.nib
 t1393297883
@@ -2141,9 +2164,9 @@ t1393290576
 s452
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m
-c00000000530BED500000000000000A01
-t1393290576
-s2561
+c00000000530C4B1B0000000000000A03
+t1393314587
+s2563
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ChatViewController.h
 c00000000530BED5000000000000000E9
@@ -2241,13 +2264,13 @@ t1393298058
 s412
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m
-c00000000530C11A500000000000010C4
-t1393299877
-s4292
+c00000000530C5CEA0000000000001213
+t1393319146
+s4627
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib
-c00000000530C11D10000000000000F21
-t1393299921
+c00000000530C428E0000000000000F21
+t1393312398
 s3873
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodManagerViewController.h
@@ -2266,29 +2289,29 @@ t1393290829
 s1345
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.h
-c00000000530C0FA000000000000004AA
-t1393299360
-s1194
+c00000000530C2F4600000000000005A9
+t1393307462
+s1449
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m
-c00000000530C0FA00000000000001002
-t1393299360
-s4098
+c00000000530C42010000000000001118
+t1393312257
+s4376
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.h
-c00000000530BED500000000000000595
-t1393290576
-s1429
+c00000000530C428E00000000000002B1
+t1393312398
+s689
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m
-c00000000530BED50000000000000126B
-t1393290576
-s4715
+c00000000530C438F0000000000000BB5
+t1393312655
+s2997
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib
-c00000000530BED5000000000000043A7
-t1393290576
-s17319
+c00000000530C4F4F0000000000002887
+t1393315663
+s10375
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsManamentModel.h
 c00000000530BED50000000000000044C
@@ -2324,6 +2347,21 @@ N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 c00000000530BEE5500000000000012AB
 t1393290837
 s4779
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.h
+c00000000530C62E900000000000002F7
+t1393320681
+s759
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m
+c00000000530C684A000000000000098F
+t1393322058
+s2447
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib
+c00000000530C61F300000000000042D5
+t1393320435
+s17109
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MoreViewController.h
 c00000000530BED5000000000000000E9
@@ -2570,6 +2608,11 @@ c00000000530BED500000000000000D96
 t1393290576
 s3478
 
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/Submit.png
+c00000000530C47530000000000001A76
+t1393313619
+s6774
+
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/background.png
 c00000000530BED50000000000000196C
 t1393290576
@@ -2619,6 +2662,11 @@ N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 c00000000530BED500000000000001898
 t1393290576
 s6296
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/init.jpg
+c00000000530C3CEE0000000000002A8D
+t1393310958
+s10893
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/landButton.png
 c00000000530BED500000000000001D27
@@ -2824,6 +2872,11 @@ N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 c00000000530BED500000000000000B54
 t1393290576
 s2900
+
+N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/save.png
+c00000000530C47530000000000001861
+t1393313619
+s6241
 
 N/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/shopMangerImages/dimensional code.png
 c00000000530BED5000000000000024C7
@@ -3547,6 +3600,9 @@ r0
 CBuild AST from /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MainViewController.m
 r0
 
+CBuild AST from /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m
+r0
+
 CBuild AST from /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MoreViewController.m
 r0
 
@@ -3609,7 +3665,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9df79b5149bcb841^9d829c5149bcb841^---0#1#1#--18"Check dependencies36"5AAD0DF2-C748-4A0D-B76C-361C3B392BD6-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies793ddcca9fbcb841^aa9adcca9fbcb841^---0#1#1#--18"Check dependencies36"1E5F6341-4BB5-4D00-9F61-4CF6F2FD93A0-
 
 CCompileAssetCatalog /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app /Users/Width/Desktop/flashShopping-master/flashShopping/Images.xcassets
 s414938221.873924
@@ -4187,8 +4243,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile
 b6549E8DD-7956-47BA-A61F-2E19D5FBEFF3
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414983650.391093
-e414983650.518789
+s415007387.362748
+e415007387.506729
 r1
 xCompileC
 xBuild/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o
@@ -4199,8 +4255,8 @@ xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m234"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o flashShopping/BaseViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerab3d64e225bcb841^1ea685e225bcb841^---0#0#1#-19%DVTDocumentLocation2@127"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m0000000000000000^4381"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o flashShopping/BaseViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o36"B4B97EDC-ACD8-4C9D-9864-DFF2E19C3BF1-
-b6BA547D3-C1BD-4F7D-A3D8-609A8EB4CE14
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m234"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o flashShopping/BaseViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerc1015d9b82bcb841^dbdb819b82bcb841^---0#0#1#-19%DVTDocumentLocation2@127"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m0000000000000000^4381"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o flashShopping/BaseViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/BaseViewController.o36"A9FC57B9-53ED-4EAE-AFE5-CA89BDE4DF48-
+b51CC23B0-8C76-428C-B951-5A9874BC272F
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ChatViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/ChatViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414938201.512704
@@ -4319,8 +4375,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compil
 bE0DBC34F-F5FF-4CB0-A012-31752503879D
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414992677.338199
-e414992677.469894
+s415011946.903674
+e415011947.129934
 r1
 xCompileC
 xBuild/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o
@@ -4342,8 +4398,9 @@ d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ASIHttpRequst/ASICacheDelegate.h
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoModle.h
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m242"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4ab6562549bcb841^3d62782549bcb841^---0#0#1#-19%DVTDocumentLocation2@131"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m0000000000000000^4405"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o36"439053AF-048D-47BF-BF7E-89FD3090BDE0-
-bB53E2CCF-1D65-4B48-A753-826CE5DBDA1C
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m242"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6780e76a94bcb841^5fb6216b94bcb841^---0#0#1#-19%DVTDocumentLocation2@131"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m0000000000000000^4405"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o flashShopping/GoodInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodInfoViewController.o36"D1339FFD-0C1A-4B65-ACE3-1C3FDABB4698-
+b45AC8563-7372-4BF2-8371-AB872497938B
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodManagerViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodManagerViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414990858.079536
@@ -4387,8 +4444,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile
 b6549E8DD-7956-47BA-A61F-2E19D5FBEFF3
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414992160.620870
-e414992160.769953
+s415005057.908530
+e415005058.038460
 r1
 xCompileC
 xBuild/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o
@@ -4406,8 +4463,8 @@ d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/SDWebImage/SDWebImageManager.h
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/SDWebImage/SDWebImageDownloaderDelegate.h
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/SDWebImage/SDImageCacheDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m216"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o flashShopping/GoodsCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6f129f2047bcb841^e71bc52047bcb841^---0#0#1#-19%DVTDocumentLocation2@118"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m0000000000000000^4327"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o flashShopping/GoodsCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o36"2C167D6A-50F7-46DB-B722-892A2E332ADD-
-b99C00D19-63B4-4C61-9F6D-DA4A7C4A3EED
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m216"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o flashShopping/GoodsCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerfeb5e88179bcb841^41d8098279bcb841^---0#0#1#-19%DVTDocumentLocation2@118"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m0000000000000000^4327"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o flashShopping/GoodsCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsCell.o36"8F22DD0B-0856-41E4-A9AA-68D52D816B64-
+b221EBDE9-5995-4ABA-9A60-7B64EDEA1145
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414938175.597042
@@ -4428,8 +4485,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile
 b6549E8DD-7956-47BA-A61F-2E19D5FBEFF3
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s414983648.254789
-e414983648.748364
+s415013482.004417
+e415013482.159741
 r1
 xCompileC
 xBuild/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o
@@ -4441,9 +4498,11 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.h
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.h
-d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsManamentModel.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m248"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerbb5f41e025bcb841^b4b0bfe025bcb841^---0#0#1#-19%DVTDocumentLocation2@134"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m0000000000000000^4423"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o36"A40D944C-C762-4A21-AC55-26C83647FCE6-
-b6BA547D3-C1BD-4F7D-A3D8-609A8EB4CE14
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoModle.h
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsCell.h
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m248"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9a40016a9abcb841^9300296a9abcb841^---0#0#1#-19%DVTDocumentLocation2@134"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m0000000000000000^4423"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o flashShopping/GoodsDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o36"4716DF7C-6D16-4B1B-AFE2-67A17A057FE0-
+b76BD4FBF-A1D1-4478-8C20-8786AE16EFC8
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsManaMentViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/GoodsManaMentViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
@@ -4557,6 +4616,23 @@ d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/fl
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseNavViewController.h
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MainViewController.m234"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.o flashShopping/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilereacca5e125bcb841^b64dc9e125bcb841^---0#0#1#-19%DVTDocumentLocation2@127"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MainViewController.m0000000000000000^4381"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.o flashShopping/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MainViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MainViewController.o36"07284DEA-3B69-467E-9333-57300A796C22-
 b6BA547D3-C1BD-4F7D-A3D8-609A8EB4CE14
+
+CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s415014858.865096
+e415014858.991013
+r1
+xCompileC
+xBuild/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o
+x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.h
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m246"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o flashShopping/ModifyInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9a99ddca9fbcb841^2cd5fdca9fbcb841^---0#0#1#-19%DVTDocumentLocation2@133"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m0000000000000000^4417"CompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o flashShopping/ModifyInfoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Width/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=4.3 -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-generated-files.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-own-target-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-all-target-headers.hmap -iquote /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/flashShopping-project-headers.hmap -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources/i386 -I/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/DerivedSources -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -include /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/PrecompiledHeaders/flashShopping-Prefix-fqbmgycutuwlqtdbroguhmsvufxg/flashShopping-Prefix.pch -MMD -MT dependencies -MF /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.d --serialize-diagnostics /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.dia -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.m -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o36"1C6725D4-F312-465D-BC08-934412DF3336-
+b33813477-4117-47F4-8CB1-3E3D6DA96CE4
 
 CCompileC Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/MoreViewController.o /Users/Width/Desktop/flashShopping-master/flashShopping/MoreViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s414938176.156371
@@ -5407,13 +5483,13 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compil
 b91C30FA4-DEAA-4B44-AA18-718145470948
 
 CCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib
-s414992721.631147
-e414992721.724190
+s415005199.244331
+e415005203.259541
 r1
 xCompileXIB
 x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compiling /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib51"CompileXIB flashShopping/GoodInfoViewController.xib00ada15149bcb841^976fb95149bcb841^---0#0#1#-19%DVTDocumentLocation2@133"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib0000000000000000^913"CompileXIB flashShopping/GoodInfoViewController.xib    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 4.3 --output-format human-readable-text --compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodInfoViewController.nib /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib36"9C9F0839-567C-44C0-9FEF-964E342E1CA3-
-bF3F2EAD6-AC30-4477-9B80-89F98C6B6999
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compiling /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib51"CompileXIB flashShopping/GoodInfoViewController.xib3fa93e0f7abcb841^da7242137abcb841^---0#0#1#-19%DVTDocumentLocation2@133"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib0000000000000000^913"CompileXIB flashShopping/GoodInfoViewController.xib    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 4.3 --output-format human-readable-text --compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodInfoViewController.nib /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodInfoViewController.xib36"73408E91-009F-4135-85DC-D74475AFC2D9-
+bE3B204DC-F784-4B4D-A3F9-07E3C94B8BD6
 
 CCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodManagerViewController.xib
 s414983652.082168
@@ -5425,7 +5501,22 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Compil
 b6BA547D3-C1BD-4F7D-A3D8-609A8EB4CE14
 
 CCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib
-r0
+s415008463.656499
+e415008467.315989
+r1
+xCompileXIB
+x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Compiling /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib54"CompileXIB flashShopping/GoodsDetailViewController.xibd029a8cf86bcb841^1de550d386bcb841^---0#0#1#-19%DVTDocumentLocation2@136"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib0000000000000000^922"CompileXIB flashShopping/GoodsDetailViewController.xib    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 4.3 --output-format human-readable-text --compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/GoodsDetailViewController.nib /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/GoodsDetailViewController.xib36"D298D7BA-CE68-4F06-9121-BF63F46412FA-
+b736034F9-DB34-429D-B713-80F1978AF5E0
+
+CCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib
+s415013235.879815
+e415013238.527968
+r1
+xCompileXIB
+x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compiling /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib53"CompileXIB flashShopping/ModifyInfoViewController.xiba950e17399bcb841^672b877699bcb841^---0#0#1#-19%DVTDocumentLocation2@135"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib0000000000000000^919"CompileXIB flashShopping/ModifyInfoViewController.xib    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 4.3 --output-format human-readable-text --compile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/ModifyInfoViewController.nib /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ModifyInfoViewController.xib36"F74C345D-92D9-4225-A0E5-D49A5E8FB859-
+b0165CFE6-72BD-424F-9EF9-F3F893A7773C
 
 CCompileXIB /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/MoreViewController.xib
 r0
@@ -5600,6 +5691,16 @@ xBuild/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.png
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.png118"CpResource flashShopping/images/Remember_bg.png Build/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.pngd3fab36d74bbb841^dfa5b46d74bbb841^---0#0#1#-19%DVTDocumentLocation2@128"file://localhost/Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.png0038840bdfffdf42^651"CpResource flashShopping/images/Remember_bg.png Build/Products/Debug-iphonesimulator/flashShopping.app/Remember_bg.png    cd /Users/Width/Desktop/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/images/Remember_bg.png /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"2AEEBBA7-D839-487F-9324-8B4E2BAF7F72-
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
 
+CCpResource flashShopping/images/Submit.png Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png
+s415006719.173531
+e415006719.176987
+r1
+xCpResource
+xflashShopping/images/Submit.png
+xBuild/Products/Debug-iphonesimulator/flashShopping.app/Submit.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png108"CpResource flashShopping/images/Submit.png Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png12832cff7fbcb841^855c2dff7fbcb841^---0#0#1#-19%DVTDocumentLocation2@158"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png00382cdbddffdf42^741"CpResource flashShopping/images/Submit.png Build/Products/Debug-iphonesimulator/flashShopping.app/Submit.png    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/Submit.png /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"DE385527-DAD2-4D89-8B05-5103FFE38A4B-
+bECEE435C-E5C0-4C5F-898F-C28AF5E3694A
+
 CCpResource flashShopping/images/background.png Build/Products/Debug-iphonesimulator/flashShopping.app/background.png
 s414938217.100453
 e414938217.103850
@@ -5699,6 +5800,16 @@ xflashShopping/images/complete.png
 xBuild/Products/Debug-iphonesimulator/flashShopping.app/complete.png
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/complete.png112"CpResource flashShopping/images/complete.png Build/Products/Debug-iphonesimulator/flashShopping.app/complete.pngea91466d74bbb841^0741476d74bbb841^---0#0#1#-19%DVTDocumentLocation2@125"file://localhost/Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/complete.png0038840bdfffdf42^642"CpResource flashShopping/images/complete.png Build/Products/Debug-iphonesimulator/flashShopping.app/complete.png    cd /Users/Width/Desktop/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/images/complete.png /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"0EA3C672-42FF-47EF-A51F-8972EB5EBA91-
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
+
+CCpResource flashShopping/images/init.jpg Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg
+s415003866.678237
+e415003866.685494
+r1
+xCpResource
+xflashShopping/images/init.jpg
+xBuild/Products/Debug-iphonesimulator/flashShopping.app/init.jpg
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg104"CpResource flashShopping/images/init.jpg Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpgba85aeda74bcb841^8e92afda74bcb841^---0#0#1#-19%DVTDocumentLocation2@156"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg00382cdbddffdf42^735"CpResource flashShopping/images/init.jpg Build/Products/Debug-iphonesimulator/flashShopping.app/init.jpg    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/init.jpg /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"46CAA401-A239-4551-8894-B75E1483B28A-
+b3319509E-52F1-4CC2-89A7-43CC5FEA0563
 
 CCpResource flashShopping/images/landButton.png Build/Products/Debug-iphonesimulator/flashShopping.app/landButton.png
 s414938221.796622
@@ -6110,6 +6221,16 @@ xBuild/Products/Debug-iphonesimulator/flashShopping.app/remember.png
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/remember.png112"CpResource flashShopping/images/remember.png Build/Products/Debug-iphonesimulator/flashShopping.app/remember.pnge011b56d74bbb841^5ff0b56d74bbb841^---0#0#1#-19%DVTDocumentLocation2@125"file://localhost/Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/remember.png0038840bdfffdf42^642"CpResource flashShopping/images/remember.png Build/Products/Debug-iphonesimulator/flashShopping.app/remember.png    cd /Users/Width/Desktop/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/images/remember.png /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"2D624C78-2E5A-46D1-860B-CE18CF2B6DFE-
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
 
+CCpResource flashShopping/images/save.png Build/Products/Debug-iphonesimulator/flashShopping.app/save.png
+s415006719.185340
+e415006719.188307
+r1
+xCpResource
+xflashShopping/images/save.png
+xBuild/Products/Debug-iphonesimulator/flashShopping.app/save.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/save.png104"CpResource flashShopping/images/save.png Build/Products/Debug-iphonesimulator/flashShopping.app/save.png72892fff7fbcb841^223630ff7fbcb841^---0#0#1#-19%DVTDocumentLocation2@156"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/save.png00382cdbddffdf42^735"CpResource flashShopping/images/save.png Build/Products/Debug-iphonesimulator/flashShopping.app/save.png    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/images/save.png /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"661231DF-B44A-4F69-9F90-1FCDB08BD592-
+bECEE435C-E5C0-4C5F-898F-C28AF5E3694A
+
 CCpResource flashShopping/images/shopMangerImages/dimensional\ code.png Build/Products/Debug-iphonesimulator/flashShopping.app/dimensional\ code.png
 s414938221.735560
 e414938221.738640
@@ -6240,6 +6361,15 @@ xBuild/Products/Debug-iphonesimulator/flashShopping.app/whitePoint.png
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy Build/Products/Debug-iphonesimulator/flashShopping.app/whitePoint.png116"CpResource flashShopping/images/whitePoint.png Build/Products/Debug-iphonesimulator/flashShopping.app/whitePoint.pngf54bc06d74bbb841^f8fcc06d74bbb841^---0#0#1#-19%DVTDocumentLocation2@127"file://localhost/Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/whitePoint.png0038840bdfffdf42^648"CpResource flashShopping/images/whitePoint.png Build/Products/Debug-iphonesimulator/flashShopping.app/whitePoint.png    cd /Users/Width/Desktop/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Width/Desktop/flashShopping-master/flashShopping/images/whitePoint.png /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"C9F38931-77A4-4932-BE85-0DF3CDA246DA-
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
 
+CCpResource flashShopping/images/图片加载中.jpg Build/Products/Debug-iphonesimulator/flashShopping.app/图片加载中.jpg
+r0
+
+CCpResource flashShopping/images/按钮a1.png Build/Products/Debug-iphonesimulator/flashShopping.app/按钮a1.png
+r0
+
+CCpResource flashShopping/images/按钮a2.png Build/Products/Debug-iphonesimulator/flashShopping.app/按钮a2.png
+r0
+
 CGenerateDSYMFile /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping
 s414938222.198717
 e414938222.343546
@@ -6251,14 +6381,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Genera
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
 
 CGenerateDSYMFile /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping
-s414992677.609889
-e414992677.718562
+s415014859.154234
+e415014859.272250
 r1
 xGenerateDSYMFile
 x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM
 x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Generate /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM145"GenerateDSYMFile Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping44369c2549bcb841^73f5b72549bcb841^---0#0#1#-19%DVTDocumentLocation2@153"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM/0000000000000000^811"GenerateDSYMFile Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM36"B99F7FD5-A6AA-4212-9DA7-BDB5B6DBB138-
-bB53E2CCF-1D65-4B48-A753-826CE5DBDA1C
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Generate /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM145"GenerateDSYMFile Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM Build/Products/Debug-iphonesimulator/flashShopping.app/flashShoppingfb9027cb9fbcb841^19ca45cb9fbcb841^---0#0#1#-19%DVTDocumentLocation2@153"file://localhost/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM/0000000000000000^811"GenerateDSYMFile Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app.dSYM36"2A95006D-35EB-4C18-B5C0-B4826D07B7D6-
+b33813477-4117-47F4-8CB1-3E3D6DA96CE4
 
 CLd /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i386
 s414938216.960823
@@ -6375,8 +6505,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Link /
 b7102793E-23AD-4572-AE1D-A4563BCE90EE
 
 CLd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i386
-s414992677.481003
-e414992677.586290
+s415014859.002050
+e415014859.130082
 r1
 xLd
 x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping
@@ -6384,6 +6514,7 @@ xnormal
 xi386
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping.LinkFileList
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ModifyInfoViewController.o
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/EGORefreshTableHeaderView.o
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/ASIAuthenticationDialog.o
 d/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/GoodsDetailViewController.o
@@ -6434,14 +6565,13 @@ d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -6463,6 +6593,7 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
 d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
 d/usr/lib/system/libcache.dylib
 d/usr/lib/system/libcommonCrypto.dylib
@@ -6484,8 +6615,8 @@ d/usr/lib/system/libsystem_notify.dylib
 d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Link /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping83"Ld Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i3861d3c7b2549bcb841^8621962549bcb841^---0#0#1#--1763"Ld Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i386    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -filelist /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.3 -lz -framework CoreGraphics -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping_dependency_info.dat -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping36"D4E73DA9-F898-437A-AF47-CD57ADA2A004-
-bB53E2CCF-1D65-4B48-A753-826CE5DBDA1C
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Link /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping83"Ld Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i386d3a000cb9fbcb841^b14e21cb9fbcb841^---0#0#1#--1763"Ld Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping normal i386    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -F/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator -filelist /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=4.3 -lz -framework CoreGraphics -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Intermediates/flashShopping.build/Debug-iphonesimulator/flashShopping.build/Objects-normal/i386/flashShopping_dependency_info.dat -o /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/flashShopping36"56EAB41D-310F-458A-9D2C-DF242686CC3F-
+b33813477-4117-47F4-8CB1-3E3D6DA96CE4
 
 CProcessInfoPlistFile /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app/Info.plist /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-Info.plist
 s414938222.185370
@@ -6587,11 +6718,11 @@ CTouch /Users/Width/Desktop/flashShopping-master/Build/Products/Debug-iphonesimu
 r0
 
 CTouch /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app
-s414990305.234112
-e414990305.242173
+s415011950.413897
+e415011950.422761
 r1
 xTouch
 x/Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Touch /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app60"Touch Build/Products/Debug-iphonesimulator/flashShopping.app19023ce13fbcb841^1e163ee13fbcb841^---0#0#1#--494"Touch Build/Products/Debug-iphonesimulator/flashShopping.app    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"B185A9F6-3062-4F06-A1A7-3A033857313D-
-b0E7FEA89-406E-4E8B-818E-FB4F660D2D2E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Touch /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app60"Touch Build/Products/Debug-iphonesimulator/flashShopping.appc0086a6e94bcb841^0c3b6c6e94bcb841^---0#0#1#--494"Touch Build/Products/Debug-iphonesimulator/flashShopping.app    cd /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/Build/Products/Debug-iphonesimulator/flashShopping.app36"90D6BAB4-2965-4753-8125-F4A2C33C32A8-
+b45AC8563-7372-4BF2-8371-AB872497938B
 

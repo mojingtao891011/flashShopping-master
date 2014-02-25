@@ -11,6 +11,7 @@
 #import "RequestNetwork.h"
 #import "GoodInfoModle.h"
 #import "GoodsCell.h"
+#import "GoodsDetailViewController.h"
 
 @interface GoodInfoViewController ()<UITableViewDataSource , UITableViewDelegate , UITextFieldDelegate>
 {
@@ -79,6 +80,13 @@
     goodCell.goodsModel = goodInfoModle ;
     return goodCell ;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d",indexPath.row);
+    GoodsDetailViewController *goodsDetaiView = [[GoodsDetailViewController alloc]init];
+    goodsDetaiView.goodsModel = dataArr[indexPath.row];
+    [self.navigationController pushViewController:goodsDetaiView animated:YES];
+}
 #pragma mark-----NSNotificationCenter
 - (void)returnPreviousView
 {
@@ -103,8 +111,7 @@
         [dataArr addObject:gInfoModle];
     }
     [goodTableView reloadData];
-    GoodInfoModle *modle = dataArr[0];
-    NSLog(@"%@",modle.name);
+    
 }
 #pragma mark-----UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -116,7 +123,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 - (IBAction)searchButton:(id)sender {

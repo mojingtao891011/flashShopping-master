@@ -36,7 +36,7 @@
     self.navigationItem.titleView = _titleLabel;
     
 	//背景图片
-    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+   // self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
     if (self.navigationController.viewControllers.count > 1) {
         //自定义ButtonItem
