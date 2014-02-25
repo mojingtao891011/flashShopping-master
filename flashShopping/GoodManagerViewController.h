@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface ShopManagerViewController : BaseViewController
+@interface GoodManagerViewController : BaseViewController
 
 @end

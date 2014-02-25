@@ -148,6 +148,6 @@
 }
 - (void)returnAction
 {
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"return" object:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"returnPreviousView" object:nil];
 }
 @end

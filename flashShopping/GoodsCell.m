@@ -38,13 +38,9 @@
 - (void)_initSunView
 {
    
-   // _goodsModel = [[ShopInfoModle alloc]init];
     //图片
     _goodsImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_goodsImgView];
-     //出售中
-    _sellStatusLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-   // [self.contentView addSubview:_sellStatusLabel];
     //商品描述
     _directionsLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_directionsLabel];
@@ -70,16 +66,9 @@
     [_goodsImgView setFrame:CGRectMake(10, 10, 80, 80)];
     [_goodsImgView setImageWithURL:[NSURL URLWithString:_goodsModel.viewUrl] placeholderImage:[UIImage imageNamed:@"testImg1"]];
     
-    //出售中
-    [_sellStatusLabel setFrame:CGRectMake(_goodsImgView.right, _goodsImgView.top, 0, 0)];
-    _sellStatusLabel.textColor = [UIColor redColor];
-    _sellStatusLabel.backgroundColor = [UIColor clearColor];
-    _sellStatusLabel.text = @"[出售中]";
-    [_sellStatusLabel sizeToFit];
-
     //商品描述
     CGSize size = [_goodsModel.name sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:CGSizeMake( 100 , 300) lineBreakMode:NSLineBreakByCharWrapping];
-    [_directionsLabel setFrame:CGRectMake(_goodsImgView.right,  5,  self.width - _goodsImgView.right , size.height - 15)];
+    [_directionsLabel setFrame:CGRectMake(_goodsImgView.right,  5,  self.width - _goodsImgView.right , size.height - 15 )];
     _directionsLabel.numberOfLines = 0 ;
     _directionsLabel.backgroundColor = [UIColor clearColor];
     _directionsLabel.text = [NSString stringWithFormat:@"[出售中]%@",_goodsModel.name];
@@ -96,7 +85,7 @@
     
     //价格
     [_priceMoneyLabel setFrame:CGRectMake(_priceLabel.right, _directionsLabel.bottom, 0, 0)];
-    _priceMoneyLabel.text = [NSString stringWithFormat:@"%@",_goodsModel.unitprice];
+    _priceMoneyLabel.text = [NSString stringWithFormat:@"%@",_goodsModel.price];
     _priceMoneyLabel.textColor = [UIColor redColor];
     _priceMoneyLabel.backgroundColor = [UIColor clearColor];
     [_priceMoneyLabel sizeToFit];
@@ -109,7 +98,7 @@
 
     //库存数量
     [_numNumberabel setFrame:CGRectMake(_numLabel.right, _priceLabel.bottom, 0, 0)];
-    _numNumberabel.text = [NSString stringWithFormat:@"%@",_goodsModel.quantity] ;
+    _numNumberabel.text = [NSString stringWithFormat:@"%@",_goodsModel.num] ;
     _numNumberabel.backgroundColor = [UIColor clearColor];
     [_numNumberabel sizeToFit];
     

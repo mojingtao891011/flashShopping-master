@@ -6,16 +6,16 @@
 //  Copyright (c) 2014年 chinawidth. All rights reserved.
 //
 
-#import "ShopManagerViewController.h"
+#import "GoodManagerViewController.h"
+#import "GoodInfoViewController.h"
 
-
-@interface ShopManagerViewController ()
+@interface GoodManagerViewController ()
 //店铺管理菜单
 - (void)creatShopManagerButton;
 
 @end
 
-@implementation ShopManagerViewController
+@implementation GoodManagerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,7 @@
     self.titleLabel.text = @"店铺管理";
     [self creatShopManagerButton];//店铺管理菜单
     
-   
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -82,8 +82,8 @@
     }
     else if (button.tag == 123)
     {
-//        GoodsManamentViewController *goodsManamentView = [[GoodsManamentViewController alloc]init];
-//        [self.navigationController pushViewController:goodsManamentView animated:YES];
+        GoodInfoViewController *goodsManamentView = [[GoodInfoViewController alloc]init];
+        [self.navigationController pushViewController:goodsManamentView animated:YES];
     }
 }
 #pragma mark-----Memory

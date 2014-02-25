@@ -8,7 +8,7 @@
 
 #import "BaseTableView.h"
 #import "OrderManagerDataModle.h"
-#import "ShopInfoModle.h"
+
 
 @implementation BaseTableView
 

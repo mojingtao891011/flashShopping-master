@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "ShopMvoingViewController.h"
-#import "ShopManagerViewController.h"
+#import "GoodManagerViewController.h"
 #import "ChatViewController.h"
 #import "MoreViewController.h"
 #import "BaseNavViewController.h"
@@ -51,7 +51,7 @@
     
     //初始化视图控制器
     ShopMvoingViewController *shopMoveView=[[ShopMvoingViewController alloc]init];
-    ShopManagerViewController *shopManagerView=[[ShopManagerViewController alloc]init];
+    GoodManagerViewController *shopManagerView=[[GoodManagerViewController alloc]init];
     ChatViewController *chatView=[[ChatViewController alloc]init];
     MoreViewController *moreView=[[MoreViewController alloc]init];
     

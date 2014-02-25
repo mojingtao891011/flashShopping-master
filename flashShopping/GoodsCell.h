@@ -16,17 +16,16 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "ShopInfoModle.h"
+#import "GoodInfoModle.h"
 
 @interface GoodsCell : UITableViewCell
 
 @property ( nonatomic , retain )UIImageView         *goodsImgView;                      //商品图片
-@property ( nonatomic , retain )UILabel                   *sellStatusLabel;                      //出售状态
 @property ( nonatomic , retain )UILabel                   *directionsLabel;                     //商品描述
 @property ( nonatomic , retain ) UILabel                   *priceLabel;                             //价格（字体）
 @property ( nonatomic , retain ) UILabel                   *priceMoneyLabel;                  //价格
 @property ( nonatomic , retain ) UILabel                   *numLabel;                               //库存 （字体）
 @property ( nonatomic , retain ) UILabel                   *numNumberabel;                   //库存
-@property (nonatomic , retain )ShopInfoModle        *goodsModel ;                   //数据模型
+@property (nonatomic , retain )GoodInfoModle        *goodsModel ;                   //数据模型
 
 @end
