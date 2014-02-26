@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ChatViewController.m \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/ChatViewController.h \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/BaseViewController.h \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/PullNenu.h
+  /Users/Width/Downloads/flashShopping-master/flashShopping/ChatViewController.m \
+  /Users/Width/Downloads/flashShopping-master/flashShopping/ChatViewController.h \
+  /Users/Width/Downloads/flashShopping-master/flashShopping/BaseViewController.h \
+  /Users/Width/Downloads/flashShopping-master/flashShopping/PullNenu.h

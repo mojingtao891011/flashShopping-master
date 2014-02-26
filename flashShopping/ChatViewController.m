@@ -33,7 +33,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"闪聊";
-
+    
+    NSLog(@"weilei_test");
+    
     [self post];
     
    
