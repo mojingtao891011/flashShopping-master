@@ -27,6 +27,10 @@
 		E217F30F1882454B0095CEA3 /* 04-按钮h.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2FC1882454B0095CEA3 /* 04-按钮h.png */; };
 		E217F3101882454B0095CEA3 /* 04-按钮i.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2FD1882454B0095CEA3 /* 04-按钮i.png */; };
 		E225EA5C18AA044A0098F2C6 /* PullNenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E225EA5B18AA044A0098F2C6 /* PullNenu.m */; };
+		E22F781418BDC02500F9F0C6 /* LogisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F781218BDC02500F9F0C6 /* LogisticViewController.m */; };
+		E22F781518BDC02500F9F0C6 /* LogisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22F781318BDC02500F9F0C6 /* LogisticViewController.xib */; };
+		E22F781818BDD87600F9F0C6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E22F781618BDD87600F9F0C6 /* icon.png */; };
+		E22F781918BDD87600F9F0C6 /* icon@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E22F781718BDD87600F9F0C6 /* icon@x2.png */; };
 		E230F041187E30C1009A0479 /* cellbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E230F040187E30C1009A0479 /* cellbackground.png */; };
 		E230F050187E70D3009A0479 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E230F046187E70D3009A0479 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E230F051187E70D3009A0479 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E230F048187E70D3009A0479 /* blackArrow.png */; };
@@ -167,6 +171,11 @@
 		E217F2FD1882454B0095CEA3 /* 04-按钮i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-按钮i.png"; sourceTree = "<group>"; };
 		E225EA5A18AA044A0098F2C6 /* PullNenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullNenu.h; sourceTree = "<group>"; };
 		E225EA5B18AA044A0098F2C6 /* PullNenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullNenu.m; sourceTree = "<group>"; };
+		E22F781118BDC02500F9F0C6 /* LogisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticViewController.h; sourceTree = "<group>"; };
+		E22F781218BDC02500F9F0C6 /* LogisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticViewController.m; sourceTree = "<group>"; };
+		E22F781318BDC02500F9F0C6 /* LogisticViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogisticViewController.xib; sourceTree = "<group>"; };
+		E22F781618BDD87600F9F0C6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E22F781718BDD87600F9F0C6 /* icon@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@x2.png"; sourceTree = "<group>"; };
 		E230F040187E30C1009A0479 /* cellbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellbackground.png; sourceTree = "<group>"; };
 		E230F045187E70D3009A0479 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		E230F046187E70D3009A0479 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
@@ -445,7 +454,6 @@
 		E249F596187549E900462E6B = {
 			isa = PBXGroup;
 			children = (
-				E24AC18C1887DED900AF86F1 /* PublicModel */,
 				E249F5A8187549E900462E6B /* flashShopping */,
 				E249F5A1187549E900462E6B /* Frameworks */,
 				E249F5A0187549E900462E6B /* Products */,
@@ -478,6 +486,7 @@
 		E249F5A8187549E900462E6B /* flashShopping */ = {
 			isa = PBXGroup;
 			children = (
+				E24AC18C1887DED900AF86F1 /* PublicModel */,
 				E24AC17B18876FDB00AF86F1 /* DataModel */,
 				E2480971187FCF2E00046EB7 /* landView */,
 				E2929E831876970A007CE3C7 /* thirdSourceLibrary */,
@@ -548,6 +557,9 @@
 				E250879118BC7A7D005350DE /* ModifyInfoViewController.h */,
 				E250879218BC7A7D005350DE /* ModifyInfoViewController.m */,
 				E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */,
+				E22F781118BDC02500F9F0C6 /* LogisticViewController.h */,
+				E22F781218BDC02500F9F0C6 /* LogisticViewController.m */,
+				E22F781318BDC02500F9F0C6 /* LogisticViewController.xib */,
 			);
 			name = shopManager;
 			sourceTree = "<group>";
@@ -578,6 +590,8 @@
 		E249F5F318754FD800462E6B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E22F781618BDD87600F9F0C6 /* icon.png */,
+				E22F781718BDD87600F9F0C6 /* icon@x2.png */,
 				E250878F18BC74AF005350DE /* init.jpg */,
 				E26BFB3F1890F469001401F3 /* pen.png */,
 				E280A3A61882798E00D67265 /* logisticsButton.png */,
@@ -637,7 +651,6 @@
 				E225EA5B18AA044A0098F2C6 /* PullNenu.m */,
 			);
 			name = PublicModel;
-			path = flashShopping;
 			sourceTree = "<group>";
 		};
 		E265B687187B98B700B7CA13 /* orderManager */ = {
@@ -840,6 +853,7 @@
 				E230F052187E70D3009A0479 /* blackArrow@2x.png in Resources */,
 				E244FA3B187D521F005DFF26 /* lastCell.png in Resources */,
 				E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */,
+				E22F781518BDC02500F9F0C6 /* LogisticViewController.xib in Resources */,
 				E217F3031882454B0095CEA3 /* 03-顶部.png in Resources */,
 				E217F3051882454B0095CEA3 /* 03-顶部d.png in Resources */,
 				E249F5E018754B0A00462E6B /* ShopMvoingViewController.xib in Resources */,
@@ -886,11 +900,13 @@
 				E265B698187B98B700B7CA13 /* searchButton.png in Resources */,
 				E2929E35187654E3007CE3C7 /* noShop_manger.png in Resources */,
 				E230F068187E9607009A0479 /* buttom_shopMoving.png in Resources */,
+				E22F781918BDD87600F9F0C6 /* icon@x2.png in Resources */,
 				E230F06B187E9607009A0479 /* chat_bg.png in Resources */,
 				E217F2FF1882454B0095CEA3 /* orderNunmber_b.png in Resources */,
 				E230F058187E70D3009A0479 /* whiteArrow@2x.png in Resources */,
 				E230F066187E9607009A0479 /* buttom_shopManager.png in Resources */,
 				E2480969187FCE8400046EB7 /* landLogo.jpg in Resources */,
+				E22F781818BDD87600F9F0C6 /* icon.png in Resources */,
 				E2480970187FCE8400046EB7 /* landButton.png in Resources */,
 				E230F055187E70D3009A0479 /* grayArrow.png in Resources */,
 				E265B6A4187B98B700B7CA13 /* pullDownButton.png in Resources */,
@@ -916,6 +932,7 @@
 				E250879418BC7A7D005350DE /* ModifyInfoViewController.m in Sources */,
 				E230F050187E70D3009A0479 /* EGORefreshTableHeaderView.m in Sources */,
 				E26BFB23188F52E7001401F3 /* ASIAuthenticationDialog.m in Sources */,
+				E22F781418BDC02500F9F0C6 /* LogisticViewController.m in Sources */,
 				E26BFB3D1890E299001401F3 /* GoodsDetailViewController.m in Sources */,
 				E298362B18BB4A8C00B1DB2C /* SDWebImagePrefetcher.m in Sources */,
 				E26BFB39188F5B2F001401F3 /* RequestNetwork.m in Sources */,

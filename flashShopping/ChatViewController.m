@@ -8,9 +8,11 @@
 
 #import "ChatViewController.h"
 #import "PullNenu.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 
-@interface ChatViewController ()<NSURLConnectionDelegate>
+@interface ChatViewController ()<NSURLConnectionDelegate , ASIHTTPRequestDelegate>
 {
     UITableView *testView ;
     NSMutableData *receiveData ;
@@ -34,33 +36,31 @@
     self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"闪聊";
     
-    NSLog(@"weilei_test");
     
-    [self post];
+     NSString *postString =@"{\"actionCode\":\"441\",\"appType\":\"json\",\"companyId\":\"00000101\"}";
+    [self post:postString];
     
    
 }
-- (void)post
+- (void)post:(NSString*)postString
 {
    // http://192.168.1.16:8080/Assistant/app
    // NSString *postString =@"{\"companyId\":\"\",\"createDate\":\"\",\"descs\":\"\",\"goodsCode\":\"\",\"id\":\"\",\"limit\":10,\"marketPrice\":\"\",\"merchantCode\":\"\",\"name\":\"\",\"num\":\"\",\"page\":1,\"price\":\"\",\"productId\":\"\",\"sellCount\":\"\",\"state\":\"\"}";
-    NSString *postString =@"{\"actionCode\":\"21\",\"appType\":\"json\",\"companyId\":\"00000101\",\"username\":\"shanghu2\",\"password\":\"ak47\"}";
+   
     
     NSURL *url = [NSURL URLWithString:
                   @"http://192.168.1.83:9000/Assistant/app"];//http://192.168.1.83:9000
                   NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-                  NSString *msgLength = [NSString stringWithFormat:@"%d", [postString length]];
-                  [req addValue:@"application/html"
+                [req addValue:@"application/json"
              forHTTPHeaderField:@"Content-Type"];
-                  [req addValue:msgLength forHTTPHeaderField:@"Content-Length"];
                   [req setHTTPMethod:@"POST"];
-                  [req setHTTPBody: [postString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    
+
+                 [req setHTTPBody: [postString dataUsingEncoding:NSUTF8StringEncoding]];
                 NSURLConnection  *conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
                   if (conn) {    
                       receiveData = [NSMutableData new];
                   }
+    
 }
 //接收到服务器回应的时候调用此方法
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -78,8 +78,9 @@
 //数据传完之后调用此方法
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSString *receiveStr = [[NSString alloc]initWithData:receiveData encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",receiveStr);
+   // NSString *receiveStr = [[NSString alloc]initWithData:receiveData encoding:NSUTF8StringEncoding];
+    id json = [NSJSONSerialization JSONObjectWithData:receiveData options: NSJSONReadingMutableContainers error:Nil];
+    NSLog(@">>%@",json);
 }
 //网络请求过程中，出现任何错误（断网，连接超时等）会进入此方法
 -(void)connection:(NSURLConnection *)connection
@@ -101,5 +102,49 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)requestNetwork:(NSString*)postString
+{
+    NSLog(@"ok>>>>>");
+        NSURL *url = [NSURL URLWithString:
+                  @"http://192.168.1.83:9000/Assistant/app"];
+    //NSString *postString =@"{\"companyId\":\"\",\"createDate\":\"\",\"descs\":\"\",\"goodsCode\":\"\",\"id\":\"\",\"limit\":10,\"marketPrice\":\"\",\"merchantCode\":\"\",\"name\":\"\",\"num\":\"\",\"page\":1,\"price\":\"\",\"productId\":\"\",\"sellCount\":\"\",\"state\":\"\"}";
 
+    ASIFormDataRequest  *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+     NSString *msgLength = [NSString stringWithFormat:@"%d", [postString length]];
+    [request addRequestHeader:@"application/json" value:@"Content-Type"];
+    [request addRequestHeader:@"Content-Length" value: msgLength];
+    [request setRequestMethod:@"POST"];
+    [request appendPostData:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    [request startSynchronous];
+    
+
+}
+- (void)requestStarted:(ASIHTTPRequest *)request
+{
+     receiveData = [NSMutableData new];
+    NSLog(@"%s",__func__);
+}
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSLog(@"%s",__func__);
+    NSString *receiveStr = [[NSString alloc]initWithData:receiveData encoding:NSUTF8StringEncoding];
+    NSLog(@">>><<<%@",receiveStr);
+}
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+    NSLog(@"%s",__func__);
+}
+- (void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data
+{
+    NSLog(@"%s",__func__);
+    [receiveData appendData:data];
+}
+
+
+- (IBAction)edition:(id)sender {
+    NSString *postString = @"{\"actionCode\":\"442\",\"appType\":\"json\",\"companyId\":\"00000101\",\"Id\":\"102884\",\"goodsId\":\"T32391K\",\"isUp\":\"1\"}";
+    [self requestNetwork:postString];
+}
 @end

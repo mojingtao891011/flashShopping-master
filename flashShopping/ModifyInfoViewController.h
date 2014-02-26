@@ -15,5 +15,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodCodeTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodPriceTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodNumTextField;
-
+@property ( nonatomic , copy )NSString *Id ;
+- (IBAction)selectButton:(id)sender;
 @end

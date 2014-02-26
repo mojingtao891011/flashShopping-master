@@ -17,5 +17,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *edPrice;
 @property (strong, nonatomic) IBOutlet UITableViewCell *edInfoCell;
 - (IBAction)ModifyInfoButton:(id)sender;
+- (IBAction)logisticInfo:(id)sender;
 
 @end

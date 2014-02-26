@@ -95,6 +95,7 @@
 - (void)netDataNotification:(NSNotification*)note
 {
     id json =  [NSJSONSerialization JSONObjectWithData:[note object] options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@">>>>%@",json);
     NSArray *jsonArr = json[@"content"];
     for (NSDictionary *dict in jsonArr) {
         GoodInfoModle *gInfoModle = [GoodInfoModle new];

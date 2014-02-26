@@ -9,6 +9,7 @@
 #import "GoodsDetailViewController.h"
 #import "GoodsCell.h"
 #import "ModifyInfoViewController.h"
+#import "LogisticViewController.h"
 
 @interface GoodsDetailViewController ()
 {
@@ -84,9 +85,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark---customModth
 - (IBAction)ModifyInfoButton:(id)sender {
     ModifyInfoViewController *ModifyInfoView = [[ModifyInfoViewController alloc]init];
+    ModifyInfoView.Id = _goodsModel.Id ;
     [self.navigationController pushViewController:ModifyInfoView animated:YES];
+}
+
+- (IBAction)logisticInfo:(id)sender {
+    LogisticViewController *logisticInfoView = [[LogisticViewController alloc]init];
+    [self.navigationController pushViewController:logisticInfoView animated:YES];
 }
 @end

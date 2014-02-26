@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Width/Downloads/flashShopping-master/flashShopping/main.m \
-  /Users/Width/Downloads/flashShopping-master/flashShopping/AppDelegate.h
+  /Users/Width/Desktop/flashShopping-master/flashShopping/main.m \
+  /Users/Width/Desktop/flashShopping-master/flashShopping/AppDelegate.h

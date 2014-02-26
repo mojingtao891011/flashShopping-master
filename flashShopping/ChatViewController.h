@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface ChatViewController : BaseViewController
+- (IBAction)edition:(id)sender;
 
 @end

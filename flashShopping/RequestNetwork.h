@@ -15,5 +15,5 @@
 
 + (RequestNetwork*)shareManager;                    //单例
 - (void)requestNetwork:(NSString*)postString ;    //post 参数
-
+- (void)requestNetworks:(NSDictionary*)dict ;    //post 参数
 @end

@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/Width/Downloads/flashShopping-master/flashShopping/UIViewExt.m
+  /Users/Width/Desktop/flashShopping-master/flashShopping/UIViewExt.m

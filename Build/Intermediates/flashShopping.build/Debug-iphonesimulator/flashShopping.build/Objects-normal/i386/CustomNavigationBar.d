@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Width/Downloads/flashShopping-master/flashShopping/CustomNavigationBar.m \
-  /Users/Width/Downloads/flashShopping-master/flashShopping/CustomNavigationBar.h
+  /Users/Width/Desktop/flashShopping-master/flashShopping/CustomNavigationBar.m \
+  /Users/Width/Desktop/flashShopping-master/flashShopping/CustomNavigationBar.h

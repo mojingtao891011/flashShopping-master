@@ -7,6 +7,7 @@
 //
 
 #import "ModifyInfoViewController.h"
+#import "RequestNetwork.h"
 
 @interface ModifyInfoViewController ()
 
@@ -49,11 +50,6 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(defaultFrame:) name:UIKeyboardWillHideNotification object:Nil];
 }
-#pragma mark---customModth
-- (void)saveModifyInfo
-{
-    NSLog(@"sb");
-}
 #pragma mark---UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -81,5 +77,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark---customModth
+- (void)saveModifyInfo
+{
+    NSLog(@"%@",_Id);
+   
+}
 
+- (IBAction)selectButton:(id)sender {
+    UIButton *selectButton = (UIButton*)sender ;
+    for (id button in _bodyView.subviews) {
+        if ([button isKindOfClass:[UIButton class]]) {
+            [button setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
+        }
+    }
+        [selectButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
+}
 @end
