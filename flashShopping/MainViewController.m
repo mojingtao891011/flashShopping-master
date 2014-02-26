@@ -103,6 +103,8 @@
     }
     self.selectedIndex=button.tag-100;
     button.selected=YES;
+    
+    NSLog(@"========dfsfoen ldvo 123456789odsnvodnewir ========");
 }
 
 //是否要显示BarItem
