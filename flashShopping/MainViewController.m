@@ -43,7 +43,7 @@
     [self _initView];
     
     [self customItemBar];
-	
+	NSLog(@"================");
 }
 
 //初始化MainViewController管理的4个ViewController；
