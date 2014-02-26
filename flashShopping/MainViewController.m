@@ -90,7 +90,7 @@
         
         [barView addSubview:itemButton];
     }
-    
+    NSLog(@"========dfsfoen ldvo odsnvodnewir ========");
 }
 
 //ViewController视图之间的切换
