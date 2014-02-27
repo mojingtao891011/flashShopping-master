@@ -10,10 +10,12 @@
 #import "ASIFormDataRequest.h"
 
 @interface RequestNetwork : NSObject < ASIHTTPRequestDelegate , NSURLConnectionDataDelegate>
-
+{
+    NSString *noteName ;
+}
 @property ( nonatomic , retain ) NSMutableData *receiveData ;
 
 + (RequestNetwork*)shareManager;                    //单例
-- (void)requestNetwork:(NSString*)postString ;    //post 参数
-- (void)requestNetworks:(NSDictionary*)dict ;    //post 参数
+- (void)requestNetwork:(NSString*)postString noteName:(NSString*)n_name;    //post 参数
+
 @end

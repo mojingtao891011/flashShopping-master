@@ -25,5 +25,7 @@
 @property ( nonatomic , copy )NSString      *viewUrl ;                  //缩略图路径
 @property ( nonatomic , copy )NSString      *price ;                      //闪购价
 @property ( nonatomic , copy )NSString      *num ;                       //库存
+@property ( nonatomic , copy )NSString      *isUp ;                        //是否上架、0 未上架、1 已上架
 
+//@property ( nonatomic , copy )NSString      *hasNext ;                  //是否有下一页
 @end

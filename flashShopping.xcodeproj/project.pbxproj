@@ -121,6 +121,10 @@
 		E280A3A71882798E00D67265 /* logisticsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E280A3A61882798E00D67265 /* logisticsButton.png */; };
 		E280A3AF1882824F00D67265 /* redPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = E280A3AD1882824F00D67265 /* redPoint.png */; };
 		E280A3B01882824F00D67265 /* whitePoint.png in Resources */ = {isa = PBXBuildFile; fileRef = E280A3AE1882824F00D67265 /* whitePoint.png */; };
+		E28E5E6E18BF44C900D450AF /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E5E6918BF44C900D450AF /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E28E5E6F18BF44C900D450AF /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E5E6B18BF44C900D450AF /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E28E5E7018BF44C900D450AF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E5E6D18BF44C900D450AF /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E28E5E7318BF45AB00D450AF /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E5E7218BF45AB00D450AF /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E2929E2718764A76007CE3C7 /* startPage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2929E2618764A76007CE3C7 /* startPage.jpg */; };
 		E2929E32187654E3007CE3C7 /* dimensional code.png in Resources */ = {isa = PBXBuildFile; fileRef = E2929E2A187654E3007CE3C7 /* dimensional code.png */; };
 		E2929E33187654E3007CE3C7 /* logistics_Manager.png in Resources */ = {isa = PBXBuildFile; fileRef = E2929E2B187654E3007CE3C7 /* logistics_Manager.png */; };
@@ -147,6 +151,8 @@
 		E2D2AB081888BDF4002F8D66 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D2AB071888BDF4002F8D66 /* UIViewExt.m */; };
 		E2D2AB0D1888D34C002F8D66 /* GoodsManamentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D2AB0C1888D34C002F8D66 /* GoodsManamentModel.m */; };
 		E2D2AB0F1888F3D0002F8D66 /* pullViewbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D2AB0E1888F3D0002F8D66 /* pullViewbackground.png */; };
+		E2E129E518BF2191004D74E0 /* NoGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E129E318BF2191004D74E0 /* NoGoodViewController.m */; };
+		E2E129E618BF2191004D74E0 /* NoGoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +306,14 @@
 		E280A3A61882798E00D67265 /* logisticsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logisticsButton.png; sourceTree = "<group>"; };
 		E280A3AD1882824F00D67265 /* redPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redPoint.png; sourceTree = "<group>"; };
 		E280A3AE1882824F00D67265 /* whitePoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitePoint.png; sourceTree = "<group>"; };
+		E28E5E6818BF44C900D450AF /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		E28E5E6918BF44C900D450AF /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		E28E5E6A18BF44C900D450AF /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		E28E5E6B18BF44C900D450AF /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		E28E5E6C18BF44C900D450AF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E28E5E6D18BF44C900D450AF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E28E5E7118BF45AB00D450AF /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		E28E5E7218BF45AB00D450AF /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
 		E2929E2618764A76007CE3C7 /* startPage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startPage.jpg; sourceTree = "<group>"; };
 		E2929E2A187654E3007CE3C7 /* dimensional code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dimensional code.png"; sourceTree = "<group>"; };
 		E2929E2B187654E3007CE3C7 /* logistics_Manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logistics_Manager.png; sourceTree = "<group>"; };
@@ -342,6 +356,9 @@
 		E2D2AB0B1888D34C002F8D66 /* GoodsManamentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsManamentModel.h; sourceTree = "<group>"; };
 		E2D2AB0C1888D34C002F8D66 /* GoodsManamentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsManamentModel.m; sourceTree = "<group>"; };
 		E2D2AB0E1888F3D0002F8D66 /* pullViewbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullViewbackground.png; sourceTree = "<group>"; };
+		E2E129E218BF2191004D74E0 /* NoGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoGoodViewController.h; sourceTree = "<group>"; };
+		E2E129E318BF2191004D74E0 /* NoGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoGoodViewController.m; sourceTree = "<group>"; };
+		E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoGoodViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,20 +563,10 @@
 				E249F5E118754B4600462E6B /* GoodManagerViewController.h */,
 				E249F5E218754B4600462E6B /* GoodManagerViewController.m */,
 				E249F5E318754B4600462E6B /* GoodManagerViewController.xib */,
-				E250878718BC25AD005350DE /* GoodInfoViewController.h */,
-				E250878818BC25AD005350DE /* GoodInfoViewController.m */,
-				E250878918BC25AD005350DE /* GoodInfoViewController.xib */,
-				E2C4E109188D3A5600A94FA2 /* GoodsCell.h */,
-				E2C4E10A188D3A5600A94FA2 /* GoodsCell.m */,
-				E26BFB3A1890E299001401F3 /* GoodsDetailViewController.h */,
-				E26BFB3B1890E299001401F3 /* GoodsDetailViewController.m */,
-				E26BFB3C1890E299001401F3 /* GoodsDetailViewController.xib */,
-				E250879118BC7A7D005350DE /* ModifyInfoViewController.h */,
-				E250879218BC7A7D005350DE /* ModifyInfoViewController.m */,
-				E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */,
-				E22F781118BDC02500F9F0C6 /* LogisticViewController.h */,
-				E22F781218BDC02500F9F0C6 /* LogisticViewController.m */,
-				E22F781318BDC02500F9F0C6 /* LogisticViewController.xib */,
+				E2E129E218BF2191004D74E0 /* NoGoodViewController.h */,
+				E2E129E318BF2191004D74E0 /* NoGoodViewController.m */,
+				E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */,
+				E2E129E118BF20E0004D74E0 /* allGoodInfo */,
 			);
 			name = shopManager;
 			sourceTree = "<group>";
@@ -722,6 +729,21 @@
 			name = modifyPrice;
 			sourceTree = "<group>";
 		};
+		E28E5E6718BF44C900D450AF /* json */ = {
+			isa = PBXGroup;
+			children = (
+				E28E5E7118BF45AB00D450AF /* SBJsonStreamWriterState.h */,
+				E28E5E7218BF45AB00D450AF /* SBJsonStreamWriterState.m */,
+				E28E5E6818BF44C900D450AF /* SBJsonStreamWriter.h */,
+				E28E5E6918BF44C900D450AF /* SBJsonStreamWriter.m */,
+				E28E5E6A18BF44C900D450AF /* SBJsonStreamWriterAccumulator.h */,
+				E28E5E6B18BF44C900D450AF /* SBJsonStreamWriterAccumulator.m */,
+				E28E5E6C18BF44C900D450AF /* SBJsonWriter.h */,
+				E28E5E6D18BF44C900D450AF /* SBJsonWriter.m */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
 		E2929E28187654E3007CE3C7 /* shopMangerImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +762,7 @@
 		E2929E831876970A007CE3C7 /* thirdSourceLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				E28E5E6718BF44C900D450AF /* json */,
 				E298361018BB4A8C00B1DB2C /* SDWebImage */,
 				E26BFB0E188F52E7001401F3 /* ASIHttpRequst */,
 				E2D2AB061888BDF4002F8D66 /* UIViewExt.h */,
@@ -774,6 +797,27 @@
 				E298362418BB4A8C00B1DB2C /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		E2E129E118BF20E0004D74E0 /* allGoodInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E250878718BC25AD005350DE /* GoodInfoViewController.h */,
+				E250878818BC25AD005350DE /* GoodInfoViewController.m */,
+				E250878918BC25AD005350DE /* GoodInfoViewController.xib */,
+				E2C4E109188D3A5600A94FA2 /* GoodsCell.h */,
+				E2C4E10A188D3A5600A94FA2 /* GoodsCell.m */,
+				E26BFB3A1890E299001401F3 /* GoodsDetailViewController.h */,
+				E26BFB3B1890E299001401F3 /* GoodsDetailViewController.m */,
+				E26BFB3C1890E299001401F3 /* GoodsDetailViewController.xib */,
+				E250879118BC7A7D005350DE /* ModifyInfoViewController.h */,
+				E250879218BC7A7D005350DE /* ModifyInfoViewController.m */,
+				E250879318BC7A7D005350DE /* ModifyInfoViewController.xib */,
+				E22F781118BDC02500F9F0C6 /* LogisticViewController.h */,
+				E22F781218BDC02500F9F0C6 /* LogisticViewController.m */,
+				E22F781318BDC02500F9F0C6 /* LogisticViewController.xib */,
+			);
+			name = allGoodInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -828,6 +872,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E298362518BB4A8C00B1DB2C /* LICENSE in Resources */,
+				E2E129E618BF2191004D74E0 /* NoGoodViewController.xib in Resources */,
 				E249F5AD187549E900462E6B /* InfoPlist.strings in Resources */,
 				E217F3011882454B0095CEA3 /* addressBg.png in Resources */,
 				E280A3AF1882824F00D67265 /* redPoint.png in Resources */,
@@ -940,9 +985,11 @@
 				E26BFB28188F52E7001401F3 /* ASIHTTPRequest.m in Sources */,
 				E249F5B3187549E900462E6B /* AppDelegate.m in Sources */,
 				E26BFB26188F52E7001401F3 /* ASIDownloadCache.m in Sources */,
+				E28E5E7318BF45AB00D450AF /* SBJsonStreamWriterState.m in Sources */,
 				E249F5EE18754B7800462E6B /* MoreViewController.m in Sources */,
 				E26BFB27188F52E7001401F3 /* ASIFormDataRequest.m in Sources */,
 				E249F5DB18754ACB00462E6B /* BaseNavViewController.m in Sources */,
+				E2E129E518BF2191004D74E0 /* NoGoodViewController.m in Sources */,
 				E298362918BB4A8C00B1DB2C /* SDWebImageDownloader.m in Sources */,
 				E249F5DF18754B0A00462E6B /* ShopMvoingViewController.m in Sources */,
 				E249F5F218754BBD00462E6B /* MainViewController.m in Sources */,
@@ -958,6 +1005,8 @@
 				E244FA29187CE033005DFF26 /* BaseTableView.m in Sources */,
 				E249F5D818754AA300462E6B /* BaseViewController.m in Sources */,
 				E298362D18BB4A8C00B1DB2C /* UIImageView+WebCache.m in Sources */,
+				E28E5E6F18BF44C900D450AF /* SBJsonStreamWriterAccumulator.m in Sources */,
+				E28E5E7018BF44C900D450AF /* SBJsonWriter.m in Sources */,
 				E249F5E418754B4600462E6B /* GoodManagerViewController.m in Sources */,
 				E2C4E10B188D3A5600A94FA2 /* GoodsCell.m in Sources */,
 				E26BFB2E188F5408001401F3 /* Reachability.m in Sources */,
@@ -968,6 +1017,7 @@
 				E2929E8118768FC5007CE3C7 /* SelectRowViewController.m in Sources */,
 				E249F5E918754B6200462E6B /* ChatViewController.m in Sources */,
 				E298362C18BB4A8C00B1DB2C /* UIButton+WebCache.m in Sources */,
+				E28E5E6E18BF44C900D450AF /* SBJsonStreamWriter.m in Sources */,
 				E249F5AF187549E900462E6B /* main.m in Sources */,
 				E298362718BB4A8C00B1DB2C /* SDImageCache.m in Sources */,
 			);

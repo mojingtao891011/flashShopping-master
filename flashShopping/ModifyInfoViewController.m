@@ -49,6 +49,8 @@
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(defaultFrame:) name:UIKeyboardWillHideNotification object:Nil];
+    //获取数据通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:@"getDatas" object:nil];
 }
 #pragma mark---UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -71,6 +73,23 @@
     }];
 
 }
+- (void)getData:(NSNotification*)note
+{
+    
+    NSData *getData = [note object];
+    id json = [NSJSONSerialization JSONObjectWithData:getData options:NSJSONReadingMutableContainers error:nil];
+    static NSString *msg ;
+    if (json[@"content"] != NULL) {
+        msg = json[@"content"] ;
+    }
+    else{
+        msg = @"数据提交失败";
+    }
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
+    [alertView show];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:ModifyDataFinishNote object:nil];
+}
 #pragma mark---MemoryManager
 - (void)didReceiveMemoryWarning
 {
@@ -80,12 +99,18 @@
 #pragma mark---customModth
 - (void)saveModifyInfo
 {
-    NSLog(@"%@",_Id);
-   
+    NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\":\"%@\" , \"goodsCode\":\"%@\", \"price\":\"%@\", \"num\":\"%@\" }", _Id , _goodsId , @"1" , _goodTitleTextView.text , _goodCodeTextField.text , _goodPriceTextField.text , _goodNumTextField.text ];
+
+    [[RequestNetwork shareManager]requestNetwork:postString noteName:@"getDatas"];
 }
 
 - (IBAction)selectButton:(id)sender {
     UIButton *selectButton = (UIButton*)sender ;
+    if (selectButton.tag == 2) {
+        _isUp = @"1" ;
+    }else if( selectButton.tag == 3){
+        _isUp = @"0" ;
+    }
     for (id button in _bodyView.subviews) {
         if ([button isKindOfClass:[UIButton class]]) {
             [button setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];

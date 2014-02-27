@@ -49,4 +49,6 @@
 #define SGorderTime      @"orderTime"
 #define SGtotal          @"total"
 
+#define ModifyDataFinishNote    @"ModifyDataFinishNote"
+
 #endif

@@ -8,6 +8,7 @@
 
 #import "GoodManagerViewController.h"
 #import "GoodInfoViewController.h"
+#import "NoGoodViewController.h"
 
 @interface GoodManagerViewController ()
 //店铺管理菜单
@@ -84,6 +85,11 @@
     {
         GoodInfoViewController *goodsManamentView = [[GoodInfoViewController alloc]init];
         [self.navigationController pushViewController:goodsManamentView animated:YES];
+    }
+    else if (button.tag == 124)
+    {
+        NoGoodViewController  *noGoodViewCtl = [[ NoGoodViewController alloc ]init ];
+        [self.navigationController pushViewController:noGoodViewCtl animated:YES];
     }
 }
 #pragma mark-----Memory

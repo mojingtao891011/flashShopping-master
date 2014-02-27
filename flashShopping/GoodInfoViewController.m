@@ -53,12 +53,15 @@
     
     //加载网络数据
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(netDataNotification:) name:@"getData" object:nil];
+    
+   [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Refresh) name:ModifyDataFinishNote object:nil];
+    
     [self loadNetData];
 }
 - (void)loadNetData
 {
-    NSString *postString = @"{\"actionCode\":\"441\",\"appType\":\"json\",\"companyId\":\"00000101\"}";
-    [[RequestNetwork shareManager]requestNetwork:postString];
+    NSString *postString = @"{\"actionCode\":\"441\" , \"appType\":\"json\",\"companyId\":\"00000101\"}";
+    [[RequestNetwork shareManager]requestNetwork:postString noteName:@"getData"];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -92,6 +95,12 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)Refresh
+{
+    [dataArr removeAllObjects];
+    [self loadNetData];
+    NSLog(@"uodata>>>>>>");
+}
 - (void)netDataNotification:(NSNotification*)note
 {
     id json =  [NSJSONSerialization JSONObjectWithData:[note object] options:NSJSONReadingMutableContainers error:nil];
@@ -102,10 +111,12 @@
         gInfoModle.goodsCode = dict[@"goodsCode"];
         gInfoModle.goodsId = dict[@"goodsId"];
         gInfoModle.Id = dict[@"id"];
+        gInfoModle.isUp = dict[@"isUp"];
         gInfoModle.name = dict[@"name"];
         gInfoModle.num = dict[@"num"];
         gInfoModle.price = dict[@"price"];
         gInfoModle.viewUrl = dict[@"viewUrl"];
+        NSLog(@"%@",gInfoModle.name);
         if (dataArr == nil) {
             dataArr = [NSMutableArray new];
         }

@@ -58,8 +58,9 @@
 }
 
 #pragma mark------customMethod
-- (void)createUIBarButtonItem:(BOOL)isRightOrLeft  image:(NSString*)imageName
+- (void)createUIBarButtonItemAndLoction:(NSInteger)loctions  image:(NSString*)imageName
 {
+    _isLeftOrRight = loctions ;
     //自定义ButtonItem
     UIButton *buttonItem = [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonItem setFrame:CGRectMake(0, 10, 20, 20)];
@@ -67,7 +68,7 @@
     [buttonItem addTarget:self action:@selector(buttonItemClickAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithCustomView:buttonItem];
     
-    if (isRightOrLeft) {
+    if (loctions == left) {
         self.navigationItem.leftBarButtonItem = barButtonItem ;
     }else{
         self.navigationItem.rightBarButtonItem = barButtonItem ;
@@ -76,6 +77,9 @@
 }
 - (void)buttonItemClickAction:(UIButton *)buttonItem
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (!_isLeftOrRight) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+        
 }
 @end

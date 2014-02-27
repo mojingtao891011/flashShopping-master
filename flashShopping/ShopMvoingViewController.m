@@ -50,7 +50,7 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:@"getData" object:nil];
        NSString *postString =@"{\"actionCode\":\"71\",\"appType\":\"json\",\"companyId\":\"00000101\"}";
 
-    [[RequestNetwork shareManager] requestNetwork:postString];
+   // [[RequestNetwork shareManager] requestNetwork:postString];
 }
 #pragma mark---NSNotificationCenter
 - (void)getData:(NSNotification*)note

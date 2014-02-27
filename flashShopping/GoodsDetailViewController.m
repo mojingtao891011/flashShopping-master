@@ -40,6 +40,8 @@
     tableView_bg.backgroundColor = [UIColor clearColor];
     _tableView.backgroundView = tableView_bg ;
     [self.view addSubview:_tableView];
+    
+    //[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Refresh) name:ModifyDataFinishNote object:nil];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -47,6 +49,13 @@
     self.navigationController.navigationBar.hidden= NO  ;
     
 }
+//-(void)Refresh
+//{
+//    [dataArr removeAllObjects];
+//    [self loadNetData];
+//    NSLog(@"uodata>>>>>>");
+//}
+
 #pragma mark---UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -89,6 +98,7 @@
 - (IBAction)ModifyInfoButton:(id)sender {
     ModifyInfoViewController *ModifyInfoView = [[ModifyInfoViewController alloc]init];
     ModifyInfoView.Id = _goodsModel.Id ;
+    ModifyInfoView.goodsId = _goodsModel.goodsId ;
     [self.navigationController pushViewController:ModifyInfoView animated:YES];
 }
 

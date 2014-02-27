@@ -8,4 +8,5 @@ dependencies: \
   /Users/Width/Desktop/flashShopping-master/flashShopping/ASIHttpRequst/ASIHTTPRequestDelegate.h \
   /Users/Width/Desktop/flashShopping-master/flashShopping/ASIHttpRequst/ASIProgressDelegate.h \
   /Users/Width/Desktop/flashShopping-master/flashShopping/ASIHttpRequst/ASICacheDelegate.h \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/ASIHttpRequst/ASIFormDataRequest.h
+  /Users/Width/Desktop/flashShopping-master/flashShopping/ASIHttpRequst/ASIFormDataRequest.h \
+  /Users/Width/Desktop/flashShopping-master/flashShopping/json/SBJsonWriter.h

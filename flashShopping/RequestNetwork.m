@@ -9,6 +9,7 @@
 #import "RequestNetwork.h"
 #import "ASIFormDataRequest.h"
 
+#define BASEURL @"http://192.168.1.83:9000/Assistant/app"
 @implementation RequestNetwork
 @synthesize receiveData = receiveData ;
 
@@ -25,16 +26,15 @@
     });
     return requestNetwork ;
 }
-- (void)requestNetwork:(NSString*)postString
+- (void)requestNetwork:(NSString*)postString noteName:(NSString *)n_name
 {
-   
-    NSURL *url = [NSURL URLWithString:
-                  @"http://192.168.1.83:9000/Assistant/app"];
+    noteName = n_name ;
+    NSURL *url = [NSURL URLWithString:BASEURL];
     ASIFormDataRequest  *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     
      NSString *msgLength = [NSString stringWithFormat:@"%d", [postString length]];
-    [request addRequestHeader:@"application/json" value:@"Content-Type"];
+    [request addRequestHeader:@"application/json;charset=UTF-8" value:@"Content-Type"];
     [request addRequestHeader:@"Content-Length" value: msgLength];
     [request setRequestMethod:@"POST"];
     [request appendPostData:[postString dataUsingEncoding:NSUTF8StringEncoding]];
@@ -47,11 +47,11 @@
      receiveData = [NSMutableData new];
     
 }
-- (void)requestFinished:(ASIHTTPRequest *)request
+- (void)requestFinished:(ASIHTTPRequest *)request ;
 {
    // NSString *receiveStr = [[NSString alloc]initWithData:receiveData encoding:NSUTF8StringEncoding];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"getData" object:receiveData];
+    [[NSNotificationCenter defaultCenter]postNotificationName:noteName object:receiveData];
   // NSLog(@"%@",receiveStr);
     
 }
