@@ -9,8 +9,13 @@
 #import "BaseViewController.h"
 
 @interface ModifyInfoViewController : BaseViewController<UITextViewDelegate , UITextFieldDelegate>
-
-@property (unsafe_unretained, nonatomic) IBOutlet UIView *bodyView;
+{
+    CGFloat         _bodyTop ;
+    CGFloat         _textFieldBottom ;
+    CGFloat         _KeyboardHeight ;
+    NSInteger      _textFieldTag ;
+}
+@property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *bodyView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *goodTitleBg;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextView *goodTitleTextView;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodCodeTextField;

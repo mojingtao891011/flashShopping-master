@@ -104,7 +104,8 @@
 - (void)netDataNotification:(NSNotification*)note
 {
     id json =  [NSJSONSerialization JSONObjectWithData:[note object] options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@">>>>%@",json);
+    //NSLog(@">>>>%@",json);
+
     NSArray *jsonArr = json[@"content"];
     for (NSDictionary *dict in jsonArr) {
         GoodInfoModle *gInfoModle = [GoodInfoModle new];
@@ -116,7 +117,7 @@
         gInfoModle.num = dict[@"num"];
         gInfoModle.price = dict[@"price"];
         gInfoModle.viewUrl = dict[@"viewUrl"];
-        NSLog(@"%@",gInfoModle.name);
+        NSLog(@">>>>name<<%@",gInfoModle.name );
         if (dataArr == nil) {
             dataArr = [NSMutableArray new];
         }

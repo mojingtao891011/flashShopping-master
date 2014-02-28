@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"基本信息";
+    _bodyTop = _bodyView.top ;
+    
     //创建导航栏上的保存按钮
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     saveButton.width = 50 ;
@@ -37,8 +39,11 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:saveButton];
     
     self.bodyView.height = SCREENMAIN_HEIGHT ;
+    self.bodyView.width = SCREENMAIN_WIDTH ;
+   // _bodyView.contentSize = CGSizeMake(SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT );
     if (IOS_VERSION < 7.0) {
         self.bodyView.top = 0 ;
+        self.bodyView.height = SCREENMAIN_HEIGHT - 64 ;
     }
     
      //图片的拉伸
@@ -48,7 +53,7 @@
     
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
-     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(defaultFrame:) name:UIKeyboardWillHideNotification object:Nil];
+   
     //获取数据通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:@"getDatas" object:nil];
 }
@@ -56,21 +61,31 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    if ( textField.tag == 6 || textField.tag ==7 ) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _bodyView.top = _bodyTop ;
+        }];
+    }
+    return YES ;
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    _textFieldTag = textField.tag ;
+    _textFieldBottom = textField.bottom ;
+    return YES ;
+}
+#pragma mark--- UITextViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    _textFieldTag = 0 ;
     return YES ;
 }
 #pragma mark----NSNotificationCenter
 - (void)modifyFrame:(NSNotification*)note
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        _bodyView.top = _bodyView.top - 75;
-    }];
-    
-}
-- (void)defaultFrame:(NSNotification*)note
-{
-    [UIView animateWithDuration:0.5 animations:^{
-        _bodyView.top = _bodyView.top + 75;
-    }];
+    CGRect rect = [[[note userInfo]objectForKey:@"UIKeyboardFrameEndUserInfoKey"]CGRectValue];
+     _KeyboardHeight = rect.size.height ;
+   [self setFrame:_textFieldBottom andKeyboardHeight:_KeyboardHeight andTextFieldTag:_textFieldTag];
 
 }
 - (void)getData:(NSNotification*)note
@@ -99,11 +114,25 @@
 #pragma mark---customModth
 - (void)saveModifyInfo
 {
-    NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\":\"%@\" , \"goodsCode\":\"%@\", \"price\":\"%@\", \"num\":\"%@\" }", _Id , _goodsId , @"1" , _goodTitleTextView.text , _goodCodeTextField.text , _goodPriceTextField.text , _goodNumTextField.text ];
+        
+    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSString*   temp = [[NSString alloc] initWithData:[_goodTitleTextView.text dataUsingEncoding:NSUTF8StringEncoding] encoding:encoding];//data为NSData类型
+    NSLog(@"temp=%@",temp);
+     NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\" : \"%@\" }", _Id , _goodsId , @"1"  , [_goodTitleTextView.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"++++++++============%@" , _goodTitleTextView.text);
+    
+   // NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\":\"%@\" , \"goodsCode\":\"%@\", \"price\":\"%@\", \"num\":\"%@\" }", _Id , _goodsId , @"1" ,urlString , _goodCodeTextField.text , _goodPriceTextField.text , _goodNumTextField.text ];
 
     [[RequestNetwork shareManager]requestNetwork:postString noteName:@"getDatas"];
 }
-
+- (void)setFrame:(CGFloat)textFieldBottom andKeyboardHeight:(CGFloat)keyboardHeight andTextFieldTag:(NSInteger)textFieldTag
+{
+    if ( textFieldTag == 6 || textFieldTag ==7 ) {
+        [UIView animateWithDuration:0.5 animations:^{
+            _bodyView.top =_bodyTop - (textFieldBottom - (_bodyView.height - keyboardHeight - 64));
+        }];
+    }
+}
 - (IBAction)selectButton:(id)sender {
     UIButton *selectButton = (UIButton*)sender ;
     if (selectButton.tag == 2) {

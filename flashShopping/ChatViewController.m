@@ -35,10 +35,17 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"闪聊";
-    
-    
+        
      //NSString *postString =@"{\"actionCode\":\"441\",\"appType\":\"json\",\"companyId\":\"00000101\"}";
     NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"441",@"actionCode",@"json",@"appType",@"00000101",@"companyId", nil];
+    
+    NSMutableString *postStrings= nil;
+    for(id key in dic){
+        NSString *encodedkey= [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        CFStringRef encodedValue= CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)([dic objectForKey:key]), NULL, CFSTR(":/?#[]@!$&’()*+,;="), kCFStringEncodingUTF8);
+        [postStrings appendFormat:@"%@=%@&",encodedkey, encodedValue];
+    }
+    
     SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
     
     NSString *postString = [jsonWriter stringWithObject:dic];
