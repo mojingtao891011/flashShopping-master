@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomUIBarButtonItem.h"
 
-@interface NoGoodViewController : BaseViewController
+@interface NoGoodViewController : BaseViewController<barButtonProtocol>
 
 @end

@@ -33,6 +33,7 @@
     [super viewDidLoad];
     self.titleLabel.text = @"商品详情";
     self.view.backgroundColor = [UIColor clearColor];
+    //添加UITableView
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 64) style:UITableViewStyleGrouped];
     _tableView.dataSource = self ;
     _tableView.delegate = self ;
@@ -40,8 +41,9 @@
     tableView_bg.backgroundColor = [UIColor clearColor];
     _tableView.backgroundView = tableView_bg ;
     [self.view addSubview:_tableView];
-    
-    //[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Refresh) name:ModifyDataFinishNote object:nil];
+    //添加刷新按钮
+    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 20, 20) andSetdelegate:self andImageName:@"refresh"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barButton];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -49,13 +51,6 @@
     self.navigationController.navigationBar.hidden= NO  ;
     
 }
-//-(void)Refresh
-//{
-//    [dataArr removeAllObjects];
-//    [self loadNetData];
-//    NSLog(@"uodata>>>>>>");
-//}
-
 #pragma mark---UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -65,7 +60,8 @@
 {
     return 2 ;
 }
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (indexPath.section == 0 && indexPath.row == 0) {
         return _customCell ;
     }else if (indexPath.section == 0 && indexPath.row == 1){
@@ -92,9 +88,13 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 #pragma mark---customModth
+- (void)actions:(id)sender
+{
+    NSLog(@"开始刷新…………");
+}
 - (IBAction)ModifyInfoButton:(id)sender {
     ModifyInfoViewController *ModifyInfoView = [[ModifyInfoViewController alloc]init];
     ModifyInfoView.Id = _goodsModel.Id ;

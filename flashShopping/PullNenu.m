@@ -14,12 +14,13 @@
     CGRect  subFrame ;
     UITableView *pulltableView ;
 }
-- (id)initWithFrame:(CGRect)frame AndTitleArr:(NSArray *)titleArr
+- (id)initWithFrame:(CGRect)frame setDelegate:(id<pullNenuProtocol>)deles AndTitleArr:(NSArray *)titleArr
 {
     self = [super initWithFrame:frame];
     if (self) {
         titleArrs = [titleArr mutableCopy];
         subFrame = frame ;
+        self.dele = deles;
         [self initPullView];
     }
     return self;
@@ -38,7 +39,7 @@
     [self addSubview:pullDwonVIewbg];
     
     //tableView用于显示数据
-    pulltableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 15, subFrame.size.width, subFrame.size.height - 15) style:UITableViewStylePlain];
+    pulltableView = [[UITableView alloc]initWithFrame:CGRectMake(5, 18, subFrame.size.width-10, subFrame.size.height - 18) style:UITableViewStylePlain];
     pulltableView.dataSource = self ;
     pulltableView.delegate = self ;
     pulltableView.rowHeight = 30 ;
@@ -70,8 +71,10 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"pullMenuRow" object:titleArrs[indexPath.row]];
-       
+    if (_dele && [ _dele respondsToSelector:@selector(changeTitles:)]) {
+        [_dele changeTitles:titleArrs[indexPath.row]];
+    }
+    
+   
 }
-
 @end

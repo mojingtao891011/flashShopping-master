@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PullNenu : UIView<UITableViewDataSource ,UITableViewDelegate>
+@protocol pullNenuProtocol <NSObject>
 
-- (id)initWithFrame:(CGRect)frame  AndTitleArr:(NSArray*)titleArr;
+- (void)changeTitles:(NSString*)title ;
+
+@end
+
+@interface PullNenu : UIView<UITableViewDataSource ,UITableViewDelegate>
+@property(nonatomic , assign)id<pullNenuProtocol>dele ;
+
+- (id)initWithFrame:(CGRect)frame  setDelegate:(id<pullNenuProtocol>)deles AndTitleArr:(NSArray*)titleArr ;
 
 @end

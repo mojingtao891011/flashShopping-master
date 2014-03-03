@@ -7,8 +7,7 @@
 //
 
 #import "GoodInfoViewController.h"
-#import "CustomNavigationBar.h"
-#import "RequestNetwork.h"
+#import "SGDataService.h"
 #import "GoodInfoModle.h"
 #import "GoodsCell.h"
 #import "GoodsDetailViewController.h"
@@ -17,6 +16,7 @@
 {
     UITableView *goodTableView ;
     NSMutableArray *dataArr ;
+    CustomNavigationBar *navigationBar ;
 }
 @end
 
@@ -37,9 +37,8 @@
     self.view.backgroundColor = [UIColor blackColor];
    
     //自定义导航
-    CustomNavigationBar *navigationBar = [[CustomNavigationBar alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 44) andTitleArr:[NSArray arrayWithObjects:@"所有商品",@"橱窗中商品",@"出售中商品",@"仓库中商品",@"已下架商品", nil]];
+    navigationBar = [[CustomNavigationBar alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 44) andTitleArr:[NSArray arrayWithObjects:@"所有商品",@"橱窗中商品",@"出售中商品",@"仓库中商品",@"已下架商品", nil] andSetBarButtonDelegate:self andSetPullNenuDelegate:self ];
     [self.view addSubview:navigationBar];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(returnPreviousView) name:@"returnPreviousView" object:nil];
     
     //加载goodTableView
     goodTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 54, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 54) style:UITableViewStylePlain];
@@ -52,16 +51,34 @@
     [self.view bringSubviewToFront:navigationBar];
     
     //加载网络数据
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(netDataNotification:) name:@"getData" object:nil];
-    
-   [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Refresh) name:ModifyDataFinishNote object:nil];
-    
     [self loadNetData];
 }
 - (void)loadNetData
 {
-    NSString *postString = @"{\"actionCode\":\"441\" , \"appType\":\"json\",\"companyId\":\"00000101\"}";
-    [[RequestNetwork shareManager]requestNetwork:postString noteName:@"getData"];
+    NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json" , @"companyId":@"00000101"};
+    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
+        NSArray *jsonArr = result[@"content"];
+        for (NSDictionary *dict in jsonArr) {
+            GoodInfoModle *gInfoModle = [GoodInfoModle new];
+            gInfoModle.goodsCode = dict[@"goodsCode"];
+            gInfoModle.goodsId = dict[@"goodsId"];
+            gInfoModle.Id = dict[@"id"];
+            gInfoModle.isUp = dict[@"isUp"];
+            gInfoModle.name = dict[@"name"];
+            gInfoModle.num = dict[@"num"];
+            gInfoModle.price = dict[@"price"];
+            gInfoModle.viewUrl = dict[@"viewUrl"];
+            NSLog(@">>>>name<<%@",gInfoModle.name );
+            if (dataArr == nil) {
+                dataArr = [NSMutableArray new];
+            }
+            [dataArr addObject:gInfoModle];
+        }
+        [goodTableView reloadData];
+        
+    }];
+
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -90,41 +107,11 @@
     goodsDetaiView.goodsModel = dataArr[indexPath.row];
     [self.navigationController pushViewController:goodsDetaiView animated:YES];
 }
-#pragma mark-----NSNotificationCenter
-- (void)returnPreviousView
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 -(void)Refresh
 {
     [dataArr removeAllObjects];
     [self loadNetData];
     NSLog(@"uodata>>>>>>");
-}
-- (void)netDataNotification:(NSNotification*)note
-{
-    id json =  [NSJSONSerialization JSONObjectWithData:[note object] options:NSJSONReadingMutableContainers error:nil];
-    //NSLog(@">>>>%@",json);
-
-    NSArray *jsonArr = json[@"content"];
-    for (NSDictionary *dict in jsonArr) {
-        GoodInfoModle *gInfoModle = [GoodInfoModle new];
-        gInfoModle.goodsCode = dict[@"goodsCode"];
-        gInfoModle.goodsId = dict[@"goodsId"];
-        gInfoModle.Id = dict[@"id"];
-        gInfoModle.isUp = dict[@"isUp"];
-        gInfoModle.name = dict[@"name"];
-        gInfoModle.num = dict[@"num"];
-        gInfoModle.price = dict[@"price"];
-        gInfoModle.viewUrl = dict[@"viewUrl"];
-        NSLog(@">>>>name<<%@",gInfoModle.name );
-        if (dataArr == nil) {
-            dataArr = [NSMutableArray new];
-        }
-        [dataArr addObject:gInfoModle];
-    }
-    [goodTableView reloadData];
-    
 }
 #pragma mark-----UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -138,7 +125,22 @@
     [super didReceiveMemoryWarning];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
-
+#pragma mark---customAction
+- (void)actions:(id)sender{
+    UIButton *b = (UIButton*)sender ;
+    if (b.tag == 10) {
+         [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        NSLog(@"刷新…………");
+    }
+   
+}
+- (void)changeTitles:(NSString *)title
+{
+    [navigationBar.titleButton setTitle:title forState:UIControlStateNormal];
+    navigationBar.pullNenu.hidden = YES , navigationBar.flag = !navigationBar.flag ;
+}
 - (IBAction)searchButton:(id)sender {
+    NSLog(@"开始搜索…………");
 }
 @end

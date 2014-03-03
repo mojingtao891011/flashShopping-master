@@ -27,10 +27,12 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"缺货商品" ;
-    [self createUIBarButtonItemAndLoction:right image:@"refresh"];
+    //refresh按钮
+    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 20, 20) andSetdelegate:self andImageName:@"refresh"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barButton];
 }
 #pragma mark------customMethod
-- (void)buttonItemClickAction:(UIButton *)buttonItem
+- (void)actions:(id)sender
 {
     NSLog(@"refresh");
 }

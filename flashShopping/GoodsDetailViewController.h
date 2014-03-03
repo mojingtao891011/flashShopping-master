@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "GoodInfoModle.h"
+#import "CustomUIBarButtonItem.h"
 
-@interface GoodsDetailViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface GoodsDetailViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate , barButtonProtocol>
 
 @property ( nonatomic ,retain)GoodInfoModle *goodsModel;
 @property (strong, nonatomic) IBOutlet UITableViewCell *customCell;

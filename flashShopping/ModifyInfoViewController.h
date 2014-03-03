@@ -7,8 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomUIBarButtonItem.h"
 
-@interface ModifyInfoViewController : BaseViewController<UITextViewDelegate , UITextFieldDelegate>
+@interface ModifyInfoViewController : BaseViewController<UITextViewDelegate , UITextFieldDelegate , barButtonProtocol>
 {
     CGFloat         _bodyTop ;
     CGFloat         _textFieldBottom ;

@@ -7,7 +7,7 @@
 //
 
 #import "ModifyInfoViewController.h"
-#import "RequestNetwork.h"
+#import "SGDataService.h"
 
 @interface ModifyInfoViewController ()
 
@@ -31,11 +31,7 @@
     _bodyTop = _bodyView.top ;
     
     //创建导航栏上的保存按钮
-    UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveButton.width = 50 ;
-    saveButton.height = 30 ;
-    [saveButton setBackgroundImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
-    [saveButton addTarget:self action:@selector(saveModifyInfo) forControlEvents:UIControlEventTouchUpInside];
+    CustomUIBarButtonItem *saveButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 50, 30) andSetdelegate:self andImageName:@"save"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:saveButton];
     
     self.bodyView.height = SCREENMAIN_HEIGHT ;
@@ -54,8 +50,6 @@
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
    
-    //获取数据通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:@"getDatas" object:nil];
 }
 #pragma mark---UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -103,7 +97,6 @@
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
     [alertView show];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:ModifyDataFinishNote object:nil];
 }
 #pragma mark---MemoryManager
 - (void)didReceiveMemoryWarning
@@ -112,18 +105,14 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark---customModth
-- (void)saveModifyInfo
+- (void)actions:(id)sender
 {
-        
-    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSString*   temp = [[NSString alloc] initWithData:[_goodTitleTextView.text dataUsingEncoding:NSUTF8StringEncoding] encoding:encoding];//data为NSData类型
-    NSLog(@"temp=%@",temp);
-     NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\" : \"%@\" }", _Id , _goodsId , @"1"  , [_goodTitleTextView.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSLog(@"++++++++============%@" , _goodTitleTextView.text);
+    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" , @"Id":_Id , @"goodsId":_goodsId , @"isUp":@"1"};
+    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
+        NSLog(@"%@",result[@"content"]);
+    }];
     
-   // NSString *postString = [NSString stringWithFormat:@"{\"actionCode\":\"442\",\"appType\":\"json\" , \"companyId\":\"00000101\" , \"Id\":%@,\"goodsId\":%@ ,\"isUp\":%@ , \"name\":\"%@\" , \"goodsCode\":\"%@\", \"price\":\"%@\", \"num\":\"%@\" }", _Id , _goodsId , @"1" ,urlString , _goodCodeTextField.text , _goodPriceTextField.text , _goodNumTextField.text ];
-
-    [[RequestNetwork shareManager]requestNetwork:postString noteName:@"getDatas"];
 }
 - (void)setFrame:(CGFloat)textFieldBottom andKeyboardHeight:(CGFloat)keyboardHeight andTextFieldTag:(NSInteger)textFieldTag
 {

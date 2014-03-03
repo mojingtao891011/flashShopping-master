@@ -49,6 +49,5 @@
 #define SGorderTime      @"orderTime"
 #define SGtotal          @"total"
 
-#define ModifyDataFinishNote    @"ModifyDataFinishNote"
-
+#define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
 #endif
