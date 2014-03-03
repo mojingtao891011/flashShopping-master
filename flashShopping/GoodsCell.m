@@ -23,12 +23,12 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
         [self _initSunView];
        
     }
     return self;
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -41,9 +41,13 @@
     //图片
     _goodsImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_goodsImgView];
+    
     //商品描述
     _directionsLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_directionsLabel];
+    //出售状态
+    _isUpLabel = [[UILabel alloc]init];
+    [_directionsLabel addSubview:_isUpLabel];
     //商品编号
     _goodsCodeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:_goodsCodeLabel];
@@ -70,19 +74,32 @@
     [_goodsImgView setImageWithURL:[NSURL URLWithString:_goodsModel.viewUrl] placeholderImage:[UIImage imageNamed:@"init.jpg"]];
     
     //商品描述
-    CGSize size = [_goodsModel.name sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:CGSizeMake( 100 , 300) lineBreakMode:NSLineBreakByCharWrapping];
-    [_directionsLabel setFrame:CGRectMake(_goodsImgView.right,  5,  self.width - _goodsImgView.right , size.height - 15 )];
+    [self setIntroductionText:_goodsModel.name];
+    _directionsLabel.left = _goodsImgView.right + 5;
+    _directionsLabel.top = 0 ;
+    _directionsLabel.width = self.width - _goodsImgView.width - 20 ;
     _directionsLabel.numberOfLines = 0 ;
     _directionsLabel.backgroundColor = [UIColor clearColor];
-    _directionsLabel.text = [NSString stringWithFormat:@"[出售中]%@",_goodsModel.name];
-        
+    _directionsLabel.text = [NSString  stringWithFormat:@"              %@",_goodsModel.name];
+    
+    //出售状态
+    _isUpLabel.left = 0 ;
+    _isUpLabel.top = 0 ;
+    _isUpLabel.textColor = [UIColor redColor];
+    if (_goodsModel.isUp) {
+        _isUpLabel.text = @"[出售中]";
+    }else{
+        _isUpLabel.text = @"[已下架]";
+    }
+    [_isUpLabel sizeToFit];
+    
     //商品编号
-    _goodsCodeLabel.left = _goodsImgView.right ;
+    _goodsCodeLabel.left = _directionsLabel.left ;
     _goodsCodeLabel.top = _directionsLabel.bottom ;
     [_goodsCodeLabel sizeToFit];
     
     //价格（字体）
-    _priceLabel.left = _goodsImgView.right ;
+    _priceLabel.left = _goodsCodeLabel.left ;
     _priceLabel.top = _goodsCodeLabel.bottom ;
     _priceLabel.text = @"价格：";
     _priceLabel.backgroundColor = [UIColor clearColor];
@@ -109,6 +126,30 @@
     _numNumberabel.backgroundColor = [UIColor clearColor];
     [_numNumberabel sizeToFit];
     
-    
+  
 }
+
+//赋值 and 自动换行,计算出cell的高度
+-(void)setIntroductionText:(NSString*)text{
+    //获得当前cell高度
+    CGRect frame = [self frame];
+    //文本赋值
+    self.directionsLabel.text = text;
+    //设置label的最大行数
+    self.directionsLabel.numberOfLines = 10;
+    CGSize size = CGSizeMake(220, 300);
+    CGSize labelSize = [self.directionsLabel.text sizeWithFont:self.directionsLabel.font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+    self.directionsLabel.frame = CGRectMake(self.directionsLabel.frame.origin.x, self.directionsLabel.frame.origin.y, labelSize.width, labelSize.height );
+    
+    //计算出自适应的高度
+    frame.size.height = labelSize.height+70;
+    
+    self.frame = frame;
+}
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+//{
+//    [super setSelected:selected animated:animated];
+//    
+//}
+
 @end

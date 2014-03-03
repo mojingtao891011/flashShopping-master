@@ -7,9 +7,9 @@
 //
 
 #import "GoodsDetailViewController.h"
-#import "GoodsCell.h"
 #import "ModifyInfoViewController.h"
 #import "LogisticViewController.h"
+#import "SGDataService.h"
 
 @interface GoodsDetailViewController ()
 {
@@ -68,6 +68,7 @@
         GoodsCell *goodsCell = [[GoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         goodsCell.goodsModel = _goodsModel ;
         goodsCell.goodsCodeLabel.text = [NSString stringWithFormat:@"编号:%@",_goodsModel.goodsCode];
+        [goodsCell setIntroductionText:_goodsModel.name];
         return goodsCell ;
     }else if (indexPath.section == 1 && indexPath.row == 0){
         return _customCell2 ;
@@ -78,9 +79,9 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size = [_goodsModel.name sizeWithFont:[UIFont systemFontOfSize:16.0] constrainedToSize:CGSizeMake(200, 100) lineBreakMode:NSLineBreakByWordWrapping];
     if (indexPath.section == 0 && indexPath.row == 1) {
-        return 100 + size.height - 20 ;
+        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+        return cell.frame.size.height;    
     }
     return 44 ;
 }
@@ -88,12 +89,23 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
     
+}
+#pragma mark----NSNotification
+- (void)refreshUI:(NSNotification*)note
+{
+    _goodsModel = [note object];
+    [_tableView reloadData];
 }
 #pragma mark---customModth
 - (void)actions:(id)sender
 {
     NSLog(@"开始刷新…………");
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"refresh" object:[NSString stringWithFormat:@"%d",_indexs]];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshUI:) name:@"toGooDetaiView" object:nil];
+    
 }
 - (IBAction)ModifyInfoButton:(id)sender {
     ModifyInfoViewController *ModifyInfoView = [[ModifyInfoViewController alloc]init];

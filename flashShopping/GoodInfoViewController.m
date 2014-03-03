@@ -9,7 +9,6 @@
 #import "GoodInfoViewController.h"
 #import "SGDataService.h"
 #import "GoodInfoModle.h"
-#import "GoodsCell.h"
 #import "GoodsDetailViewController.h"
 
 @interface GoodInfoViewController ()<UITableViewDataSource , UITableViewDelegate , UITextFieldDelegate>
@@ -17,6 +16,8 @@
     UITableView *goodTableView ;
     NSMutableArray *dataArr ;
     CustomNavigationBar *navigationBar ;
+    int index ;
+    NSInteger Cellheight ;
 }
 @end
 
@@ -44,16 +45,16 @@
     goodTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 54, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 54) style:UITableViewStylePlain];
     goodTableView.dataSource = self ;
     goodTableView.delegate = self ;
-    goodTableView.rowHeight = 100 ;
     [goodTableView setTableHeaderView:_searchBox];//加载搜索框
-    _textField.delegate = self ;
     [self.view addSubview:goodTableView];
     [self.view bringSubviewToFront:navigationBar];
     
     //加载网络数据
-    [self loadNetData];
+    [self loadNetData:YES];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshNote:) name:@"refresh" object:nil];
 }
-- (void)loadNetData
+- (void)loadNetData:(BOOL)isReloadData
 {
     NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json" , @"companyId":@"00000101"};
     NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
@@ -69,13 +70,18 @@
             gInfoModle.num = dict[@"num"];
             gInfoModle.price = dict[@"price"];
             gInfoModle.viewUrl = dict[@"viewUrl"];
-            NSLog(@">>>>name<<%@",gInfoModle.name );
             if (dataArr == nil) {
                 dataArr = [NSMutableArray new];
             }
             [dataArr addObject:gInfoModle];
         }
-        [goodTableView reloadData];
+        
+         [[NSNotificationCenter defaultCenter]postNotificationName:@"toGooDetaiView" object:dataArr[index]];
+        
+        if (isReloadData) {
+            [goodTableView reloadData];
+
+        }
         
     }];
 
@@ -94,24 +100,34 @@
     static NSString *goodCellID = @"goodCellID";
     GoodsCell *goodCell = [tableView dequeueReusableCellWithIdentifier:goodCellID];
     if (goodCell == nil) {
-        goodCell = [[GoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:goodCellID];
+        goodCell = [[GoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:goodCellID ];
     }
     GoodInfoModle *goodInfoModle = dataArr[indexPath.row];
     goodCell.goodsModel = goodInfoModle ;
+    [goodCell setIntroductionText:goodInfoModle.name];
     return goodCell ;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d",indexPath.row);
     GoodsDetailViewController *goodsDetaiView = [[GoodsDetailViewController alloc]init];
     goodsDetaiView.goodsModel = dataArr[indexPath.row];
+    goodsDetaiView.indexs = indexPath.row ;
     [self.navigationController pushViewController:goodsDetaiView animated:YES];
 }
--(void)Refresh
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    return cell.frame.size.height;
+    
+}
+#pragma mark-----NSNotification
+- (void)refreshNote:(NSNotification*)note
+{
+    index = [[note object]intValue];
     [dataArr removeAllObjects];
-    [self loadNetData];
-    NSLog(@"uodata>>>>>>");
+    [self loadNetData:NO];
+   
 }
 #pragma mark-----UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -125,6 +141,11 @@
     [super didReceiveMemoryWarning];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+#pragma mark---ChangeHeightProtocol
+- (void)ChangeHeight:(NSInteger)height
+{
+        Cellheight = height ;
+}
 #pragma mark---customAction
 - (void)actions:(id)sender{
     UIButton *b = (UIButton*)sender ;
@@ -132,6 +153,8 @@
          [self.navigationController popViewControllerAnimated:YES];
     }else{
         NSLog(@"刷新…………");
+        [dataArr removeAllObjects];
+        [self loadNetData:YES];
     }
    
 }

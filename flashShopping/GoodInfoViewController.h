@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "CustomNavigationBar.h"
+#import "GoodsCell.h"
 
-@interface GoodInfoViewController : BaseViewController<barButtonProtocol , pullNenuProtocol>
+@interface GoodInfoViewController : BaseViewController<barButtonProtocol , pullNenuProtocol >
 
 
 @property (strong, nonatomic) IBOutlet UIView *searchBox;

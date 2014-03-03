@@ -78,22 +78,6 @@
    [self setFrame:_textFieldBottom andKeyboardHeight:_KeyboardHeight andTextFieldTag:_textFieldTag];
 
 }
-- (void)getData:(NSNotification*)note
-{
-    
-    NSData *getData = [note object];
-    id json = [NSJSONSerialization JSONObjectWithData:getData options:NSJSONReadingMutableContainers error:nil];
-    static NSString *msg ;
-    if (json[@"content"] != NULL) {
-        msg = json[@"content"] ;
-    }
-    else{
-        msg = @"数据提交失败";
-    }
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
-    [alertView show];
-    
-}
 #pragma mark---MemoryManager
 - (void)didReceiveMemoryWarning
 {
@@ -110,8 +94,11 @@
     [mutableDict setObject:_goodCodeTextField.text forKey:@"goodsCode"];
     [mutableDict setObject:_goodPriceTextField.text forKey:@"price"];
     [mutableDict setObject:_goodNumTextField.text forKey:@"num"];
+    
     [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
-        NSLog(@"%@",result[@"content"]);
+        //NSLog(@"%@",result[@"content"]);
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:result[@"content"] delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
+            [alertView show];
     }];
     
 }
