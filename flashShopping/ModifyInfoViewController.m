@@ -42,11 +42,6 @@
         self.bodyView.height = SCREENMAIN_HEIGHT - 64 ;
     }
     
-     //图片的拉伸
-    _goodTitleBg.image = [UIImage imageNamed:@"textfiled-b"];
-    UIImage *newImg = [_goodTitleBg .image stretchableImageWithLeftCapWidth:10 topCapHeight:10];
-    _goodTitleBg.image = newImg ;
-    
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
    
@@ -66,6 +61,7 @@
 {
     _textFieldTag = textField.tag ;
     _textFieldBottom = textField.bottom ;
+    [self setFrame:_textFieldBottom andKeyboardHeight:_KeyboardHeight andTextFieldTag:_textFieldTag];
     return YES ;
 }
 #pragma mark--- UITextViewDelegate
@@ -107,8 +103,13 @@
 #pragma mark---customModth
 - (void)actions:(id)sender
 {
-    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" , @"Id":_Id , @"goodsId":_goodsId , @"isUp":@"1"};
+    
+    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" , @"Id":_Id , @"goodsId":_goodsId , @"isUp":@"2"  };
     NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    [mutableDict  setObject:_goodTitleTextView.text forKey:@"name"];
+    [mutableDict setObject:_goodCodeTextField.text forKey:@"goodsCode"];
+    [mutableDict setObject:_goodPriceTextField.text forKey:@"price"];
+    [mutableDict setObject:_goodNumTextField.text forKey:@"num"];
     [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
         NSLog(@"%@",result[@"content"]);
     }];

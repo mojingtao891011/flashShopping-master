@@ -94,7 +94,7 @@
 		E265B6A4187B98B700B7CA13 /* pullDownButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B695187B98B700B7CA13 /* pullDownButton.png */; };
 		E265B6A5187B98B700B7CA13 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B696187B98B700B7CA13 /* refresh.png */; };
 		E265B6F3187BFAB200B7CA13 /* tableView_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E265B6F2187BFAB200B7CA13 /* tableView_bg.png */; };
-		E26A010C187565FF005FD9AD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E26A010B187565FF005FD9AD /* background.png */; };
+		E26A010C187565FF005FD9AD /* background@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E26A010B187565FF005FD9AD /* background@x2.png */; };
 		E26BFB23188F52E7001401F3 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E26BFB10188F52E7001401F3 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E26BFB24188F52E7001401F3 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E26BFB13188F52E7001401F3 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E26BFB25188F52E7001401F3 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E26BFB15188F52E7001401F3 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -154,6 +154,10 @@
 		FB394B6D18C23EA400919C22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6918C23EA400919C22 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FB394B7018C23F2700919C22 /* SGDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6F18C23F2700919C22 /* SGDataService.m */; };
 		FB52950018C372EF0073C44C /* CustomUIBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */; };
+		FBE393C418C427F700571EBD /* textFields@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C218C427F700571EBD /* textFields@x2.png */; };
+		FBE393C518C427F700571EBD /* textFieldView@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C318C427F700571EBD /* textFieldView@x2.png */; };
+		FBE393C818C42B7600571EBD /* textFieldView.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C618C42B7600571EBD /* textFieldView.png */; };
+		FBE393C918C42B7600571EBD /* textFields.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C718C42B7600571EBD /* textFields.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,7 +268,7 @@
 		E265B695187B98B700B7CA13 /* pullDownButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullDownButton.png; sourceTree = "<group>"; };
 		E265B696187B98B700B7CA13 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		E265B6F2187BFAB200B7CA13 /* tableView_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableView_bg.png; sourceTree = "<group>"; };
-		E26A010B187565FF005FD9AD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		E26A010B187565FF005FD9AD /* background@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@x2.png"; sourceTree = "<group>"; };
 		E26BFB0F188F52E7001401F3 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		E26BFB10188F52E7001401F3 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		E26BFB11188F52E7001401F3 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -363,6 +367,10 @@
 		FB394B6F18C23F2700919C22 /* SGDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDataService.m; sourceTree = "<group>"; };
 		FB5294FE18C372EF0073C44C /* CustomUIBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIBarButtonItem.h; sourceTree = "<group>"; };
 		FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIBarButtonItem.m; sourceTree = "<group>"; };
+		FBE393C218C427F700571EBD /* textFields@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFields@x2.png"; sourceTree = "<group>"; };
+		FBE393C318C427F700571EBD /* textFieldView@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFieldView@x2.png"; sourceTree = "<group>"; };
+		FBE393C618C42B7600571EBD /* textFieldView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textFieldView.png; sourceTree = "<group>"; };
+		FBE393C718C42B7600571EBD /* textFields.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textFields.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +609,10 @@
 		E249F5F318754FD800462E6B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FBE393C618C42B7600571EBD /* textFieldView.png */,
+				FBE393C718C42B7600571EBD /* textFields.png */,
+				FBE393C218C427F700571EBD /* textFields@x2.png */,
+				FBE393C318C427F700571EBD /* textFieldView@x2.png */,
 				E22F781618BDD87600F9F0C6 /* icon.png */,
 				E22F781718BDD87600F9F0C6 /* icon@x2.png */,
 				E250878F18BC74AF005350DE /* init.jpg */,
@@ -632,7 +644,7 @@
 				E230F063187E9607009A0479 /* chat_bg.png */,
 				E230F064187E9607009A0479 /* chat.png */,
 				E249F5FC18754FD800462E6B /* nav_bg.png */,
-				E26A010B187565FF005FD9AD /* background.png */,
+				E26A010B187565FF005FD9AD /* background@x2.png */,
 			);
 			name = ItemBar;
 			sourceTree = "<group>";
@@ -891,12 +903,13 @@
 				E249F5AD187549E900462E6B /* InfoPlist.strings in Resources */,
 				E217F3011882454B0095CEA3 /* addressBg.png in Resources */,
 				E280A3AF1882824F00D67265 /* redPoint.png in Resources */,
-				E26A010C187565FF005FD9AD /* background.png in Resources */,
+				E26A010C187565FF005FD9AD /* background@x2.png in Resources */,
 				E230F054187E70D3009A0479 /* blueArrow@2x.png in Resources */,
 				E26BFB3E1890E299001401F3 /* GoodsDetailViewController.xib in Resources */,
 				E230F053187E70D3009A0479 /* blueArrow.png in Resources */,
 				E230F06A187E9607009A0479 /* button_more.png in Resources */,
 				E280A3981882655200D67265 /* Radio-b.png in Resources */,
+				FBE393C418C427F700571EBD /* textFields@x2.png in Resources */,
 				E2929E8218768FC5007CE3C7 /* SelectRowViewController.xib in Resources */,
 				E2929E36187654E3007CE3C7 /* order_Manager.png in Resources */,
 				E265B6F3187BFAB200B7CA13 /* tableView_bg.png in Resources */,
@@ -909,8 +922,10 @@
 				E280A39A1882655900D67265 /* complete.png in Resources */,
 				E2929E38187654E3007CE3C7 /* shop_manager.png in Resources */,
 				E217F3081882454B0095CEA3 /* detailbuttonBackground_a@2x.png in Resources */,
+				FBE393C818C42B7600571EBD /* textFieldView.png in Resources */,
 				E265B697187B98B700B7CA13 /* search_bg.png in Resources */,
 				E230F052187E70D3009A0479 /* blackArrow@2x.png in Resources */,
+				FBE393C518C427F700571EBD /* textFieldView@x2.png in Resources */,
 				E244FA3B187D521F005DFF26 /* lastCell.png in Resources */,
 				E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */,
 				E22F781518BDC02500F9F0C6 /* LogisticViewController.xib in Resources */,
@@ -955,6 +970,7 @@
 				E280A3B01882824F00D67265 /* whitePoint.png in Resources */,
 				E217F30E1882454B0095CEA3 /* 04-按钮g.png in Resources */,
 				E248096D187FCE8400046EB7 /* passworsBackground.png in Resources */,
+				FBE393C918C42B7600571EBD /* textFields.png in Resources */,
 				E248096B187FCE8400046EB7 /* userBackground.png in Resources */,
 				E249F60518754FD800462E6B /* nav_bg.png in Resources */,
 				E265B698187B98B700B7CA13 /* searchButton.png in Resources */,

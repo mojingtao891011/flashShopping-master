@@ -32,7 +32,7 @@
     [self addSubview:imageView];
     
     // 导航栏左边按钮
-    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(5, 10, 20, 20) andSetdelegate:_barButtonDele andImageName:@"return"];
+    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(10, 10, 20, 20) andSetdelegate:_barButtonDele andImageName:@"return"];
     barButton.tag = 10 ;
     [self addSubview:barButton];
     
@@ -41,6 +41,7 @@
     [_titleButton setFrame:CGRectMake( (SCREENMAIN_WIDTH - 100 ) / 2, 5, 100, 34)];
     _titleButton.tag = 100 ;
     [_titleButton setTitle:_titleArr[0] forState:UIControlStateNormal];
+    _titleButton.titleLabel.font = [UIFont systemFontOfSize:20];
     [_titleButton addTarget:self action:@selector(pullDwonAction) forControlEvents: UIControlEventTouchUpInside];
     [self addSubview:_titleButton];
     
@@ -58,7 +59,7 @@
     [self addSubview:_pullNenu];
 
      //导航栏右边刷新按钮
-    CustomUIBarButtonItem *barButtonrefresh = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(SCREENMAIN_WIDTH - 25, 10, 20, 20) andSetdelegate:_barButtonDele andImageName:@"refresh"];
+    CustomUIBarButtonItem *barButtonrefresh = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(SCREENMAIN_WIDTH - 30, 10, 20, 20) andSetdelegate:_barButtonDele andImageName:@"refresh"];
    barButtonrefresh.tag = 11 ;
     [self addSubview:barButtonrefresh];
     
