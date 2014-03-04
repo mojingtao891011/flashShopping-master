@@ -7,7 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomUIBarButtonItem.h"
 
-@interface LogisticViewController : BaseViewController
+@interface LogisticViewController : BaseViewController<barButtonProtocol>
+{
+    UIButton *_logisticButton ;
+}
 @property (unsafe_unretained, nonatomic) IBOutlet UIView *bodyView;
+- (IBAction)logisticStatus:(id)sender;
+
 @end

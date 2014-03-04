@@ -33,17 +33,19 @@
     //创建导航栏上的保存按钮
     CustomUIBarButtonItem *saveButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 50, 30) andSetdelegate:self andImageName:@"save"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:saveButton];
-    
+    //适配
     self.bodyView.height = SCREENMAIN_HEIGHT ;
     self.bodyView.width = SCREENMAIN_WIDTH ;
-   // _bodyView.contentSize = CGSizeMake(SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT );
     if (IOS_VERSION < 7.0) {
-        self.bodyView.top = 0 ;
-        self.bodyView.height = SCREENMAIN_HEIGHT - 64 ;
+        self.bodyView.top = 44 ;
     }
     
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
+    
+    //post (  NSDictionary )
+    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" };
+    _mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
    
 }
 #pragma mark---UITextFieldDelegate
@@ -85,23 +87,27 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark---customModth
+//保存
 - (void)actions:(id)sender
 {
-    
-    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" , @"Id":_Id , @"goodsId":_goodsId , @"isUp":@"2"  };
-    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
-    [mutableDict  setObject:_goodTitleTextView.text forKey:@"name"];
-    [mutableDict setObject:_goodCodeTextField.text forKey:@"goodsCode"];
-    [mutableDict setObject:_goodPriceTextField.text forKey:@"price"];
-    [mutableDict setObject:_goodNumTextField.text forKey:@"num"];
-    
-    [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
+    //必须post字段
+    [_mutableDict setObject:_Id forKey:@"Id"];
+    [_mutableDict setObject:_goodsId forKey:@"goodsId"];
+    //非必须post字段
+    [_mutableDict  setObject:_goodTitleTextView.text forKey:@"name"];
+    [_mutableDict setObject:_goodCodeTextField.text forKey:@"goodsCode"];
+    [_mutableDict setObject:_goodPriceTextField.text forKey:@"price"];
+    [_mutableDict setObject:_goodNumTextField.text forKey:@"num"];
+    //NSLog(@"dict = %@",_mutableDict);
+    //提交修改
+    [SGDataService requestWithUrl:BASEURL dictParams:_mutableDict httpMethod:@"post" completeBlock:^(id result){
         //NSLog(@"%@",result[@"content"]);
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:result[@"content"] delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
             [alertView show];
     }];
     
 }
+//键盘自适应
 - (void)setFrame:(CGFloat)textFieldBottom andKeyboardHeight:(CGFloat)keyboardHeight andTextFieldTag:(NSInteger)textFieldTag
 {
     if ( textFieldTag == 6 || textFieldTag ==7 ) {
@@ -110,18 +116,25 @@
         }];
     }
 }
+//商品状态
 - (IBAction)selectButton:(id)sender {
-    UIButton *selectButton = (UIButton*)sender ;
+     UIButton *selectButton = (UIButton*)sender ;
     if (selectButton.tag == 2) {
-        _isUp = @"1" ;
+        _isUp = YES;
     }else if( selectButton.tag == 3){
-        _isUp = @"0" ;
+        _isUp = NO ;
     }
-    for (id button in _bodyView.subviews) {
-        if ([button isKindOfClass:[UIButton class]]) {
-            [button setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
-        }
-    }
-        [selectButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
+ 
+    [_mutableDict  setObject:[NSString stringWithFormat:@"%d",_isUp] forKey:@"isUp"];
+    [_StateButton setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
+    _StateButton = (UIButton*)sender ;
+    [_StateButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
+
+}
+//推荐
+- (IBAction)recommend:(id)sender {
+    [_recommendButton setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
+    _recommendButton = (UIButton*)sender ;
+    [_recommendButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
 }
 @end

@@ -31,15 +31,20 @@
     CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 20, 20) andSetdelegate:self andImageName:@"refresh"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barButton];
 }
-#pragma mark------customMethod
+#pragma mark------barButtonProtocol
 - (void)actions:(id)sender
 {
     NSLog(@"refresh");
 }
+#pragma  mark-----memoryManager
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark------customMethod
+- (void)startLoadNet
+{
+    
+}
 @end

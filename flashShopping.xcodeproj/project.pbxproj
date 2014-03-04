@@ -153,6 +153,8 @@
 		FB394B6C18C23EA400919C22 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6718C23EA400919C22 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FB394B6D18C23EA400919C22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6918C23EA400919C22 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FB394B7018C23F2700919C22 /* SGDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6F18C23F2700919C22 /* SGDataService.m */; };
+		FB43DA4618C5BF500098F5F9 /* LogisticManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43DA4418C5BF500098F5F9 /* LogisticManagerViewController.m */; };
+		FB43DA4718C5BF500098F5F9 /* LogisticManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB43DA4518C5BF500098F5F9 /* LogisticManagerViewController.xib */; };
 		FB52950018C372EF0073C44C /* CustomUIBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */; };
 		FBE393C418C427F700571EBD /* textFields@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C218C427F700571EBD /* textFields@x2.png */; };
 		FBE393C518C427F700571EBD /* textFieldView@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C318C427F700571EBD /* textFieldView@x2.png */; };
@@ -365,6 +367,9 @@
 		FB394B6918C23EA400919C22 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		FB394B6E18C23F2700919C22 /* SGDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDataService.h; sourceTree = "<group>"; };
 		FB394B6F18C23F2700919C22 /* SGDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDataService.m; sourceTree = "<group>"; };
+		FB43DA4318C5BF500098F5F9 /* LogisticManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticManagerViewController.h; sourceTree = "<group>"; };
+		FB43DA4418C5BF500098F5F9 /* LogisticManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticManagerViewController.m; sourceTree = "<group>"; };
+		FB43DA4518C5BF500098F5F9 /* LogisticManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogisticManagerViewController.xib; sourceTree = "<group>"; };
 		FB5294FE18C372EF0073C44C /* CustomUIBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIBarButtonItem.h; sourceTree = "<group>"; };
 		FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIBarButtonItem.m; sourceTree = "<group>"; };
 		FBE393C218C427F700571EBD /* textFields@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFields@x2.png"; sourceTree = "<group>"; };
@@ -575,6 +580,9 @@
 				E249F5E118754B4600462E6B /* GoodManagerViewController.h */,
 				E249F5E218754B4600462E6B /* GoodManagerViewController.m */,
 				E249F5E318754B4600462E6B /* GoodManagerViewController.xib */,
+				FB43DA4318C5BF500098F5F9 /* LogisticManagerViewController.h */,
+				FB43DA4418C5BF500098F5F9 /* LogisticManagerViewController.m */,
+				FB43DA4518C5BF500098F5F9 /* LogisticManagerViewController.xib */,
 				E2E129E218BF2191004D74E0 /* NoGoodViewController.h */,
 				E2E129E318BF2191004D74E0 /* NoGoodViewController.m */,
 				E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */,
@@ -925,6 +933,7 @@
 				FBE393C818C42B7600571EBD /* textFieldView.png in Resources */,
 				E265B697187B98B700B7CA13 /* search_bg.png in Resources */,
 				E230F052187E70D3009A0479 /* blackArrow@2x.png in Resources */,
+				FB43DA4718C5BF500098F5F9 /* LogisticManagerViewController.xib in Resources */,
 				FBE393C518C427F700571EBD /* textFieldView@x2.png in Resources */,
 				E244FA3B187D521F005DFF26 /* lastCell.png in Resources */,
 				E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */,
@@ -1020,6 +1029,7 @@
 				E2E129E518BF2191004D74E0 /* NoGoodViewController.m in Sources */,
 				E298362918BB4A8C00B1DB2C /* SDWebImageDownloader.m in Sources */,
 				FB394B6C18C23EA400919C22 /* SBJsonStreamWriterState.m in Sources */,
+				FB43DA4618C5BF500098F5F9 /* LogisticManagerViewController.m in Sources */,
 				E249F5DF18754B0A00462E6B /* ShopMvoingViewController.m in Sources */,
 				E249F5F218754BBD00462E6B /* MainViewController.m in Sources */,
 				E298362A18BB4A8C00B1DB2C /* SDWebImageManager.m in Sources */,

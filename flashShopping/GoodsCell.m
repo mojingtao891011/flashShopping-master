@@ -86,6 +86,7 @@
     _isUpLabel.left = 0 ;
     _isUpLabel.top = 0 ;
     _isUpLabel.textColor = [UIColor redColor];
+   // NSLog(@"goodsIsUP = %d",_goodsModel.isUp);
     if (_goodsModel.isUp) {
         _isUpLabel.text = @"[出售中]";
     }else{

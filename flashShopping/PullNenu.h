@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol pullNenuProtocol <NSObject>
-
+//选中行的标题
 - (void)changeTitles:(NSString*)title ;
 
 @end

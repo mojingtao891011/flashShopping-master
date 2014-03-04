@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol barButtonProtocol <NSObject>
-
+//点击自定义导航按钮时启动
 - (void)actions:(id)sender;
 
 @end

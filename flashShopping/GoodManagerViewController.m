@@ -7,6 +7,7 @@
 //
 
 #import "GoodManagerViewController.h"
+#import "LogisticManagerViewController.h"
 #import "GoodInfoViewController.h"
 #import "NoGoodViewController.h"
 
@@ -80,6 +81,10 @@
     NSLog(@"%d",button.tag);
     if (button.tag == 120) {
       
+    }
+    else if (button.tag == 121){
+        LogisticManagerViewController *LogisticManagerCtl = [[LogisticManagerViewController alloc]init];
+        [self.navigationController pushViewController:LogisticManagerCtl animated:YES];
     }
     else if (button.tag == 123)
     {

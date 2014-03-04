@@ -38,7 +38,7 @@
                         <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="LUs-Cr-lBR"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="tvG-dB-nWm">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入商品名称或编号" minimumFontSize="17" id="tvG-dB-nWm">
                     <rect key="frame" x="15" y="8" width="250" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

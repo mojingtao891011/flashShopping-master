@@ -28,12 +28,9 @@
     [super viewDidLoad];
     self.titleLabel.text = @"物流信息";
     //创建导航栏上的保存按钮
-    UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveButton.width = 50 ;
-    saveButton.height = 30 ;
-    [saveButton setBackgroundImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
-    [saveButton addTarget:self action:@selector(saveModifyInfo) forControlEvents:UIControlEventTouchUpInside];
+    CustomUIBarButtonItem *saveButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 50, 30) andSetdelegate:self andImageName:@"save"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:saveButton];
+    
     self.bodyView.height = SCREENMAIN_HEIGHT ;
     if (IOS_VERSION < 7.0) {
         self.bodyView.top = - 64 ;
@@ -46,10 +43,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark---customModth
-- (void)saveModifyInfo
+#pragma mark---barButtonProtocol
+//保存
+- (void)actions:(id)sender
 {
-    NSLog(@"sbsd");
+    NSLog(@"save");
+    
+}
+#pragma mark-----UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES ;
+}
+#pragma mark---customModth
+- (IBAction)logisticStatus:(id)sender {
+    [_logisticButton setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
+    _logisticButton = (UIButton*)sender ;
+    [_logisticButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
 }
 
 @end

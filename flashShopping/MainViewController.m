@@ -43,7 +43,7 @@
     [self _initView];
     
     [self customItemBar];
-	NSLog(@"================");
+	
 }
 
 //初始化MainViewController管理的4个ViewController；
@@ -90,7 +90,7 @@
         
         [barView addSubview:itemButton];
     }
-    NSLog(@"========dfsfoen ldvo odsnvodnewir ========");
+    
 }
 
 //ViewController视图之间的切换
@@ -103,7 +103,7 @@
     }
     self.selectedIndex=button.tag-100;
     button.selected=YES;
-    NSLog(@"========dfsfoen ldvo odsn00000000000000vodnewir ========");
+ 
 }
 
 //是否要显示BarItem

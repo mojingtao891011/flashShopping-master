@@ -48,39 +48,45 @@
     [goodTableView setTableHeaderView:_searchBox];//加载搜索框
     [self.view addSubview:goodTableView];
     [self.view bringSubviewToFront:navigationBar];
-    
+    //适配
+    if (IOS_VERSION < 7.0) {
+        navigationBar.top = 0 ;
+        goodTableView.top = 44 ;
+    }
     //加载网络数据
     [self loadNetData:YES];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshNote:) name:@"refresh" object:nil];
 }
+//加载网络数据
 - (void)loadNetData:(BOOL)isReloadData
 {
     NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json" , @"companyId":@"00000101"};
     NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
     [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
         NSArray *jsonArr = result[@"content"];
+        NSLog(@"%@",jsonArr);
         for (NSDictionary *dict in jsonArr) {
             GoodInfoModle *gInfoModle = [GoodInfoModle new];
             gInfoModle.goodsCode = dict[@"goodsCode"];
             gInfoModle.goodsId = dict[@"goodsId"];
             gInfoModle.Id = dict[@"id"];
-            gInfoModle.isUp = dict[@"isUp"];
+            gInfoModle.isUp = [dict[@"isUp"]boolValue];
             gInfoModle.name = dict[@"name"];
             gInfoModle.num = dict[@"num"];
             gInfoModle.price = dict[@"price"];
             gInfoModle.viewUrl = dict[@"viewUrl"];
+    
             if (dataArr == nil) {
                 dataArr = [NSMutableArray new];
             }
             [dataArr addObject:gInfoModle];
         }
-        
-         [[NSNotificationCenter defaultCenter]postNotificationName:@"toGooDetaiView" object:dataArr[index]];
-        
-        if (isReloadData) {
+         if (isReloadData) {
             [goodTableView reloadData];
 
+        }else{
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"toGooDetaiView" object:dataArr[index]];
         }
         
     }];
@@ -142,11 +148,14 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 #pragma mark---ChangeHeightProtocol
-- (void)ChangeHeight:(NSInteger)height
+//选中下拉行的标题
+- (void)changeTitles:(NSString *)title
 {
-        Cellheight = height ;
+    [navigationBar.titleButton setTitle:title forState:UIControlStateNormal];
+    navigationBar.pullNenu.hidden = YES , navigationBar.flag = !navigationBar.flag ;
 }
-#pragma mark---customAction
+#pragma mark----barButtonProtocol
+//点击自定义导航按钮时启动
 - (void)actions:(id)sender{
     UIButton *b = (UIButton*)sender ;
     if (b.tag == 10) {
@@ -158,11 +167,7 @@
     }
    
 }
-- (void)changeTitles:(NSString *)title
-{
-    [navigationBar.titleButton setTitle:title forState:UIControlStateNormal];
-    navigationBar.pullNenu.hidden = YES , navigationBar.flag = !navigationBar.flag ;
-}
+#pragma mark---customAction
 - (IBAction)searchButton:(id)sender {
     NSLog(@"开始搜索…………");
 }
