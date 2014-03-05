@@ -8,6 +8,7 @@
 
 #import "ModifyInfoViewController.h"
 #import "SGDataService.h"
+#import "NSString+URLEncoding.h"
 
 @interface ModifyInfoViewController ()
 
@@ -39,7 +40,6 @@
     if (IOS_VERSION < 7.0) {
         self.bodyView.top = 44 ;
     }
-    
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
     
@@ -54,7 +54,11 @@
     [textField resignFirstResponder];
     if ( textField.tag == 6 || textField.tag ==7 ) {
         [UIView animateWithDuration:0.5 animations:^{
-            _bodyView.top = _bodyTop ;
+            if (IOS_VERSION < 7.0) {
+                _bodyView.top = _bodyTop + 20 ;
+            }else{
+                _bodyView.top = _bodyTop  ;
+            }
         }];
     }
     return YES ;
@@ -112,7 +116,12 @@
 {
     if ( textFieldTag == 6 || textFieldTag ==7 ) {
         [UIView animateWithDuration:0.5 animations:^{
-            _bodyView.top =_bodyTop - (textFieldBottom - (_bodyView.height - keyboardHeight - 64));
+            if (IOS_VERSION < 7.0) {
+                 _bodyView.top =_bodyTop - (textFieldBottom - (_bodyView.height - keyboardHeight - 44));
+            }else{
+                 _bodyView.top =_bodyTop - (textFieldBottom - (_bodyView.height - keyboardHeight - 64));
+            }
+           
         }];
     }
 }

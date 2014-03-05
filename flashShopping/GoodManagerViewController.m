@@ -31,7 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"店铺管理";
     [self creatShopManagerButton];//店铺管理菜单
     

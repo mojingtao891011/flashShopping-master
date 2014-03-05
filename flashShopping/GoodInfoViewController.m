@@ -16,6 +16,7 @@
     UITableView *goodTableView ;
     NSMutableArray *dataArr ;
     CustomNavigationBar *navigationBar ;
+    UIView *MBHView ;
     int index ;
     NSInteger Cellheight ;
 }
@@ -36,7 +37,10 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
-   
+    MBHView = [[UIView alloc]initWithFrame:CGRectMake(0, -64, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 64)];
+    MBHView.backgroundColor = [UIColor whiteColor];
+    
+    
     //自定义导航
     navigationBar = [[CustomNavigationBar alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 44) andTitleArr:[NSArray arrayWithObjects:@"所有商品",@"橱窗中商品",@"出售中商品",@"仓库中商品",@"已下架商品", nil] andSetBarButtonDelegate:self andSetPullNenuDelegate:self ];
     [self.view addSubview:navigationBar];
@@ -45,8 +49,10 @@
     goodTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 54, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 54) style:UITableViewStylePlain];
     goodTableView.dataSource = self ;
     goodTableView.delegate = self ;
+    goodTableView.separatorStyle = UITableViewCellSeparatorStyleNone ;
     [goodTableView setTableHeaderView:_searchBox];//加载搜索框
-    [self.view addSubview:goodTableView];
+    [goodTableView addSubview: MBHView];
+     [self.view addSubview:goodTableView];
     [self.view bringSubviewToFront:navigationBar];
     //适配
     if (IOS_VERSION < 7.0) {
@@ -61,11 +67,14 @@
 //加载网络数据
 - (void)loadNetData:(BOOL)isReloadData
 {
+    MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:MBHView animated:YES];
+    hub.mode = MBProgressHUDModeIndeterminate ;
+    hub.labelText = @"loading" ;
+    
     NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json" , @"companyId":@"00000101"};
     NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
     [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
         NSArray *jsonArr = result[@"content"];
-        NSLog(@"%@",jsonArr);
         for (NSDictionary *dict in jsonArr) {
             GoodInfoModle *gInfoModle = [GoodInfoModle new];
             gInfoModle.goodsCode = dict[@"goodsCode"];
@@ -84,13 +93,17 @@
         }
          if (isReloadData) {
             [goodTableView reloadData];
+             [UIView animateWithDuration:0.5 animations:^{
+                  [MBProgressHUD hideHUDForView:MBHView animated:YES];
+                 MBHView.alpha = 0 ;
+                 goodTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine ;
+                 [MBHView removeFromSuperview];
+             }];
 
         }else{
              [[NSNotificationCenter defaultCenter]postNotificationName:@"toGooDetaiView" object:dataArr[index]];
         }
-        
     }];
-
 }
 - (void)viewWillAppear:(BOOL)animated
 {

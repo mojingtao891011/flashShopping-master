@@ -8,7 +8,6 @@
 
 #import "ChatViewController.h"
 
-
 @interface ChatViewController ()
 @end
 
@@ -28,6 +27,10 @@
     [super viewDidLoad];
     self.titleLabel.text = @"闪聊";
     
+    
+}
+- (void)start
+{
     
 }
 - (void)didReceiveMemoryWarning

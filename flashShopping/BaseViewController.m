@@ -36,13 +36,7 @@
     _titleLabel.font = [UIFont systemFontOfSize:20];
     self.navigationItem.titleView = _titleLabel;
     
-	//背景图片
-//    UIImageView *backgroundView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 568)];
-//    backgroundView.userInteractionEnabled = YES ;
-//    backgroundView.image = [UIImage imageNamed:@"background"];
-//    backgroundView.contentMode = UIViewContentModeScaleToFill ;
-//    self.view = backgroundView ;
-    //[self.view addSubview:backgroundView];
+    self.view.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1];
     
     NSLog(@"%f",self.view.size.height);
     if (self.navigationController.viewControllers.count > 1) {

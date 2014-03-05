@@ -38,7 +38,7 @@
     moreTableView.delegate=self;
     moreTableView.bounces=NO;
     [self.view addSubview:moreTableView];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:postNoteName object:nil];
+   // [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:postNoteName object:nil];
     titleArr=[NSArray arrayWithObjects:@"关于我们",@"新手入门",@"版本检测",@"意见反馈",@"打分鼓励一下",@"清除本地缓存", nil];
 }
 - (void)getData:(NSNotification*)note

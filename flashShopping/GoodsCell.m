@@ -138,8 +138,8 @@
     self.directionsLabel.text = text;
     //设置label的最大行数
     self.directionsLabel.numberOfLines = 10;
-    CGSize size = CGSizeMake(220, 300);
-    CGSize labelSize = [self.directionsLabel.text sizeWithFont:self.directionsLabel.font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize size = CGSizeMake(200, 300);
+    CGSize labelSize = [self.directionsLabel.text sizeWithFont:self.directionsLabel.font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail];
     self.directionsLabel.frame = CGRectMake(self.directionsLabel.frame.origin.x, self.directionsLabel.frame.origin.y, labelSize.width, labelSize.height );
     
     //计算出自适应的高度

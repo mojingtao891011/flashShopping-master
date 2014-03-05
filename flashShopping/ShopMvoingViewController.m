@@ -7,7 +7,6 @@
 //
 
 #import "ShopMvoingViewController.h"
-#import "BaseTableView.h"
 #import "BaseNavViewController.h"
 
 
@@ -28,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
+    //self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"店铺动态";
    
         

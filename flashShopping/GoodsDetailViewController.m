@@ -32,7 +32,6 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"商品详情";
-    self.view.backgroundColor = [UIColor clearColor];
     //添加UITableView
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 64) style:UITableViewStyleGrouped];
     _tableView.dataSource = self ;
