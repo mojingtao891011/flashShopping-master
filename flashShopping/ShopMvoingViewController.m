@@ -35,6 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES ];
+    NSLog(@"代码合并测试（03/10 ）分支");
 }
 
 - (void)didReceiveMemoryWarning
