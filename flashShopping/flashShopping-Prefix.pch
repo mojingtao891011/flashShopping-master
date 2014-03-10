@@ -14,8 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIViewExt.h"
-
-#define ChangeTitle    @"ChangeTitle"
+    #import "MBProgressHUD.h"
 
 //获取屏幕的宽、高
 #define SCREENMAIN_WIDTH    [UIScreen mainScreen].bounds.size.width
@@ -24,9 +23,6 @@
 //获取ios版本号
 #define IOS_VERSION  [[[UIDevice currentDevice]systemVersion] floatValue]
 #define POINT_Y   IOS_VERSION < 7.0 ? 0 : 64
-
-//发送数据通知
-#define postNoteName @"postNotificationName"
 
 //字体的颜色
 #define searchTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//A2A1A1
@@ -48,5 +44,8 @@
 #define SGfreight        @"freight"
 #define SGorderTime      @"orderTime"
 #define SGtotal          @"total"
+
+#define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
+//#define BASEURL     @"http://192.168.1.16:8080/Assistant/app"
 
 #endif

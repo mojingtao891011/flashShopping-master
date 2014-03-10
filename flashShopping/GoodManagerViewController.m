@@ -7,7 +7,9 @@
 //
 
 #import "GoodManagerViewController.h"
+#import "LogisticManagerViewController.h"
 #import "GoodInfoViewController.h"
+#import "NoGoodViewController.h"
 
 @interface GoodManagerViewController ()
 //店铺管理菜单
@@ -29,7 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"店铺管理";
     [self creatShopManagerButton];//店铺管理菜单
     
@@ -80,10 +81,19 @@
     if (button.tag == 120) {
       
     }
+    else if (button.tag == 121){
+        LogisticManagerViewController *LogisticManagerCtl = [[LogisticManagerViewController alloc]init];
+        [self.navigationController pushViewController:LogisticManagerCtl animated:YES];
+    }
     else if (button.tag == 123)
     {
         GoodInfoViewController *goodsManamentView = [[GoodInfoViewController alloc]init];
         [self.navigationController pushViewController:goodsManamentView animated:YES];
+    }
+    else if (button.tag == 124)
+    {
+        NoGoodViewController  *noGoodViewCtl = [[ NoGoodViewController alloc ]init ];
+        [self.navigationController pushViewController:noGoodViewCtl animated:YES];
     }
 }
 #pragma mark-----Memory

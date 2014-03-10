@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m \
-  /Users/Width/Desktop/flashShopping-master/flashShopping/flashShopping-master/flashShopping/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.h
+  /Users/Width/Desktop/flashShopping-master/flashShopping/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.m \
+  /Users/Width/Desktop/flashShopping-master/flashShopping/EGOTableViewPullRefresh/Classes/View/EGORefreshTableHeaderView.h

@@ -8,14 +8,18 @@
 
 #import "BaseViewController.h"
 #import "GoodInfoModle.h"
+#import "CustomUIBarButtonItem.h"
+#import "GoodsCell.h"
 
-@interface GoodsDetailViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface GoodsDetailViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate , barButtonProtocol>
 
 @property ( nonatomic ,retain)GoodInfoModle *goodsModel;
+@property ( nonatomic , assign)NSInteger indexs ;
 @property (strong, nonatomic) IBOutlet UITableViewCell *customCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *customCell2;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *edPrice;
 @property (strong, nonatomic) IBOutlet UITableViewCell *edInfoCell;
 - (IBAction)ModifyInfoButton:(id)sender;
+- (IBAction)logisticInfo:(id)sender;
 
 @end

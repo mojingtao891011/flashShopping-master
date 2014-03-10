@@ -86,6 +86,10 @@
         itemButton.tag=100+i;
         [itemButton setBackgroundImage:[UIImage imageNamed:imgNormaArr[i]] forState:UIControlStateNormal];
         [itemButton setImage:[UIImage imageNamed:imgSelectedArr[i]] forState:UIControlStateSelected];
+        if (itemButton.tag == 100) {
+            _lastSelectedButton = itemButton ;
+            _lastSelectedButton.selected = YES ;
+        }
         [itemButton addTarget:self action:@selector(selectedViewControllers:) forControlEvents:UIControlEventTouchUpInside];
         
         [barView addSubview:itemButton];
@@ -95,14 +99,12 @@
 
 //ViewController视图之间的切换
 - (void)selectedViewControllers:(UIButton*)button{
-    for (UIView *v  in barView.subviews) {
-        if ([v isKindOfClass:[UIButton class]]) {
-            UIButton *b=(UIButton*)v;
-            b.selected=NO;
-        }
+    if (_lastSelectedButton != button) {
+        _lastSelectedButton.selected = NO ;
     }
-    self.selectedIndex=button.tag-100;
-    button.selected=YES;
+    _lastSelectedButton = button ;
+    button.selected = YES ;
+    self.selectedIndex = button.tag - 100 ;
 }
 
 //是否要显示BarItem
