@@ -7,8 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomNavigationBar.h"
+#import "GoodsCell.h"
 
-@interface GoodInfoViewController : BaseViewController
+@interface GoodInfoViewController : BaseViewController<barButtonProtocol , pullNenuProtocol >
+
 
 @property (strong, nonatomic) IBOutlet UIView *searchBox;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *textField;

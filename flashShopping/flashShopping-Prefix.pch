@@ -49,4 +49,7 @@
 #define SGorderTime      @"orderTime"
 #define SGtotal          @"total"
 
+#define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
+//#define BASEURL     @"http://192.168.1.16:8080/Assistant/app"
+
 #endif

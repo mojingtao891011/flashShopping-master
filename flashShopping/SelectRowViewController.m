@@ -28,8 +28,6 @@
 {
     [super viewDidLoad];
     
-    [self createUIBarButtonItem:YES image:@"moreBack"];
-    
 }
 
 - (void)didReceiveMemoryWarning

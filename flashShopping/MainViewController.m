@@ -103,6 +103,7 @@
     }
     self.selectedIndex=button.tag-100;
     button.selected=YES;
+ 
 }
 
 //是否要显示BarItem

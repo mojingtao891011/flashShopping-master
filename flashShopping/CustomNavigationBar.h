@@ -7,11 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomUIBarButtonItem.h"
+#import "PullNenu.h"
 
+@interface CustomNavigationBar : UIView
+{
+    UIButton *pullDwonButton ;
+}
 
-@interface CustomNavigationBar : UIView <UITableViewDataSource , UITableViewDelegate>
-
+@property( nonatomic , copy )UIButton *titleButton ;
+@property (nonatomic , retain )PullNenu *pullNenu ;
 @property ( nonatomic , retain )NSArray *titleArr;
-- (id)initWithFrame:(CGRect)frame andTitleArr:(NSArray *)titleArr ;
+@property (nonatomic , assign)BOOL flag ;
+@property ( nonatomic , assign )id<barButtonProtocol>barButtonDele ;
+@property ( nonatomic , assign )id<pullNenuProtocol>pullDele ;
+- (id)initWithFrame:(CGRect)frame andTitleArr:(NSArray *)titleArr andSetBarButtonDelegate:(id<barButtonProtocol>)barButtondelegate  andSetPullNenuDelegate:(id<pullNenuProtocol>)pullDelegate ;
 
 @end

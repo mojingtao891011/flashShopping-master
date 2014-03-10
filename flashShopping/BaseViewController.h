@@ -12,7 +12,4 @@
 
 @property (nonatomic , retain)UILabel *titleLabel;   //导航标题
 
-- (void)createUIBarButtonItem:(BOOL)isRightOrLeft  image:(NSString*)imageName ;  //创建导航按钮
-- (void)buttonItemClickAction:(UIButton *)buttonItem;  
-
 @end

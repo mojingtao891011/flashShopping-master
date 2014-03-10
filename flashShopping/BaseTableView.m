@@ -7,8 +7,6 @@
 //
 
 #import "BaseTableView.h"
-#import "OrderManagerDataModle.h"
-
 
 @implementation BaseTableView
 

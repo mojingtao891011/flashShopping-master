@@ -33,17 +33,24 @@
     _titleLabel.backgroundColor = [UIColor clearColor];
     _titleLabel.textColor = [UIColor whiteColor];
     _titleLabel.textAlignment = NSTextAlignmentCenter ;
+    _titleLabel.font = [UIFont systemFontOfSize:20];
     self.navigationItem.titleView = _titleLabel;
     
 	//背景图片
-   // self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+//    UIImageView *backgroundView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 568)];
+//    backgroundView.userInteractionEnabled = YES ;
+//    backgroundView.image = [UIImage imageNamed:@"background"];
+//    backgroundView.contentMode = UIViewContentModeScaleToFill ;
+//    self.view = backgroundView ;
+    //[self.view addSubview:backgroundView];
     
+    NSLog(@"%f",self.view.size.height);
     if (self.navigationController.viewControllers.count > 1) {
         //自定义ButtonItem
         UIButton *buttonItem = [UIButton buttonWithType:UIButtonTypeCustom];
         [buttonItem setFrame:CGRectMake(0, 10, 20, 20)];
         [buttonItem setBackgroundImage:[UIImage imageNamed:@"return"] forState:UIControlStateNormal];
-        [buttonItem addTarget:self action:@selector(buttonItemClickAction:) forControlEvents:UIControlEventTouchUpInside];
+        [buttonItem addTarget:self action:@selector(buttonItemClickAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithCustomView:buttonItem];
         self.navigationItem.leftBarButtonItem = barButtonItem ;
     }
@@ -58,24 +65,9 @@
 }
 
 #pragma mark------customMethod
-- (void)createUIBarButtonItem:(BOOL)isRightOrLeft  image:(NSString*)imageName
+- (void)buttonItemClickAction
 {
-    //自定义ButtonItem
-    UIButton *buttonItem = [UIButton buttonWithType:UIButtonTypeCustom];
-    [buttonItem setFrame:CGRectMake(0, 10, 20, 20)];
-    [buttonItem setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-    [buttonItem addTarget:self action:@selector(buttonItemClickAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithCustomView:buttonItem];
-    
-    if (isRightOrLeft) {
-        self.navigationItem.leftBarButtonItem = barButtonItem ;
-    }else{
-        self.navigationItem.rightBarButtonItem = barButtonItem ;
-    }
-    
-}
-- (void)buttonItemClickAction:(UIButton *)buttonItem
-{
-    [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+        
 }
 @end
