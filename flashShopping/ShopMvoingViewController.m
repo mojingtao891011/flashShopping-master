@@ -30,6 +30,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = @"店铺动态";
+    NSLog(@"hebingceshi");
    
         
 }

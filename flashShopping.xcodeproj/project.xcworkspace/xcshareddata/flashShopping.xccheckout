@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AE480995-D35D-409B-AC0E-D654B671A70F</string>
+	<string>78372C22-AE8C-4134-BCE2-884B5A890290</string>
 	<key>IDESourceControlProjectName</key>
 	<string>flashShopping</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>93BFF4B9-30DA-471F-B7C6-16DC126F2606</key>
-		<string>ssh://github.com/testmojingtao/flashShopping-master.git</string>
+		<key>4DA888B0-15DD-4E78-98B4-AE86F62CED99</key>
+		<string>https://github.com/testmojingtao/flashShopping-master.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>flashShopping.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>93BFF4B9-30DA-471F-B7C6-16DC126F2606</key>
+		<key>4DA888B0-15DD-4E78-98B4-AE86F62CED99</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/testmojingtao/flashShopping-master.git</string>
+	<string>https://github.com/testmojingtao/flashShopping-master.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>93BFF4B9-30DA-471F-B7C6-16DC126F2606</string>
+	<string>4DA888B0-15DD-4E78-98B4-AE86F62CED99</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>93BFF4B9-30DA-471F-B7C6-16DC126F2606</string>
+			<string>4DA888B0-15DD-4E78-98B4-AE86F62CED99</string>
 			<key>IDESourceControlWCCName</key>
 			<string>flashShopping-master</string>
 		</dict>
