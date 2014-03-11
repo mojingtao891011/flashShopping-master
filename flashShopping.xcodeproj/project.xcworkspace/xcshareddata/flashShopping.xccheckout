@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>049774B6-739F-4A72-A432-39EA83BE0C81</string>
+=======
+	<string>1D5A74AC-CFE8-41E9-BC4F-7B20410B3DCA</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectName</key>
 	<string>flashShopping</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
