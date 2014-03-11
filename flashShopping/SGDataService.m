@@ -22,16 +22,21 @@
     NSComparisonResult comparRet = [httpMethod caseInsensitiveCompare:@"POST"];
     if (comparRet == NSOrderedSame) {
         SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
-        NSString *jsonStr = [jsonWriter stringWithObject:dictparams];
-        [request appendPostData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding]];
-
+        NSString *jsonStr = [[jsonWriter stringWithObject:dictparams]URLEncodedString];
+        
+        NSMutableString *mutableStr =[NSMutableString stringWithString:jsonStr];
+        NSRange range = NSMakeRange(0, [mutableStr length]);
+        [mutableStr replaceOccurrencesOfString:@"%20" withString:@"+" options:NSCaseInsensitiveSearch range:range];
+        
+        [request appendPostData:[mutableStr dataUsingEncoding:NSUTF8StringEncoding ]];
+        
+        
     }
     //请求完成的block
     [request setCompletionBlock:^{
-        NSData *data = [request responseData];
+        NSString *getStr = [[request responseString] URLDecodedString];
         //json解析（ios5以后NSJSONSerialization）
-        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        //NSLog(@"%@",result);
+        id result = [NSJSONSerialization JSONObjectWithData:[getStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
         if (block != nil) {
             block(result);
         }
@@ -43,5 +48,6 @@
     [request startAsynchronous];
     return nil ;
 }
+
 
 @end
