@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "LandViewController.h"
 
 @implementation AppDelegate{
     NSTimer *timer;
@@ -19,7 +20,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [self startUp];
+   [self startUp];
 
     [self.window makeKeyAndVisible];
     return YES;
@@ -44,8 +45,9 @@
         
     }completion:^(BOOL finish){
         
-        MainViewController *mainView=[[MainViewController alloc]init];
-        self.window.rootViewController=mainView;
+       // MainViewController *mainView=[[MainViewController alloc]init];
+        LandViewController *landViewCtl = [[LandViewController alloc]init];
+        self.window.rootViewController=landViewCtl;
         
         //加载完根视图后删除启动画面同时销掉计时器
         [imageView removeFromSuperview];
@@ -81,5 +83,8 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
+    NSLog(@"sddfsfs");
+}
 @end

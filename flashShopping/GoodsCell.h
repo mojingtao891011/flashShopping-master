@@ -16,7 +16,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "GoodInfoModle.h"
+#import "GoodsInfoModel.h"
 
 @interface GoodsCell : UITableViewCell
 @property ( nonatomic , retain )UIImageView         *goodsImgView;                      //商品图片
@@ -27,7 +27,7 @@
 @property ( nonatomic , retain ) UILabel                   *priceMoneyLabel;                  //价格
 @property ( nonatomic , retain ) UILabel                   *numLabel;                               //库存 （字体）
 @property ( nonatomic , retain ) UILabel                   *numNumberabel;                   //库存
-@property (nonatomic , retain )GoodInfoModle        *goodsModel ;                       //数据模型
+@property (nonatomic , retain )GoodsInfoModel        *goodsModel ;                       //数据模型
 -(void)setIntroductionText:(NSString*)text ;
 
 @end

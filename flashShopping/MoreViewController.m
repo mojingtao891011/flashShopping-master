@@ -8,7 +8,7 @@
 
 #import "MoreViewController.h"
 #import "SelectRowViewController.h"
-
+#import "LandViewController.h"
 
 @interface MoreViewController ()<UITableViewDataSource,UITableViewDelegate>{
     UITableView *moreTableView;
@@ -31,14 +31,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
+   // self.view.backgroundColor = [UIColor clearColor];
      self.titleLabel.text = @"更多";
     moreTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, self.view.bounds.size.height-20) style:UITableViewStyleGrouped];
     moreTableView.dataSource=self;
     moreTableView.delegate=self;
     moreTableView.bounces=NO;
     [self.view addSubview:moreTableView];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:postNoteName object:nil];
+  //  [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getData:) name:postNoteName object:nil];
     titleArr=[NSArray arrayWithObjects:@"关于我们",@"新手入门",@"版本检测",@"意见反馈",@"打分鼓励一下",@"清除本地缓存", nil];
 }
 - (void)getData:(NSNotification*)note
@@ -93,6 +93,10 @@
         SelectRowViewController *selectRowView=[[SelectRowViewController alloc]init];
         selectRowView.navgationTitle=titleArr[indexPath.row];
         [self.navigationController pushViewController:selectRowView animated:YES];
+    }else if (indexPath.section == 2)
+    {
+        LandViewController *landViewCtl = [[LandViewController alloc]init];
+        [self presentModalViewController:landViewCtl animated:YES];
     }
  
 }

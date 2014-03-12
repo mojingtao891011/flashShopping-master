@@ -7,7 +7,6 @@
 //
 
 #import "ModifyInfoViewController.h"
-#import "SGDataService.h"
 
 @interface ModifyInfoViewController ()
 
@@ -28,8 +27,10 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"基本信息";
+    NSLog(@"%@",_bodyView);
     _bodyTop = _bodyView.top ;
-    
+    _bodyView.userInteractionEnabled = YES ;
+    //_bodyView.contentSize = CGSizeMake(SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT + 60);
     //创建导航栏上的保存按钮
     CustomUIBarButtonItem *saveButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 50, 30) andSetdelegate:self andImageName:@"save"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:saveButton];
@@ -44,9 +45,10 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
     
     //post (  NSDictionary )
-    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" , @"companyId":@"00000101" };
+    NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" };
     _mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
-   
+    
+    
 }
 #pragma mark---UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -87,10 +89,11 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark---customModth
-//保存
+#pragma mark---保存
 - (void)actions:(id)sender
 {
     //必须post字段
+    [_mutableDict setObject: [[NSUserDefaults standardUserDefaults]objectForKey:COMPANYID]forKey:@"companyId"];
     [_mutableDict setObject:_Id forKey:@"Id"];
     [_mutableDict setObject:_goodsId forKey:@"goodsId"];
     //非必须post字段
@@ -102,8 +105,8 @@
     //提交修改
     [SGDataService requestWithUrl:BASEURL dictParams:_mutableDict httpMethod:@"post" completeBlock:^(id result){
         //NSLog(@"%@",result[@"content"]);
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:result[@"content"] delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
-            [alertView show];
+       UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:result[@"content"] delegate:self cancelButtonTitle:@"返回" otherButtonTitles:nil , nil];
+           [alertView show];
     }];
     
 }
@@ -120,12 +123,11 @@
 - (IBAction)selectButton:(id)sender {
      UIButton *selectButton = (UIButton*)sender ;
     if (selectButton.tag == 2) {
-        _isUp = YES;
+        _isUp = @"1";
     }else if( selectButton.tag == 3){
-        _isUp = NO ;
+        _isUp = @"0" ;
     }
- 
-    [_mutableDict  setObject:[NSString stringWithFormat:@"%d",_isUp] forKey:@"isUp"];
+    [_mutableDict  setObject:_isUp forKey:@"isUp"];
     [_StateButton setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
     _StateButton = (UIButton*)sender ;
     [_StateButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
@@ -136,5 +138,9 @@
     [_recommendButton setBackgroundImage:[UIImage imageNamed:@"Radio-a"] forState:UIControlStateNormal];
     _recommendButton = (UIButton*)sender ;
     [_recommendButton setBackgroundImage:[UIImage imageNamed:@"Radio-b"] forState:UIControlStateNormal];
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touchesBegan");
 }
 @end

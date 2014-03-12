@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UITabBarController<UINavigationControllerDelegate>
-
+{
+    UIButton *_lastSelecteButton ;
+}
 - (void)showBarItem:(BOOL)show;
 
 @end

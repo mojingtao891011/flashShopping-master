@@ -25,9 +25,9 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodCodeTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodPriceTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *goodNumTextField;
-@property ( nonatomic , copy )NSString *Id ;
-@property ( nonatomic , copy )NSString *goodsId ;
-@property ( nonatomic , assign )BOOL  isUp ;
+@property ( nonatomic , retain )NSNumber *Id ;
+@property ( nonatomic , retain )NSNumber *goodsId ;
+@property ( nonatomic , copy )NSString  *isUp ;
 
 - (IBAction)selectButton:(id)sender;
 - (IBAction)recommend:(id)sender;

@@ -76,10 +76,11 @@
     //商品描述
     [self setIntroductionText:_goodsModel.name];
     _directionsLabel.left = _goodsImgView.right + 5;
-    _directionsLabel.top = 0 ;
+    _directionsLabel.top = 10 ;
     _directionsLabel.width = self.width - _goodsImgView.width - 20 ;
     _directionsLabel.numberOfLines = 0 ;
     _directionsLabel.backgroundColor = [UIColor clearColor];
+    _directionsLabel.textColor = nameTextColor ;
     _directionsLabel.text = [NSString  stringWithFormat:@"              %@",_goodsModel.name];
     
     //出售状态
@@ -87,22 +88,24 @@
     _isUpLabel.top = 0 ;
     _isUpLabel.textColor = [UIColor redColor];
    // NSLog(@"goodsIsUP = %d",_goodsModel.isUp);
-    if (_goodsModel.isUp) {
+    
+    if ([_goodsModel.isUp isEqualToString:@"1" ]) {
         _isUpLabel.text = @"[出售中]";
     }else{
         _isUpLabel.text = @"[已下架]";
     }
     [_isUpLabel sizeToFit];
     
-    //商品编号
-    _goodsCodeLabel.left = _directionsLabel.left ;
-    _goodsCodeLabel.top = _directionsLabel.bottom ;
-    [_goodsCodeLabel sizeToFit];
+//    //商品编号
+//    _goodsCodeLabel.left = _directionsLabel.left ;
+//    _goodsCodeLabel.top = _directionsLabel.bottom ;
+//    [_goodsCodeLabel sizeToFit];
     
     //价格（字体）
-    _priceLabel.left = _goodsCodeLabel.left ;
-    _priceLabel.top = _goodsCodeLabel.bottom ;
+    _priceLabel.left = _directionsLabel.left ;
+    _priceLabel.top = _directionsLabel.bottom ;
     _priceLabel.text = @"价格：";
+    _priceLabel.textColor = priceTextColor ;
     _priceLabel.backgroundColor = [UIColor clearColor];
     [_priceLabel sizeToFit];
    
@@ -118,12 +121,14 @@
     //库存
     [_numLabel setFrame:CGRectMake(_priceLabel.left, _priceLabel.bottom, 0, 0)];
     _numLabel.text = @"库存：";
+    _numLabel.textColor = priceTextColor ;
     _numLabel.backgroundColor = [UIColor clearColor];
     [_numLabel sizeToFit];
 
     //库存数量
     [_numNumberabel setFrame:CGRectMake(_numLabel.right, _priceLabel.bottom, 0, 0)];
     _numNumberabel.text = [NSString stringWithFormat:@"%@",_goodsModel.num] ;
+    _numNumberabel.textColor = nameTextColor ;
     _numNumberabel.backgroundColor = [UIColor clearColor];
     [_numNumberabel sizeToFit];
     
@@ -143,7 +148,12 @@
     self.directionsLabel.frame = CGRectMake(self.directionsLabel.frame.origin.x, self.directionsLabel.frame.origin.y, labelSize.width, labelSize.height );
     
     //计算出自适应的高度
-    frame.size.height = labelSize.height+70;
+    if (labelSize.height < 60) {
+        frame.size.height = 100 ;
+    }else{
+        frame.size.height = labelSize.height+40;
+    }
+    
     
     self.frame = frame;
 }

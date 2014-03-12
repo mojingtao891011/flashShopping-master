@@ -74,7 +74,7 @@
     if (_dele && [ _dele respondsToSelector:@selector(changeTitles:)]) {
         [_dele changeTitles:titleArrs[indexPath.row]];
     }
-    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"hideBg" object:nil];
    
 }
 @end

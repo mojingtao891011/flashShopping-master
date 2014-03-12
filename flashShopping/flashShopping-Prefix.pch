@@ -14,6 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIViewExt.h"
+    #import "SGDataService.h"
 
 #define ChangeTitle    @"ChangeTitle"
 
@@ -26,11 +27,11 @@
 #define POINT_Y   IOS_VERSION < 7.0 ? 0 : 64
 
 //发送数据通知
-#define postNoteName @"postNotificationName"
+#define  COMPANYID @"entId"
 
 //字体的颜色
 #define searchTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//A2A1A1
-#define descriptionTextColor [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:1] //3C3C3C
+#define nameTextColor [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:1] //3C3C3C
 #define priceTextColor [UIColor colorWithRed:104/255.0 green:104/255.0 blue:104/255.0 alpha:1] //#686868
 #define regTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//#BC0835
 #define greedTextColor [UIColor colorWithRed:8/255.0 green:173/255.0 blue:0/255.0 alpha:1]//#08AD00
@@ -50,6 +51,7 @@
 #define SGtotal          @"total"
 
 #define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
+//#define BASEURL     @"http://192.168.1.83:9000/Assistant/app"
 //#define BASEURL     @"http://192.168.1.16:8080/Assistant/app"
 
 #endif

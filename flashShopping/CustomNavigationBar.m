@@ -22,9 +22,13 @@
     }
     return self;
 }
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self ];
+}
 - (void)_initView
 {
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hideBgView) name:@"hideBg" object:nil];
     //自定义导航栏
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage  imageNamed:@"navigationbarBackground"]];
     [imageView setFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, 44)];
@@ -67,10 +71,10 @@
 #pragma mark---customAction
 - (void)pullDwonAction
 {
-    
+    NSLog(@"%d",_flag);
     if (!_flag) {
         _pullNenu.hidden = NO ;
-        self.height = 300;
+        self.height = _pullNenu.height + 44;
     }else{
         _pullNenu.hidden = YES;
         self.height = 44;
@@ -83,5 +87,9 @@
         pullDwonButton.transform = newTrans ;
     }];
 
+}
+- (void)hideBgView
+{
+    self.height = 44 ;
 }
 @end

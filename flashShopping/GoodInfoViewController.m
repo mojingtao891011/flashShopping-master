@@ -8,8 +8,8 @@
 
 #import "GoodInfoViewController.h"
 #import "SGDataService.h"
-#import "GoodInfoModle.h"
-#import "GoodsDetailViewController.h"
+#import "GoodsInfoModel.h"
+#import "GoodsdetaiViewController.h"
 
 @interface GoodInfoViewController ()<UITableViewDataSource , UITableViewDelegate , UITextFieldDelegate>
 {
@@ -41,6 +41,9 @@
     navigationBar = [[CustomNavigationBar alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 44) andTitleArr:[NSArray arrayWithObjects:@"所有商品",@"橱窗中商品",@"出售中商品",@"仓库中商品",@"已下架商品", nil] andSetBarButtonDelegate:self andSetPullNenuDelegate:self ];
     [self.view addSubview:navigationBar];
     
+    //加载网络数据
+    [self loadNetData:YES];
+    
     //加载goodTableView
     goodTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 54, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 54) style:UITableViewStylePlain];
     goodTableView.dataSource = self ;
@@ -53,72 +56,70 @@
         navigationBar.top = 0 ;
         goodTableView.top = 44 ;
     }
-    //加载网络数据
-    [self loadNetData:YES];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshNote:) name:@"refresh" object:nil];
-}
-//加载网络数据
-- (void)loadNetData:(BOOL)isReloadData
-{
-    NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json" , @"companyId":@"00000101"};
-    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
-    [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
-        NSArray *jsonArr = result[@"content"];
-        NSLog(@"%@",jsonArr);
-        for (NSDictionary *dict in jsonArr) {
-            GoodInfoModle *gInfoModle = [GoodInfoModle new];
-            gInfoModle.goodsCode = dict[@"goodsCode"];
-            gInfoModle.goodsId = dict[@"goodsId"];
-            gInfoModle.Id = dict[@"id"];
-            gInfoModle.isUp = [dict[@"isUp"]boolValue];
-            gInfoModle.name = dict[@"name"];
-            gInfoModle.num = dict[@"num"];
-            gInfoModle.price = dict[@"price"];
-            gInfoModle.viewUrl = dict[@"viewUrl"];
-    
-            if (dataArr == nil) {
-                dataArr = [NSMutableArray new];
-            }
-            [dataArr addObject:gInfoModle];
-        }
-         if (isReloadData) {
-            [goodTableView reloadData];
 
-        }else{
-             [[NSNotificationCenter defaultCenter]postNotificationName:@"toGooDetaiView" object:dataArr[index]];
-        }
-        
-    }];
-
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshNote:) name:@"refreshData" object:nil];
+    
 }
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden= YES ;
 }
+
+//加载网络数据
+#pragma mark----加载网络数据
+- (void)loadNetData:(BOOL)isReloadData
+{
+    NSDictionary *dict = @{@"actionCode":@"441" , @"appType":@"json"};
+    NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
+    NSString *companyId = [[NSUserDefaults standardUserDefaults]objectForKey:COMPANYID];
+    [mutableDict setObject:companyId forKey:@"companyId"] ;
+    
+    [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
+        NSArray *jsonArr = result[@"content"];
+        //NSLog(@"%@",jsonArr);
+        for (NSDictionary *dict in jsonArr) {
+            //把数据装入数据模型
+            GoodsInfoModel *goodsInfoModel =[[GoodsInfoModel alloc]initWithDataDic:dict];
+            if (dataArr == nil) {
+                dataArr = [NSMutableArray new];
+            }
+            [dataArr addObject:goodsInfoModel];
+            
+        }
+         if (isReloadData) {
+            [goodTableView reloadData];
+            
+        }else{
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"toGoodsDetaiView" object:dataArr[index]];
+        }
+    }];
+
+}
 #pragma mark---UITableViewDataSource
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return dataArr.count ;
 }
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *goodCellID = @"goodCellID";
     GoodsCell *goodCell = [tableView dequeueReusableCellWithIdentifier:goodCellID];
     if (goodCell == nil) {
         goodCell = [[GoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:goodCellID ];
     }
-    GoodInfoModle *goodInfoModle = dataArr[indexPath.row];
-    goodCell.goodsModel = goodInfoModle ;
-    [goodCell setIntroductionText:goodInfoModle.name];
+    GoodsInfoModel *gInfoModel = dataArr[indexPath.row] ;
+    goodCell.goodsModel = gInfoModel ;
+    [goodCell setIntroductionText:gInfoModel.name];
     return goodCell ;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GoodsDetailViewController *goodsDetaiView = [[GoodsDetailViewController alloc]init];
-    goodsDetaiView.goodsModel = dataArr[indexPath.row];
-    goodsDetaiView.indexs = indexPath.row ;
-    [self.navigationController pushViewController:goodsDetaiView animated:YES];
+
+    GoodsdetaiViewController *goodsDetailViewCtl = [[GoodsdetaiViewController alloc]init];
+    goodsDetailViewCtl.goodsDataModel = dataArr[indexPath.row];
+    goodsDetailViewCtl.index = indexPath.row ;
+    [self.navigationController pushViewController:goodsDetailViewCtl animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -128,6 +129,7 @@
     
 }
 #pragma mark-----NSNotification
+#pragma mark-----通知
 - (void)refreshNote:(NSNotification*)note
 {
     index = [[note object]intValue];

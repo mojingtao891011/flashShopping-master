@@ -84,6 +84,10 @@
         UIButton *itemButton=[UIButton buttonWithType:UIButtonTypeCustom];
         [itemButton setFrame:CGRectMake(i*SCREENMAIN_WIDTH/imgNormaArr.count, 0, SCREENMAIN_WIDTH/imgNormaArr.count, 49)];
         itemButton.tag=100+i;
+        if (itemButton.tag == 100) {
+            _lastSelecteButton = itemButton ;
+            _lastSelecteButton.selected = YES ;
+        }
         [itemButton setBackgroundImage:[UIImage imageNamed:imgNormaArr[i]] forState:UIControlStateNormal];
         [itemButton setImage:[UIImage imageNamed:imgSelectedArr[i]] forState:UIControlStateSelected];
         [itemButton addTarget:self action:@selector(selectedViewControllers:) forControlEvents:UIControlEventTouchUpInside];
@@ -95,14 +99,11 @@
 
 //ViewController视图之间的切换
 - (void)selectedViewControllers:(UIButton*)button{
-    for (UIView *v  in barView.subviews) {
-        if ([v isKindOfClass:[UIButton class]]) {
-            UIButton *b=(UIButton*)v;
-            b.selected=NO;
-        }
-    }
-    self.selectedIndex=button.tag-100;
-    button.selected=YES;
+
+    button.selected = YES ;
+    _lastSelecteButton.selected = NO ;
+    _lastSelecteButton = button ;
+    self.selectedIndex = button.tag - 100 ;
  
 }
 

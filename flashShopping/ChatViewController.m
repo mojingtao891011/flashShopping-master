@@ -27,9 +27,8 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"闪聊";
-    NSLog(@"dhgdjkjkdjdjkfjkdfjkgdkj==");
     
-}
+    }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

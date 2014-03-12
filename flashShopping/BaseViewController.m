@@ -44,8 +44,7 @@
 //    self.view = backgroundView ;
     //[self.view addSubview:backgroundView];
     
-    NSLog(@"%f",self.view.size.height);
-    if (self.navigationController.viewControllers.count > 1) {
+       if (self.navigationController.viewControllers.count > 1) {
         //自定义ButtonItem
         UIButton *buttonItem = [UIButton buttonWithType:UIButtonTypeCustom];
         [buttonItem setFrame:CGRectMake(0, 10, 20, 20)];
