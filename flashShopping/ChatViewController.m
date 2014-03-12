@@ -28,6 +28,9 @@
     [super viewDidLoad];
     self.titleLabel.text = @"闪聊";
     
+    
+    NSLog(@"self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];");
+    
     }
 - (void)didReceiveMemoryWarning
 {
