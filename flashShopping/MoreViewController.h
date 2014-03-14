@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface MoreViewController : BaseViewController
-
+{
+    UIActivityIndicatorView *_indicator;
+}
 @end

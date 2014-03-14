@@ -46,6 +46,12 @@
 		D29F25B618D2E10A0030510A /* topView_13.png in Resources */ = {isa = PBXBuildFile; fileRef = D29F25A618D2E10A0030510A /* topView_13.png */; };
 		D29F25B718D2E10A0030510A /* topView_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D29F25A718D2E10A0030510A /* topView_background.png */; };
 		D29F25B918D2E1380030510A /* HomePagebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D29F25B818D2E1380030510A /* HomePagebackground.png */; };
+		D29F25C118D2F23A0030510A /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25BC18D2F23A0030510A /* TKAlertCenter.m */; };
+		D29F25C218D2F23A0030510A /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25BE18D2F23A0030510A /* TKGlobal.m */; };
+		D29F25C318D2F23A0030510A /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25C018D2F23A0030510A /* UIView+TKCategory.m */; };
+		D29F25C618D2F2F10030510A /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25C518D2F2F10030510A /* AboutUsViewController.m */; };
+		D29F25C918D2F30E0030510A /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25C818D2F30E0030510A /* FeedbackViewController.m */; };
+		D29F25CB18D2F4AC0030510A /* u10_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D29F25CA18D2F4AC0030510A /* u10_normal.png */; };
 		E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2EB1882454B0095CEA3 /* orderNunmber_a.png */; };
 		E217F2FF1882454B0095CEA3 /* orderNunmber_b.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2EC1882454B0095CEA3 /* orderNunmber_b.png */; };
 		E217F3001882454B0095CEA3 /* shopbg.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2ED1882454B0095CEA3 /* shopbg.png */; };
@@ -242,6 +248,17 @@
 		D29F25A618D2E10A0030510A /* topView_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topView_13.png; sourceTree = "<group>"; };
 		D29F25A718D2E10A0030510A /* topView_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topView_background.png; sourceTree = "<group>"; };
 		D29F25B818D2E1380030510A /* HomePagebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePagebackground.png; sourceTree = "<group>"; };
+		D29F25BB18D2F23A0030510A /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		D29F25BC18D2F23A0030510A /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		D29F25BD18D2F23A0030510A /* TKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKGlobal.h; sourceTree = "<group>"; };
+		D29F25BE18D2F23A0030510A /* TKGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKGlobal.m; sourceTree = "<group>"; };
+		D29F25BF18D2F23A0030510A /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		D29F25C018D2F23A0030510A /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
+		D29F25C418D2F2F10030510A /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		D29F25C518D2F2F10030510A /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		D29F25C718D2F30E0030510A /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		D29F25C818D2F30E0030510A /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		D29F25CA18D2F4AC0030510A /* u10_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u10_normal.png; sourceTree = "<group>"; };
 		E217F2EB1882454B0095CEA3 /* orderNunmber_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderNunmber_a.png; sourceTree = "<group>"; };
 		E217F2EC1882454B0095CEA3 /* orderNunmber_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderNunmber_b.png; sourceTree = "<group>"; };
 		E217F2ED1882454B0095CEA3 /* shopbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopbg.png; sourceTree = "<group>"; };
@@ -530,6 +547,19 @@
 			name = topView;
 			sourceTree = "<group>";
 		};
+		D29F25BA18D2F23A0030510A /* TKAlertCenter */ = {
+			isa = PBXGroup;
+			children = (
+				D29F25BB18D2F23A0030510A /* TKAlertCenter.h */,
+				D29F25BC18D2F23A0030510A /* TKAlertCenter.m */,
+				D29F25BD18D2F23A0030510A /* TKGlobal.h */,
+				D29F25BE18D2F23A0030510A /* TKGlobal.m */,
+				D29F25BF18D2F23A0030510A /* UIView+TKCategory.h */,
+				D29F25C018D2F23A0030510A /* UIView+TKCategory.m */,
+			);
+			path = TKAlertCenter;
+			sourceTree = "<group>";
+		};
 		E217F2EA1882454B0095CEA3 /* orderDetailImg */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,6 +724,10 @@
 			children = (
 				E249F5EB18754B7800462E6B /* MoreViewController.h */,
 				E249F5EC18754B7800462E6B /* MoreViewController.m */,
+				D29F25C418D2F2F10030510A /* AboutUsViewController.h */,
+				D29F25C518D2F2F10030510A /* AboutUsViewController.m */,
+				D29F25C718D2F30E0030510A /* FeedbackViewController.h */,
+				D29F25C818D2F30E0030510A /* FeedbackViewController.m */,
 				E2929E7E18768FC5007CE3C7 /* SelectRowViewController.h */,
 				E2929E7F18768FC5007CE3C7 /* SelectRowViewController.m */,
 				E2929E8018768FC5007CE3C7 /* SelectRowViewController.xib */,
@@ -759,6 +793,7 @@
 		E249F5F318754FD800462E6B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D29F25CA18D2F4AC0030510A /* u10_normal.png */,
 				FB34C49D18CEDE4300ABAA96 /* LogisticInfoBg.png */,
 				FB34C49E18CEDE4300ABAA96 /* LogisticInfoBg@x2.png */,
 				FB34C49918CEDE3C00ABAA96 /* goodInfoBg.png */,
@@ -914,6 +949,7 @@
 		E2929E831876970A007CE3C7 /* thirdSourceLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				D29F25BA18D2F23A0030510A /* TKAlertCenter */,
 				FB394B6118C23EA400919C22 /* dict_json */,
 				E2E2F90718C071F600E59CC7 /* URLEncoding */,
 				E298361018BB4A8C00B1DB2C /* SDWebImage */,
@@ -1137,6 +1173,7 @@
 				E298362618BB4A8C00B1DB2C /* README.md in Resources */,
 				E230F057187E70D3009A0479 /* whiteArrow.png in Resources */,
 				FB3697FE18CFF74800686B47 /* remember.png in Resources */,
+				D29F25CB18D2F4AC0030510A /* u10_normal.png in Resources */,
 				E2929E37187654E3007CE3C7 /* refund_manager.png in Resources */,
 				FB3697FB18CFF74800686B47 /* landLogo.jpg in Resources */,
 				D29F258618D2E0510030510A /* function3-1.png in Resources */,
@@ -1205,6 +1242,7 @@
 				E298362B18BB4A8C00B1DB2C /* SDWebImagePrefetcher.m in Sources */,
 				E250878A18BC25AD005350DE /* GoodInfoViewController.m in Sources */,
 				E26BFB28188F52E7001401F3 /* ASIHTTPRequest.m in Sources */,
+				D29F25C118D2F23A0030510A /* TKAlertCenter.m in Sources */,
 				E249F5B3187549E900462E6B /* AppDelegate.m in Sources */,
 				E26BFB26188F52E7001401F3 /* ASIDownloadCache.m in Sources */,
 				E249F5EE18754B7800462E6B /* MoreViewController.m in Sources */,
@@ -1222,6 +1260,9 @@
 				FB36980418D01B3F00686B47 /* GoodsInfoModel.m in Sources */,
 				E2D2AB0D1888D34C002F8D66 /* GoodsManamentModel.m in Sources */,
 				E2480974187FCF5100046EB7 /* LandViewController.m in Sources */,
+				D29F25C218D2F23A0030510A /* TKGlobal.m in Sources */,
+				D29F25C618D2F2F10030510A /* AboutUsViewController.m in Sources */,
+				D29F25C918D2F30E0030510A /* FeedbackViewController.m in Sources */,
 				E26BFB2A188F52E7001401F3 /* ASINetworkQueue.m in Sources */,
 				E2D2AB081888BDF4002F8D66 /* UIViewExt.m in Sources */,
 				E26BFB25188F52E7001401F3 /* ASIDataDecompressor.m in Sources */,
@@ -1246,6 +1287,7 @@
 				E249F5E918754B6200462E6B /* ChatViewController.m in Sources */,
 				E298362C18BB4A8C00B1DB2C /* UIButton+WebCache.m in Sources */,
 				E249F5AF187549E900462E6B /* main.m in Sources */,
+				D29F25C318D2F23A0030510A /* UIView+TKCategory.m in Sources */,
 				E298362718BB4A8C00B1DB2C /* SDImageCache.m in Sources */,
 				E2E2F90C18C071F600E59CC7 /* NSNumber+Message.m in Sources */,
 			);
