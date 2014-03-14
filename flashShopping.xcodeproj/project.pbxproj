@@ -52,6 +52,16 @@
 		D29F25C618D2F2F10030510A /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25C518D2F2F10030510A /* AboutUsViewController.m */; };
 		D29F25C918D2F30E0030510A /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25C818D2F30E0030510A /* FeedbackViewController.m */; };
 		D29F25CB18D2F4AC0030510A /* u10_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D29F25CA18D2F4AC0030510A /* u10_normal.png */; };
+		D29F25D418D2F7F40030510A /* OrderManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25D018D2F7F40030510A /* OrderManagementViewController.m */; };
+		D29F25D518D2F7F40030510A /* OrderManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29F25D118D2F7F40030510A /* OrderManagementViewController.xib */; };
+		D29F25D618D2F7F40030510A /* OrderManagerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25D318D2F7F40030510A /* OrderManagerDetailViewController.m */; };
+		D29F25D918D2F9D10030510A /* ModifyOrderPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25D818D2F9D10030510A /* ModifyOrderPriceViewController.m */; };
+		D29F25DC18D2FA270030510A /* ShipmentsAndModifyAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25DB18D2FA270030510A /* ShipmentsAndModifyAddViewController.m */; };
+		D29F25E018D2FA670030510A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25DE18D2FA670030510A /* DetailViewController.m */; };
+		D29F25E118D2FA670030510A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29F25DF18D2FA670030510A /* DetailViewController.xib */; };
+		D29F25E518D2FA800030510A /* BasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F25E318D2FA800030510A /* BasicInfoViewController.m */; };
+		D29F25E618D2FA800030510A /* BasicInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29F25E418D2FA800030510A /* BasicInfoViewController.xib */; };
+		D29F260718D2FF740030510A /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F260618D2FF740030510A /* KxMenu.m */; };
 		E217F2FE1882454B0095CEA3 /* orderNunmber_a.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2EB1882454B0095CEA3 /* orderNunmber_a.png */; };
 		E217F2FF1882454B0095CEA3 /* orderNunmber_b.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2EC1882454B0095CEA3 /* orderNunmber_b.png */; };
 		E217F3001882454B0095CEA3 /* shopbg.png in Resources */ = {isa = PBXBuildFile; fileRef = E217F2ED1882454B0095CEA3 /* shopbg.png */; };
@@ -259,6 +269,23 @@
 		D29F25C718D2F30E0030510A /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		D29F25C818D2F30E0030510A /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		D29F25CA18D2F4AC0030510A /* u10_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u10_normal.png; sourceTree = "<group>"; };
+		D29F25CF18D2F7F40030510A /* OrderManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagementViewController.h; sourceTree = "<group>"; };
+		D29F25D018D2F7F40030510A /* OrderManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagementViewController.m; sourceTree = "<group>"; };
+		D29F25D118D2F7F40030510A /* OrderManagementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderManagementViewController.xib; sourceTree = "<group>"; };
+		D29F25D218D2F7F40030510A /* OrderManagerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerDetailViewController.h; sourceTree = "<group>"; };
+		D29F25D318D2F7F40030510A /* OrderManagerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerDetailViewController.m; sourceTree = "<group>"; };
+		D29F25D718D2F9D10030510A /* ModifyOrderPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyOrderPriceViewController.h; sourceTree = "<group>"; };
+		D29F25D818D2F9D10030510A /* ModifyOrderPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyOrderPriceViewController.m; sourceTree = "<group>"; };
+		D29F25DA18D2FA270030510A /* ShipmentsAndModifyAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipmentsAndModifyAddViewController.h; sourceTree = "<group>"; };
+		D29F25DB18D2FA270030510A /* ShipmentsAndModifyAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipmentsAndModifyAddViewController.m; sourceTree = "<group>"; };
+		D29F25DD18D2FA670030510A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D29F25DE18D2FA670030510A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D29F25DF18D2FA670030510A /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		D29F25E218D2FA800030510A /* BasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfoViewController.h; sourceTree = "<group>"; };
+		D29F25E318D2FA800030510A /* BasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfoViewController.m; sourceTree = "<group>"; };
+		D29F25E418D2FA800030510A /* BasicInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicInfoViewController.xib; sourceTree = "<group>"; };
+		D29F260518D2FF740030510A /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		D29F260618D2FF740030510A /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		E217F2EB1882454B0095CEA3 /* orderNunmber_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderNunmber_a.png; sourceTree = "<group>"; };
 		E217F2EC1882454B0095CEA3 /* orderNunmber_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderNunmber_b.png; sourceTree = "<group>"; };
 		E217F2ED1882454B0095CEA3 /* shopbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopbg.png; sourceTree = "<group>"; };
@@ -560,6 +587,48 @@
 			path = TKAlertCenter;
 			sourceTree = "<group>";
 		};
+		D29F25CC18D2F6300030510A /* orderManager */ = {
+			isa = PBXGroup;
+			children = (
+				D29F25CF18D2F7F40030510A /* OrderManagementViewController.h */,
+				D29F25D018D2F7F40030510A /* OrderManagementViewController.m */,
+				D29F25D118D2F7F40030510A /* OrderManagementViewController.xib */,
+				D29F25D218D2F7F40030510A /* OrderManagerDetailViewController.h */,
+				D29F25D318D2F7F40030510A /* OrderManagerDetailViewController.m */,
+				D29F25D718D2F9D10030510A /* ModifyOrderPriceViewController.h */,
+				D29F25D818D2F9D10030510A /* ModifyOrderPriceViewController.m */,
+				D29F25DA18D2FA270030510A /* ShipmentsAndModifyAddViewController.h */,
+				D29F25DB18D2FA270030510A /* ShipmentsAndModifyAddViewController.m */,
+				D29F25DD18D2FA670030510A /* DetailViewController.h */,
+				D29F25DE18D2FA670030510A /* DetailViewController.m */,
+				D29F25DF18D2FA670030510A /* DetailViewController.xib */,
+				D29F25E218D2FA800030510A /* BasicInfoViewController.h */,
+				D29F25E318D2FA800030510A /* BasicInfoViewController.m */,
+				D29F25E418D2FA800030510A /* BasicInfoViewController.xib */,
+			);
+			name = orderManager;
+			sourceTree = "<group>";
+		};
+		D29F25CD18D2F6410030510A /* LogisticManager */ = {
+			isa = PBXGroup;
+			children = (
+				FB43DA4318C5BF500098F5F9 /* LogisticManagerViewController.h */,
+				FB43DA4418C5BF500098F5F9 /* LogisticManagerViewController.m */,
+				FB43DA4518C5BF500098F5F9 /* LogisticManagerViewController.xib */,
+			);
+			name = LogisticManager;
+			sourceTree = "<group>";
+		};
+		D29F25CE18D2F66E0030510A /* NoGood */ = {
+			isa = PBXGroup;
+			children = (
+				E2E129E218BF2191004D74E0 /* NoGoodViewController.h */,
+				E2E129E318BF2191004D74E0 /* NoGoodViewController.m */,
+				E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */,
+			);
+			name = NoGood;
+			sourceTree = "<group>";
+		};
 		E217F2EA1882454B0095CEA3 /* orderDetailImg */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,15 +818,12 @@
 		E249F5D318754A0200462E6B /* shopManager */ = {
 			isa = PBXGroup;
 			children = (
+				D29F25CE18D2F66E0030510A /* NoGood */,
+				D29F25CD18D2F6410030510A /* LogisticManager */,
+				D29F25CC18D2F6300030510A /* orderManager */,
 				E249F5E118754B4600462E6B /* GoodManagerViewController.h */,
 				E249F5E218754B4600462E6B /* GoodManagerViewController.m */,
 				E249F5E318754B4600462E6B /* GoodManagerViewController.xib */,
-				FB43DA4318C5BF500098F5F9 /* LogisticManagerViewController.h */,
-				FB43DA4418C5BF500098F5F9 /* LogisticManagerViewController.m */,
-				FB43DA4518C5BF500098F5F9 /* LogisticManagerViewController.xib */,
-				E2E129E218BF2191004D74E0 /* NoGoodViewController.h */,
-				E2E129E318BF2191004D74E0 /* NoGoodViewController.m */,
-				E2E129E418BF2191004D74E0 /* NoGoodViewController.xib */,
 				E2E129E118BF20E0004D74E0 /* allGoodInfo */,
 			);
 			name = shopManager;
@@ -949,6 +1015,8 @@
 		E2929E831876970A007CE3C7 /* thirdSourceLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				D29F260518D2FF740030510A /* KxMenu.h */,
+				D29F260618D2FF740030510A /* KxMenu.m */,
 				D29F25BA18D2F23A0030510A /* TKAlertCenter */,
 				FB394B6118C23EA400919C22 /* dict_json */,
 				E2E2F90718C071F600E59CC7 /* URLEncoding */,
@@ -1181,6 +1249,8 @@
 				E217F3101882454B0095CEA3 /* 04-按钮i.png in Resources */,
 				E217F3061882454B0095CEA3 /* 04-按钮a.png in Resources */,
 				D29F257018D2DF570030510A /* ItemBar1-2.png in Resources */,
+				D29F25E618D2FA800030510A /* BasicInfoViewController.xib in Resources */,
+				D29F25E118D2FA670030510A /* DetailViewController.xib in Resources */,
 				D29F258418D2E0510030510A /* function2-1.png in Resources */,
 				E280A39F18826B6800D67265 /* textfiled-b.png in Resources */,
 				E280A3971882655200D67265 /* Radio-a.png in Resources */,
@@ -1216,6 +1286,7 @@
 				E230F055187E70D3009A0479 /* grayArrow.png in Resources */,
 				E265B6A4187B98B700B7CA13 /* pullDownButton.png in Resources */,
 				FB34C4A518CEDE7100ABAA96 /* GoodsdetaiViewController.xib in Resources */,
+				D29F25D518D2F7F40030510A /* OrderManagementViewController.xib in Resources */,
 				E250879518BC7A7D005350DE /* ModifyInfoViewController.xib in Resources */,
 				E230F041187E30C1009A0479 /* cellbackground.png in Resources */,
 				D29F259618D2E09B0030510A /* processedImage_4.png in Resources */,
@@ -1246,7 +1317,9 @@
 				E249F5B3187549E900462E6B /* AppDelegate.m in Sources */,
 				E26BFB26188F52E7001401F3 /* ASIDownloadCache.m in Sources */,
 				E249F5EE18754B7800462E6B /* MoreViewController.m in Sources */,
+				D29F25D618D2F7F40030510A /* OrderManagerDetailViewController.m in Sources */,
 				E26BFB27188F52E7001401F3 /* ASIFormDataRequest.m in Sources */,
+				D29F25DC18D2FA270030510A /* ShipmentsAndModifyAddViewController.m in Sources */,
 				E249F5DB18754ACB00462E6B /* BaseNavViewController.m in Sources */,
 				FB34C4A418CEDE7100ABAA96 /* GoodsdetaiViewController.m in Sources */,
 				E2E129E518BF2191004D74E0 /* NoGoodViewController.m in Sources */,
@@ -1254,6 +1327,8 @@
 				FB394B6C18C23EA400919C22 /* SBJsonStreamWriterState.m in Sources */,
 				FB43DA4618C5BF500098F5F9 /* LogisticManagerViewController.m in Sources */,
 				E249F5DF18754B0A00462E6B /* ShopMvoingViewController.m in Sources */,
+				D29F260718D2FF740030510A /* KxMenu.m in Sources */,
+				D29F25D918D2F9D10030510A /* ModifyOrderPriceViewController.m in Sources */,
 				E249F5F218754BBD00462E6B /* MainViewController.m in Sources */,
 				E298362A18BB4A8C00B1DB2C /* SDWebImageManager.m in Sources */,
 				E298362818BB4A8C00B1DB2C /* SDWebImageDecoder.m in Sources */,
@@ -1267,6 +1342,7 @@
 				E2D2AB081888BDF4002F8D66 /* UIViewExt.m in Sources */,
 				E26BFB25188F52E7001401F3 /* ASIDataDecompressor.m in Sources */,
 				E26BFB24188F52E7001401F3 /* ASIDataCompressor.m in Sources */,
+				D29F25E018D2FA670030510A /* DetailViewController.m in Sources */,
 				E244FA29187CE033005DFF26 /* BaseTableView.m in Sources */,
 				FB394B6A18C23EA400919C22 /* SBJsonStreamWriter.m in Sources */,
 				FB52950018C372EF0073C44C /* CustomUIBarButtonItem.m in Sources */,
@@ -1285,10 +1361,12 @@
 				E225EA5C18AA044A0098F2C6 /* PullNenu.m in Sources */,
 				E2929E8118768FC5007CE3C7 /* SelectRowViewController.m in Sources */,
 				E249F5E918754B6200462E6B /* ChatViewController.m in Sources */,
+				D29F25D418D2F7F40030510A /* OrderManagementViewController.m in Sources */,
 				E298362C18BB4A8C00B1DB2C /* UIButton+WebCache.m in Sources */,
 				E249F5AF187549E900462E6B /* main.m in Sources */,
 				D29F25C318D2F23A0030510A /* UIView+TKCategory.m in Sources */,
 				E298362718BB4A8C00B1DB2C /* SDImageCache.m in Sources */,
+				D29F25E518D2FA800030510A /* BasicInfoViewController.m in Sources */,
 				E2E2F90C18C071F600E59CC7 /* NSNumber+Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

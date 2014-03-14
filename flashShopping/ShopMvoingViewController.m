@@ -12,7 +12,7 @@
 //#import "RefundViewController.h"
 #import "NoGoodViewController.h"
 #import "GoodInfoViewController.h"
-//#import "AllShopViewController.h"
+#import "OrderManagementViewController.h"
 #import "BaseNavViewController.h"
 #import "LogisticManagerViewController.h"
 #import "NSString+URLEncoding.h"
@@ -276,8 +276,9 @@ ASIHTTPRequestDelegate>
     NSLog(@"%d",button.tag );
     
     if (button.tag == 510) {
-//        AllShopViewController *allshopView = [[AllShopViewController alloc]init];
-//        [self.navigationController pushViewController:allshopView animated:YES];
+        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]initWithQueryTypeIsWait4Shipments:YES];
+        [self.navigationController pushViewController:OrderManagementView animated:YES];
+        
     }else if (button.tag == 511){
         
 //        RefundViewController *refundViewCtl = [[RefundViewController alloc] init];
@@ -326,8 +327,8 @@ ASIHTTPRequestDelegate>
     NSLog(@"%d",button.tag-120);
     
     if (button.tag == 120) {
-//        AllShopViewController *allshopView = [[AllShopViewController alloc]init];
-//        [self.navigationController pushViewController:allshopView animated:YES];
+        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]init];
+        [self.navigationController pushViewController:OrderManagementView animated:YES];
     }
     else if (button.tag == 121) {
         LogisticManagerViewController *logisticsView = [[LogisticManagerViewController alloc] init];
