@@ -51,11 +51,11 @@
     
     //初始化视图控制器
     ShopMvoingViewController *shopMoveView=[[ShopMvoingViewController alloc]init];
-    GoodManagerViewController *shopManagerView=[[GoodManagerViewController alloc]init];
+    
     ChatViewController *chatView=[[ChatViewController alloc]init];
     MoreViewController *moreView=[[MoreViewController alloc]init];
     
-    NSArray *viewArr=@[ shopMoveView ,shopManagerView , chatView , moreView ];
+    NSArray *viewArr=@[ shopMoveView , chatView , moreView ];
     NSMutableArray *navArr=[NSMutableArray new];
     
     
@@ -76,8 +76,8 @@
     barView.backgroundColor=[UIColor redColor];
     [self.view addSubview:barView];
     
-    NSArray *imgNormaArr=@[@"buttom_shopMoving",@"buttom_shopManager",@"chat",@"button_more.png"];
-    NSArray *imgSelectedArr=@[@"buttom_shopMoving_bg",@"buttom_shopManager_bg",@"chat_bg",@"button_more_bg"];
+    NSArray *imgNormaArr = @[@"ItemBar1-1",@"ItemBar2-1",@"ItemBar3-1"];
+    NSArray *imgSelectedArr = @[@"ItemBar1-2",@"ItemBar2-2",@"ItemBar3-2"];
     
     for (int i=0; i<imgNormaArr.count ; i++) {
         
@@ -131,9 +131,9 @@
        
         if ([subView isKindOfClass:NSClassFromString(@"UITransitionView")]) {
             if (isFrame) {
-                [subView setFrame:CGRectMake(subView.frame.origin.x, subView.frame.origin.y, SCREENMAIN_WIDTH, 480-49)];
+                [subView setFrame:CGRectMake(subView.frame.origin.x, subView.frame.origin.y, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT-49)];
             }else{
-                [subView setFrame:CGRectMake(subView.frame.origin.x, subView.frame.origin.y, SCREENMAIN_WIDTH, 480 )];
+                [subView setFrame:CGRectMake(subView.frame.origin.x, subView.frame.origin.y, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT)];
             }
            
         }

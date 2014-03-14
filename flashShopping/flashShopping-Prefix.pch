@@ -54,4 +54,9 @@
 //#define BASEURL     @"http://192.168.1.83:9000/Assistant/app"
 //#define BASEURL     @"http://192.168.1.16:8080/Assistant/app"
 
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
+
 #endif

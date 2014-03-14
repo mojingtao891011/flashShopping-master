@@ -44,6 +44,7 @@
     //加载网络数据
     [self loadNetData:YES];
     
+    
     //加载goodTableView
     goodTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 54, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 54) style:UITableViewStylePlain];
     goodTableView.dataSource = self ;
