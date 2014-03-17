@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入商品名称或编号" minimumFontSize="17" id="tvG-dB-nWm">
-                    <rect key="frame" x="15" y="8" width="250" height="30"/>
+                    <rect key="frame" x="23" y="7" width="239" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

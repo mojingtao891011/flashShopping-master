@@ -151,7 +151,7 @@
     if (labelSize.height < 60) {
         frame.size.height = 100 ;
     }else{
-        frame.size.height = labelSize.height+40;
+        frame.size.height = labelSize.height+60;
     }
     
     

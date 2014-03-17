@@ -27,9 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.titleLabel.text = @"物流管理";
+    self.titleLabel.text = @"物流管理" ;
     //刷新按钮
-    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 20, 20) andSetdelegate:self andImageName:@"refresh"];
+    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 25, 25) andSetdelegate:self andImageName:@"refresh"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barButton];
     [self startLoadNet];
 }
@@ -41,6 +41,11 @@
         NSLog(@"%@",result[@"content"]);
     }];
         
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 #pragma mark----barButtonProtocol
 - (void)actions:(id)sender

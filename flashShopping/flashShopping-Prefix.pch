@@ -15,7 +15,7 @@
     #import <Foundation/Foundation.h>
     #import "UIViewExt.h"
     #import "SGDataService.h"
-
+    #import "MBProgressHUD.h"
 #define ChangeTitle    @"ChangeTitle"
 
 //获取屏幕的宽、高
@@ -26,8 +26,11 @@
 #define IOS_VERSION  [[[UIDevice currentDevice]systemVersion] floatValue]
 #define POINT_Y   IOS_VERSION < 7.0 ? 0 : 64
 
-//发送数据通知
-#define  COMPANYID @"entId"
+//企业Id  name   userId
+#define  COMPANYID          [[NSUserDefaults standardUserDefaults]objectForKey:@"entId"]
+#define  COMPANYNAME    [[NSUserDefaults standardUserDefaults]objectForKey:@"name"]
+#define  COMPANYUSERID  [[NSUserDefaults standardUserDefaults]objectForKey:@"userId"]
+
 
 //字体的颜色
 #define searchTextColor [UIColor colorWithRed:188/255.0 green:8/255.0 blue:35/255.0 alpha:1]//A2A1A1

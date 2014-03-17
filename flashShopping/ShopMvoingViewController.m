@@ -67,37 +67,7 @@ ASIHTTPRequestDelegate>
     [self.view addSubview:testView];
     
     
-    //开启另一个线程来获取网络数据
-    [NSThread detachNewThreadSelector:@selector(startLoadNet) toTarget:self withObject:nil];
-    
 }
-#pragma mark---获取网络数据
-- (void)startLoadNet
-{
-    
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.83:9000/Assistant/app"];
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    request.delegate = self;
-    [request setRequestMethod:@"POST"];
-    [request setTimeOutSeconds:60];
-    NSString *postString = @"{\"actionCode\":\"81\",\"companyId\":\"\",\"orderState\":\"\",\"ENTID\":\"\",\"USERID\":\"\"}";
-    [request appendPostData:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [request startAsynchronous];
-    
-}
-- (void)requestFinished:(ASIHTTPRequest *)request
-{
-    //    NSDictionary *dic = [[[request responseString] URLDecodedString] JSONValue];
-    //    NSLog(@"nsksfdslf====%@",dic);
-    
-    
-}
-- (void)requestFailed:(ASIHTTPRequest *)request
-{
-    NSLog(@"请求失败");
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -114,10 +84,11 @@ ASIHTTPRequestDelegate>
     
     topImageView.userInteractionEnabled = YES;//打开点出事件
     UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(107, SCREENMAIN_HEIGHT == 480? 20:28, 160, 40)];
-//    name.text = NAME;
+    name.text = COMPANYNAME;
     name.textColor = [UIColor whiteColor];
     name.backgroundColor = [UIColor clearColor];
     name.font = [UIFont systemFontOfSize:20];
+    [name sizeToFit];
     [topImageView addSubview:name];
     
     UILabel *shopMvoingName = [[UILabel alloc] initWithFrame:CGRectMake(140, SCREENMAIN_HEIGHT == 480? 65:81.5f, 130, 23)];
@@ -276,8 +247,8 @@ ASIHTTPRequestDelegate>
     NSLog(@"%d",button.tag );
     
     if (button.tag == 510) {
-        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]initWithQueryTypeIsWait4Shipments:YES];
-        [self.navigationController pushViewController:OrderManagementView animated:YES];
+//        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]initWithQueryTypeIsWait4Shipments:YES];
+//        [self.navigationController pushViewController:OrderManagementView animated:YES];
         
     }else if (button.tag == 511){
         

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     //背景图片
-    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+//    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
     //自定义导航标题
     _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 125, 40)];
@@ -37,14 +37,7 @@
     _titleLabel.textAlignment = NSTextAlignmentCenter ;
     _titleLabel.font = [UIFont systemFontOfSize:20];
     self.navigationItem.titleView = _titleLabel;
-    
-	//背景图片
-//    UIImageView *backgroundView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 568)];
-//    backgroundView.userInteractionEnabled = YES ;
-//    backgroundView.image = [UIImage imageNamed:@"background"];
-//    backgroundView.contentMode = UIViewContentModeScaleToFill ;
-//    self.view = backgroundView ;
-    //[self.view addSubview:backgroundView];
+
     
        if (self.navigationController.viewControllers.count > 1) {
         //自定义ButtonItem

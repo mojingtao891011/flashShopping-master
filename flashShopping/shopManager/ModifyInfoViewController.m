@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     self.titleLabel.text = @"基本信息";
-    NSLog(@"%@",_bodyView);
+    _bodyView.top = 0 ;
     _bodyTop = _bodyView.top ;
     _bodyView.userInteractionEnabled = YES ;
     //_bodyView.contentSize = CGSizeMake(SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT + 60);
@@ -44,12 +44,31 @@
     //监听键盘
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(modifyFrame:) name:UIKeyboardWillShowNotification object:Nil];
     
+     //在弹出的键盘上面加一个view来放置退出键盘的Done按钮
+    UIToolbar * topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    [topView setBarStyle:UIBarStyleDefault];
+    UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
+    NSArray * buttonsArray = [NSArray arrayWithObjects:btnSpace, doneButton, nil];
+    
+    [topView setItems:buttonsArray];
+    [_goodTitleTextView setInputAccessoryView:topView];
+    [_goodCodeTextField setInputAccessoryView:topView];
+    [_goodPriceTextField setInputAccessoryView:topView];
+    [_goodNumTextField setInputAccessoryView:topView];
+    
     //post (  NSDictionary )
     NSDictionary *dict = @{@"actionCode":@"442" , @"appType":@"json" };
     _mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
     
     
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 #pragma mark---UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -74,6 +93,15 @@
     _textFieldTag = 0 ;
     return YES ;
 }
+//Enter做键盘的响应键
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
 #pragma mark----NSNotificationCenter
 - (void)modifyFrame:(NSNotification*)note
 {
@@ -93,7 +121,7 @@
 - (void)actions:(id)sender
 {
     //必须post字段
-    [_mutableDict setObject: [[NSUserDefaults standardUserDefaults]objectForKey:COMPANYID]forKey:@"companyId"];
+    [_mutableDict setObject:COMPANYID forKey:@"companyId"];
     [_mutableDict setObject:_Id forKey:@"Id"];
     [_mutableDict setObject:_goodsId forKey:@"goodsId"];
     //非必须post字段
@@ -115,9 +143,22 @@
 {
     if ( textFieldTag == 6 || textFieldTag ==7 ) {
         [UIView animateWithDuration:0.5 animations:^{
-            _bodyView.top =_bodyTop - (textFieldBottom - (_bodyView.height - keyboardHeight - 64));
+            _bodyView.top =- (textFieldBottom - (_bodyView.height - keyboardHeight - 64));
         }];
     }
+}
+//点击完成
+- (void)dismissKeyBoard
+{
+    [_goodTitleTextView resignFirstResponder];
+    [_goodCodeTextField resignFirstResponder];
+    [_goodPriceTextField resignFirstResponder];
+    [_goodNumTextField resignFirstResponder];
+    
+        [UIView animateWithDuration:0.5 animations:^{
+            _bodyView.top = _bodyTop ;
+        }];
+  
 }
 //商品状态
 - (IBAction)selectButton:(id)sender {

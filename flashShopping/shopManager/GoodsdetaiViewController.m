@@ -22,6 +22,7 @@
     UILabel *goodsName ;
     UILabel *Status ;
     UILabel *goodsCode ;
+    UILabel *priceTitle ;
     UILabel *goodsPrice ;
     UILabel *goodsNum ;
     UILabel *goodsUpTime ;
@@ -49,10 +50,15 @@
     self.navigationController.navigationBar.hidden = NO ;
     self.titleLabel.text = @"基本详情" ;
     
-    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 20, 20) andSetdelegate:self andImageName:@"refresh"];
+    CustomUIBarButtonItem *barButton = [[CustomUIBarButtonItem alloc]initWithFrame:CGRectMake(0, 0, 25, 25) andSetdelegate:self andImageName:@"refresh"];
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithCustomView:barButton];
     self.navigationItem.rightBarButtonItem = barButtonItem ;
     [self _initView];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 - (void)viewDidDisappear:(BOOL)animated
 {
@@ -65,6 +71,10 @@
 {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshData" object:[NSString stringWithFormat:@"%d" , _index]];
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate ;
+    hud.labelText = @"加载中……" ;
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshUI:) name:@"toGoodsDetaiView" object:nil];
 }
 #pragma mark----NSNotificationCenter
@@ -72,6 +82,7 @@
 - (void)refreshUI:(NSNotification*)note
 {
     _goodsDataModel = [note object];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self loadGoodsDataModelInfo];
 }
 #pragma mark----customMethod
@@ -182,14 +193,14 @@
     goodsCode.textColor = priceTextColor ;
     goodsCode.backgroundColor = [UIColor clearColor];
     //商品价格
-    UILabel *priceTitle = nil ;
     if (priceTitle == nil) {
-        priceTitle = [[UILabel alloc]initWithFrame:CGRectMake(goodsCode.left, goodsCode.bottom, 20, 20)];
+        priceTitle = [[UILabel alloc]initWithFrame:CGRectZero];
         [imageViewgoodsInfoBg addSubview:priceTitle];
-        priceTitle.text = @"价格:" ;
         priceTitle.textColor = priceTextColor ;
-        [priceTitle sizeToFit];
     }
+    [priceTitle setFrame:CGRectMake(goodsCode.left, goodsCode.bottom, 20, 20)];
+    priceTitle.text = @"价格:" ;
+    [priceTitle sizeToFit];
     [goodsPrice setFrame:CGRectMake(priceTitle.right, goodsCode.bottom , 50, 20)];
     goodsPrice.text = [NSString stringWithFormat:@"¥%@",_goodsDataModel.price] ;
     [goodsPrice sizeToFit];
@@ -217,10 +228,12 @@
     
     if (goodsName.height + 80 >130) {
         imageViewgoodsInfoBg.height = goodsName.height + 120 ;
+        
     }else
     {
         imageViewgoodsInfoBg.height = 171 ;
     }
+    imageViewLogisticInfoBg.top = imageViewgoodsInfoBg.bottom + 30 ;
 }
 
 - (void)editorInfo:(UIButton*)sender

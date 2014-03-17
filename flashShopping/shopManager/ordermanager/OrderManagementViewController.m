@@ -13,7 +13,7 @@
 //#import "ShippedShopViewController.h"
 //#import "RefundViewController.h"
 //#import "AllShopViewController.h"
-#import "DetailViewController.h"
+//#import "DetailViewController.h"
 #import "OrderManagerDetailViewController.h"
 
 @interface OrderManagementViewController ()
@@ -127,6 +127,13 @@
     
     return YES;
     
+}
+
+- (void)refreshView
+{
+    if (_webView) {
+        [_webView reload];
+    }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
@@ -299,8 +306,8 @@
 
 - (IBAction)clickTodetail:(id)sender {
     
-    DetailViewController *detailView = [[DetailViewController alloc]init];
-    [self.navigationController pushViewController:detailView animated:YES];
-   
+//    DetailViewController *detailView = [[DetailViewController alloc]init];
+//    [self.navigationController pushViewController:detailView animated:YES];
+//   
 }
 @end

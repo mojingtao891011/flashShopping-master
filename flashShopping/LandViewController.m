@@ -9,6 +9,7 @@
 #import "LandViewController.h"
 #import "MainViewController.h"
 #import "SGDataService.h"
+#import "Reachability.h"
 
 @interface LandViewController ()<UITextFieldDelegate>
 {
@@ -76,6 +77,7 @@
     langView = [[UIView alloc]initWithFrame:CGRectMake(10, SCREENMAIN_HEIGHT, SCREENMAIN_WIDTH - 20, 170)];
     langView.backgroundColor = [UIColor clearColor];
     [scrollView addSubview:langView];
+    
     //用户名／密码的背景图
     UIImageView *landViewBg = [[UIImageView alloc]initWithFrame:CGRectMake( 0, 0, langView.width, 89)];
     landViewBg.userInteractionEnabled = YES ;
@@ -119,11 +121,13 @@
 {
     button.selected = !button.selected ;
     if (button.selected) {
+        //选中时保存
         [userDefaults setObject:userName.text forKey:@"userName"];
         [userDefaults setObject:userPossWord.text forKey:@"userPossWord"];
         [userDefaults setBool:button.selected forKey:@"isRemember"];
         [userDefaults synchronize];
     }else{
+        //没选中时就把数据删掉
         [userDefaults removeObjectForKey:@"userName"];
         [userDefaults removeObjectForKey:@"userPossWord"];
         [userDefaults removeObjectForKey:@"isRemember"];
@@ -132,6 +136,7 @@
 }
 - (void)loadUserDefaultsData
 {
+    //从NSUserDefaults里读取数据
     userName.text = [userDefaults objectForKey:@"userName"];
     userPossWord.text = [userDefaults objectForKey:@"userPossWord"];
     StatusButton.selected = [userDefaults boolForKey:@"isRemember"];
@@ -140,6 +145,14 @@
 #pragma mark------登陆
 - (void)landButton:(UIButton*)button
 {
+    //检查网络
+    BOOL reachable = [[Reachability reachabilityForInternetConnection] isReachable];
+    if (!reachable) {
+        UIAlertView *alertViews = [[UIAlertView alloc] initWithTitle:@"该功能需要连接网络才能使用，请检查您的网络连接状态" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] ;
+        [alertViews show];
+        return;
+    }
+    //访问接口
     NSDictionary *dict = @{@"actionCode":@"21" ,  @"appType":@"json" };
     NSMutableDictionary *mutableDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
     [mutableDict setObject:userName.text forKey:@"username"] ;
@@ -147,15 +160,20 @@
     [SGDataService requestWithUrl:BASEURL dictParams:mutableDict httpMethod:@"post" completeBlock:^(id result){
         if ([result[@"content"] isKindOfClass:[NSDictionary class]]) {
             NSString *companyId = result[@"content"][@"entId"] ;
-            [userDefaults setObject:companyId forKey:COMPANYID] ;
+            NSString *companyName =result[@"content"][@"name"] ;
+            NSString *companyUserId = result[@"content"][@"userId"] ;
+            
+            [userDefaults setObject:companyId forKey:@"entId"] ;
+            [userDefaults setObject:companyName forKey:@"name"];
+            [userDefaults setObject:companyUserId forKey:@"userId"];
             [userDefaults synchronize] ;
             
-             MainViewController *mainViewCtl = [[MainViewController alloc]init];
+            MainViewController *mainViewCtl = [[MainViewController alloc]init];
             mainViewCtl.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal ;
             [self presentModalViewController:mainViewCtl animated:YES];
         }else{
-
-             UIAlertView *alertView =[ [UIAlertView alloc]initWithTitle:@"友情提示" message:result[@"content"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"返回", nil];
+            
+            UIAlertView *alertView =[ [UIAlertView alloc]initWithTitle:@"友情提示" message:result[@"content"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"返回", nil];
             [alertView show] ;
         }
     }];

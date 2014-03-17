@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 #import "ShopMvoingViewController.h"
-#import "GoodManagerViewController.h"
 #import "ChatViewController.h"
 #import "MoreViewController.h"
 #import "BaseNavViewController.h"
