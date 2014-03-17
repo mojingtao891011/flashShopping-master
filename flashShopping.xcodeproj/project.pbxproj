@@ -206,6 +206,7 @@
 		FB394B6C18C23EA400919C22 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6718C23EA400919C22 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FB394B6D18C23EA400919C22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6918C23EA400919C22 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FB394B7018C23F2700919C22 /* SGDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FB394B6F18C23F2700919C22 /* SGDataService.m */; };
+		FB39D26518D6C04D005FF0A0 /* LoadLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB39D26418D6C04D005FF0A0 /* LoadLogoViewController.m */; };
 		FB52950018C372EF0073C44C /* CustomUIBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */; };
 		FBE393C418C427F700571EBD /* textFields@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C218C427F700571EBD /* textFields@x2.png */; };
 		FBE393C518C427F700571EBD /* textFieldView@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE393C318C427F700571EBD /* textFieldView@x2.png */; };
@@ -483,6 +484,8 @@
 		FB394B6918C23EA400919C22 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		FB394B6E18C23F2700919C22 /* SGDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDataService.h; sourceTree = "<group>"; };
 		FB394B6F18C23F2700919C22 /* SGDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDataService.m; sourceTree = "<group>"; };
+		FB39D26318D6C04D005FF0A0 /* LoadLogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadLogoViewController.h; sourceTree = "<group>"; };
+		FB39D26418D6C04D005FF0A0 /* LoadLogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadLogoViewController.m; sourceTree = "<group>"; };
 		FB5294FE18C372EF0073C44C /* CustomUIBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIBarButtonItem.h; sourceTree = "<group>"; };
 		FB5294FF18C372EF0073C44C /* CustomUIBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIBarButtonItem.m; sourceTree = "<group>"; };
 		FBE393C218C427F700571EBD /* textFields@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFields@x2.png"; sourceTree = "<group>"; };
@@ -715,6 +718,8 @@
 				E249F5D1187549FA00462E6B /* more */,
 				E249F5B1187549E900462E6B /* AppDelegate.h */,
 				E249F5B2187549E900462E6B /* AppDelegate.m */,
+				FB39D26318D6C04D005FF0A0 /* LoadLogoViewController.h */,
+				FB39D26418D6C04D005FF0A0 /* LoadLogoViewController.m */,
 				E249F5F018754BBD00462E6B /* MainViewController.h */,
 				E249F5F118754BBD00462E6B /* MainViewController.m */,
 				E249F5B4187549E900462E6B /* Images.xcassets */,
@@ -1303,6 +1308,7 @@
 				FB15241D18D6987600F37DFE /* OrderManagerDetailViewController.m in Sources */,
 				D29F25C618D2F2F10030510A /* AboutUsViewController.m in Sources */,
 				D29F25C918D2F30E0030510A /* FeedbackViewController.m in Sources */,
+				FB39D26518D6C04D005FF0A0 /* LoadLogoViewController.m in Sources */,
 				E26BFB2A188F52E7001401F3 /* ASINetworkQueue.m in Sources */,
 				E2D2AB081888BDF4002F8D66 /* UIViewExt.m in Sources */,
 				E26BFB25188F52E7001401F3 /* ASIDataDecompressor.m in Sources */,
@@ -1435,6 +1441,7 @@
 				INFOPLIST_FILE = "flashShopping/flashShopping-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1449,6 +1456,7 @@
 				INFOPLIST_FILE = "flashShopping/flashShopping-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

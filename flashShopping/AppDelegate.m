@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
-#import "LandViewController.h"
+#import "LoadLogoViewController.h"
+
 
 @implementation AppDelegate{
     NSTimer *timer;
@@ -20,43 +20,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-   [self startUp];
+    LoadLogoViewController *loadLogoViewCtl = [[LoadLogoViewController alloc]init];
+    self.window .rootViewController = loadLogoViewCtl ;
 
     [self.window makeKeyAndVisible];
     return YES;
 }
-//开始启动页面
-- (void)startUp{
-    
-    UIImageView *startImage=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT)];
-    startImage.contentMode=UIViewContentModeScaleToFill;
-    startImage.image=[UIImage imageNamed:@"startPage.jpg"];
-    [self.window addSubview:startImage];
-    
-    timer=[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(startMainView:) userInfo:startImage repeats:NO];
-}
-
-- (void)startMainView:(NSTimer*)temp{
-    
-    UIImageView *imageView=[temp userInfo];
-    [UIView animateWithDuration:1.0 animations:^{
-        
-        imageView.alpha=0;
-        
-    }completion:^(BOOL finish){
-        
-       // MainViewController *mainView=[[MainViewController alloc]init];
-        LandViewController *landViewCtl = [[LandViewController alloc]init];
-        self.window.rootViewController=landViewCtl;
-        
-        //加载完根视图后删除启动画面同时销掉计时器
-        [imageView removeFromSuperview];
-        [timer invalidate];
-        
-    }];
-    
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
