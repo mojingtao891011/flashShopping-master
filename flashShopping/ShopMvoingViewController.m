@@ -244,11 +244,11 @@ ASIHTTPRequestDelegate>
 }
 #pragma mark-----Action
 - (void)processedOrderView:(UIButton* )button{
-    NSLog(@"%d",button.tag );
+//    NSLog(@"%d",button.tag );
     
     if (button.tag == 510) {
-//        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]initWithQueryTypeIsWait4Shipments:YES];
-//        [self.navigationController pushViewController:OrderManagementView animated:YES];
+        OrderManagementViewController *OrderManagementView = [[OrderManagementViewController alloc]initWithQueryTypeIsWait4Shipments:YES];
+        [self.navigationController pushViewController:OrderManagementView animated:YES];
         
     }else if (button.tag == 511){
         

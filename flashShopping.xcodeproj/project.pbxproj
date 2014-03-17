@@ -1028,13 +1028,13 @@
 		FB15241018D6987600F37DFE /* ordermanager */ = {
 			isa = PBXGroup;
 			children = (
-				FB15241118D6987600F37DFE /* ModifyOrderPriceViewController.h */,
-				FB15241218D6987600F37DFE /* ModifyOrderPriceViewController.m */,
 				FB15241318D6987600F37DFE /* OrderManagementViewController.h */,
 				FB15241418D6987600F37DFE /* OrderManagementViewController.m */,
 				FB15241518D6987600F37DFE /* OrderManagementViewController.xib */,
 				FB15241618D6987600F37DFE /* OrderManagerDetailViewController.h */,
 				FB15241718D6987600F37DFE /* OrderManagerDetailViewController.m */,
+				FB15241118D6987600F37DFE /* ModifyOrderPriceViewController.h */,
+				FB15241218D6987600F37DFE /* ModifyOrderPriceViewController.m */,
 				FB15241818D6987600F37DFE /* ShipmentsAndModifyAddViewController.h */,
 				FB15241918D6987600F37DFE /* ShipmentsAndModifyAddViewController.m */,
 			);
