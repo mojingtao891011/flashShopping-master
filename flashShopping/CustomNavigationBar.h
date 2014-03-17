@@ -22,5 +22,5 @@
 @property ( nonatomic , assign )id<barButtonProtocol>barButtonDele ;
 @property ( nonatomic , assign )id<pullNenuProtocol>pullDele ;
 - (id)initWithFrame:(CGRect)frame andTitleArr:(NSArray *)titleArr andSetBarButtonDelegate:(id<barButtonProtocol>)barButtondelegate  andSetPullNenuDelegate:(id<pullNenuProtocol>)pullDelegate ;
-
+- (void)pullDwonAction;
 @end

@@ -7,18 +7,23 @@
 //
 
 #import "OrderManagementViewController.h"
-#import "KxMenu.h"
-//#import "OrderDetailViewController.h"
-//#import "ShipOrderViewController.h"
-//#import "ShippedShopViewController.h"
-//#import "RefundViewController.h"
-//#import "AllShopViewController.h"
-//#import "DetailViewController.h"
 #import "OrderManagerDetailViewController.h"
+
 
 @interface OrderManagementViewController ()
 
 @end
+
+typedef enum {
+    kAllOrder = 0,
+    kWait4PaymentOrder,
+    kWait4ShipmentOrder,
+    kAlreadyShipmentOrder,
+    kAlreadyCancelOrder,
+    kAlreadySucceedOrder,
+    kAlreadyClosedOrder
+    
+}kOrderManagerType;
 
 @implementation OrderManagementViewController
 
@@ -42,7 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 - (void)viewDidLoad
 {
@@ -50,7 +55,7 @@
     //self.view.backgroundColor = [UIColor redColor];
     self.isBack = YES ;
     self.isAddRefreshButton = YES;
-    
+    self.view.backgroundColor = [UIColor blackColor];
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0f, 64.0f, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT - 64)];
     _webView.delegate = self;
 //    _webView.userInteractionEnabled = YES;
@@ -59,7 +64,12 @@
      [_webView loadRequest:_request];
      controlJSActionInfoDic = [[NSMutableDictionary alloc] initWithCapacity:1];
     
+    //自定义导航
+//    navigationBar = [[CustomNavigationBar alloc]initWithFrame:CGRectMake(0, 20, SCREENMAIN_WIDTH, 44) andTitleArr:[NSArray arrayWithObjects:@"所有商品",@"橱窗中商品",@"出售中商品",@"仓库中商品",@"已下架商品", nil] andSetBarButtonDelegate:self andSetPullNenuDelegate:self ];
     
+    titleArr = @[@"所有订单",@"待付款订单",@"待发货订单",@"已发货订单",@"已取消订单",@"已成功订单",@"已关闭订单",];
+    navigationBar = [[CustomNavigationBar alloc] initWithFrame:CGRectMake(0.0f, 20.0f, SCREENMAIN_WIDTH, 44.0f) andTitleArr:titleArr andSetBarButtonDelegate:self andSetPullNenuDelegate:self];
+    [self.view addSubview:navigationBar];
     
     if (IOS_VERSION < 7.0) {
         [_bobyView setFrame:CGRectMake(0, 10, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT-20-44-10)];
@@ -72,16 +82,99 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.userInteractionEnabled = YES;
     
-    UIButton *pulldownButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [pulldownButton setBackgroundImage:[UIImage imageNamed:@"pulldown"] forState:UIControlStateNormal];
-    [pulldownButton setFrame:CGRectMake(85, 14, 11, 8)];
-    [pulldownButton addTarget:self action:@selector(pulldownMore:) forControlEvents:UIControlEventTouchUpInside];
-    [titleLabel addSubview:pulldownButton];
+//    UIButton *pulldownButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [pulldownButton setBackgroundImage:[UIImage imageNamed:@"pulldown"] forState:UIControlStateNormal];
+//    [pulldownButton setFrame:CGRectMake(85, 14, 11, 8)];
+//    [pulldownButton addTarget:self action:@selector(pulldownMore:) forControlEvents:UIControlEventTouchUpInside];
+//    [titleLabel addSubview:pulldownButton];
     
     self.navigationItem.titleView = titleLabel ;
 }
+- (void)actions:(id)sender{
+    UIButton *b = (UIButton*)sender ;
+    if (b.tag == 10) {
+//        navigationBar.flag = !navigationBar.flag;
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        NSLog(@"刷新…………"  );
+    }
+    
+}
 
 
+#pragma mark---ChangeHeightProtocol
+//选中下拉行的标题
+- (void)changeTitles:(NSString *)title{
+    [navigationBar pullDwonAction];
+    navigationBar.pullNenu.hidden = YES;
+    
+    [self performSelectorOnMainThread:@selector(createJSActionCodeWithState:) withObject:@"10086" waitUntilDone:NO];
+    [controlJSActionInfoDic removeAllObjects];
+# warning companyId
+    [controlJSActionInfoDic setObject:@"00000000" forKey:@"companyId"];
+    [controlJSActionInfoDic setObject:@"1" forKey:@"pageRequest"];
+    [controlJSActionInfoDic setObject:@"" forKey:@"query"];
+    
+    
+    switch ([titleArr indexOfObject:title]) {
+        case kAllOrder:
+        {
+            [controlJSActionInfoDic setObject:@"" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+        case kWait4PaymentOrder:
+        {
+            [controlJSActionInfoDic setObject:@"12" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+            
+        case kWait4ShipmentOrder:
+        {
+            [controlJSActionInfoDic setObject:@"7" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+        case kAlreadyShipmentOrder:
+        {
+            [controlJSActionInfoDic setObject:@"8_21_22" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+        case kAlreadyCancelOrder:
+        {
+            [controlJSActionInfoDic setObject:@"3" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+        case kAlreadySucceedOrder:
+        {
+            [controlJSActionInfoDic setObject:@"9" forKey:@"orderState"];
+            [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
+            
+        }
+            break;
+        case kAlreadyClosedOrder:
+        {
+            
+            
+        }
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+    
+    
+}
 #pragma mark -
 #pragma mark UIWebViewDelegate Method
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
@@ -136,8 +229,8 @@
     }
 }
 
+# warning companyId
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
     
     [controlJSActionInfoDic setObject:@"00000000" forKey:@"companyId"];
     [controlJSActionInfoDic setObject:@"1" forKey:@"pageRequest"];
@@ -161,113 +254,6 @@
     
 }
 
-
-- (void)pulldownMore:(UIButton*)button{
-    
-    NSArray *menuItems =
-    @[
-      
-      [KxMenuItem menuItem:@"所有订单"
-                     image:nil
-                    target:nil
-                    action:@selector(pushMenuItem:)],
-      
-      [KxMenuItem menuItem:@"待付款订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)],
-      
-      [KxMenuItem menuItem:@"待发货订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)],
-      
-      [KxMenuItem menuItem:@"已发货订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)],
-      
-      [KxMenuItem menuItem:@"已取消订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)],
-      
-      [KxMenuItem menuItem:@"已成功订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)],
-      [KxMenuItem menuItem:@"已关闭订单"
-                     image:nil
-                    target:self
-                    action:@selector(pushMenuItem:)]
-      ];
-    
-    KxMenuItem *first = menuItems[0];
-    first.foreColor = [UIColor colorWithRed:47/255.0f green:112/255.0f blue:225/255.0f alpha:1.0];
-    first.alignment = NSTextAlignmentCenter;
-    
-    if (IOS_VERSION < 7.0) {
-        [KxMenu showMenuInView:self.view
-                      fromRect:CGRectMake(100, -100, 100, 100)
-                     menuItems:menuItems];
-    }else{
-        [KxMenu showMenuInView:self.view
-                  fromRect:CGRectMake(100, -38, 100, 100)
-                 menuItems:menuItems];
-
-    }
-        
-    
-
-}
-
-- (void)pushMenuItem:(KxMenuItem*)menuItem{
-    NSLog(@"%@",menuItem.title);
-    
-    [self performSelectorOnMainThread:@selector(createJSActionCodeWithState:) withObject:@"10086" waitUntilDone:NO];
-     [controlJSActionInfoDic removeAllObjects];
-    
-    [controlJSActionInfoDic setObject:@"00000000" forKey:@"companyId"];
-    [controlJSActionInfoDic setObject:@"1" forKey:@"pageRequest"];
-    [controlJSActionInfoDic setObject:@"" forKey:@"query"];
-    
-    
-    
-    
-    if ([menuItem.title isEqualToString:@"所有订单"]) {
-        
-        [controlJSActionInfoDic setObject:@"" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-    }else if ([menuItem.title isEqualToString:@"待付款订单"]){
-        
-        [controlJSActionInfoDic setObject:@"12" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-    }
-
-    else if ([menuItem.title isEqualToString:@"待发货订单"]) {
-       
-        [controlJSActionInfoDic setObject:@"7" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-    }
-    else if ([menuItem.title isEqualToString:@"已发货订单"]){
-        
-        [controlJSActionInfoDic setObject:@"8_21_22" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-    }
-    else if ([menuItem.title isEqualToString:@"已取消订单"]){
-        
-        [controlJSActionInfoDic setObject:@"3" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-    }
-    else if ([menuItem.title isEqualToString:@"已成功订单"]){
-        
-        [controlJSActionInfoDic setObject:@"9" forKey:@"orderState"];
-        [self performSelectorOnMainThread:@selector(createJSActionCodeWithInfoDictionary:) withObject:controlJSActionInfoDic waitUntilDone:NO];
-        
-    }
-
-
-}
 - (void)createJSActionCodeWithState:(NSString *)aState{
     
     
@@ -290,6 +276,11 @@
     
     [_webView stringByEvaluatingJavaScriptFromString:jsFounctionStr];
     
+    UIImageView *view = [[UIImageView alloc] init];
+    UIButton *btn = [[UIButton alloc] init];
+    [view addSubview:btn];
+    
+    
 //    NSLog(@"%@",[_webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"]);
 }
 
@@ -308,6 +299,6 @@
     
 //    DetailViewController *detailView = [[DetailViewController alloc]init];
 //    [self.navigationController pushViewController:detailView animated:YES];
-//   
+//
 }
 @end
