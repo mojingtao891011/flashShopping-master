@@ -7,6 +7,20 @@
 //
 
 #import "BaseViewController.h"
+//#import "SRWebSocket.h"
 
-@interface ChatViewController : BaseViewController
+
+@interface ChatViewController : BaseViewController<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
+
+{
+    UIToolbar   *_toolBar;
+    UITextField *_textField;
+    UITableView *_tableView;
+    BOOL         _isSendByMe;
+    CGFloat _keyboardDistanceToMove;
+    NSMutableArray *_array;
+    
+//    SRWebSocket *_webSocket;
+}
+
 @end

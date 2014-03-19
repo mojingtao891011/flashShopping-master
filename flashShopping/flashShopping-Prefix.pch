@@ -27,7 +27,7 @@
 #define POINT_Y   IOS_VERSION < 7.0 ? 0 : 64
 
 //企业Id  name   userId
-#define  COMPANYID          [[NSUserDefaults standardUserDefaults]objectForKey:@"entId"]
+#define  COMPANYID         [[NSUserDefaults standardUserDefaults]objectForKey:@"entId"]
 #define  COMPANYNAME    [[NSUserDefaults standardUserDefaults]objectForKey:@"name"]
 #define  COMPANYUSERID  [[NSUserDefaults standardUserDefaults]objectForKey:@"userId"]
 
@@ -41,8 +41,8 @@
 #define backTextColor [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1]//#000000
 
 
-#define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
-//#define BASEURL     @"http://192.168.1.83:9000/Assistant/app"
+//#define BASEURL     @"http://sztest.iflashbuy.com:9000/Assistant/app"
+#define BASEURL     @"http://192.168.1.83:9000/Assistant/app"
 //#define BASEURL     @"http://192.168.1.16:8080/Assistant/app"
 
 

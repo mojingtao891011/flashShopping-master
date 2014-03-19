@@ -60,7 +60,9 @@ typedef enum {
     _webView.delegate = self;
 //    _webView.userInteractionEnabled = YES;
      [self.view addSubview:_webView];
-    _request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.16:8080/Assistant/appWeb/order.jsp?companyId=&userId="]];
+    _request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.83:9000/Assistant/appWeb/order.jsp?companyId=&userId="]];
+    
+//    "http://192.168.1.83:9000/Assistant/appWeb/order.jsp?companyId=&userId="
      [_webView loadRequest:_request];
      controlJSActionInfoDic = [[NSMutableDictionary alloc] initWithCapacity:1];
     
@@ -222,6 +224,13 @@ typedef enum {
     
 }
 
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    
+    NSLog(@"%@",error);
+    
+}
+
 - (void)refreshView
 {
     if (_webView) {
@@ -248,11 +257,6 @@ typedef enum {
 
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    
-    
-    
-}
 
 - (void)createJSActionCodeWithState:(NSString *)aState{
     

@@ -20,6 +20,7 @@
     UITextField *userPossWord ;
     UIButton *StatusButton ;
     NSUserDefaults *userDefaults ;
+    
 }
 - (void)loadLandView ;
 
@@ -67,6 +68,7 @@
     scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT)];
     scrollView.contentSize = CGSizeMake(SCREENMAIN_WIDTH, SCREENMAIN_HEIGHT + 60);
     scrollView.backgroundColor = [UIColor whiteColor];
+    scrollView.userInteractionEnabled = YES ;
     [self.view addSubview:scrollView];
     //最上面得logo
     imageViewBg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAIN_WIDTH, 145)];
@@ -99,6 +101,11 @@
     userPossWord.secureTextEntry = YES ;
     [landViewBg addSubview:userPossWord];
     //是否记住
+    UIButton *bgButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [bgButton setFrame:CGRectMake(0, landViewBg.bottom, landViewBg.width, 40)];
+    [bgButton addTarget:self action:@selector(isRememberUserName:) forControlEvents:UIControlEventTouchUpInside];
+    [langView addSubview:bgButton];
+    
     StatusButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [StatusButton setFrame:CGRectMake(0, userPossWord.bottom + 10, 15, 15)];
     [StatusButton setBackgroundImage:[UIImage imageNamed:@"remember"] forState:UIControlStateNormal];
@@ -119,12 +126,12 @@
 }
 - (void)isRememberUserName:(UIButton*)button
 {
-    button.selected = !button.selected ;
-    if (button.selected) {
+    StatusButton.selected = !StatusButton.selected ;
+    if (StatusButton.selected) {
         //选中时保存
         [userDefaults setObject:userName.text forKey:@"userName"];
         [userDefaults setObject:userPossWord.text forKey:@"userPossWord"];
-        [userDefaults setBool:button.selected forKey:@"isRemember"];
+        [userDefaults setBool:StatusButton.selected forKey:@"isRemember"];
         [userDefaults synchronize];
     }else{
         //没选中时就把数据删掉
@@ -133,6 +140,7 @@
         [userDefaults removeObjectForKey:@"isRemember"];
         [userDefaults synchronize];
     }
+    
 }
 - (void)loadUserDefaultsData
 {
